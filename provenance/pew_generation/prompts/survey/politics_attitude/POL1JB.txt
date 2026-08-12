@@ -1,0 +1,5 @@
+
+[POL1JB]
+Do you approve or disapprove of the way Joe Biden is handling his job as president?
+1 - Approve
+2 - Disapprove

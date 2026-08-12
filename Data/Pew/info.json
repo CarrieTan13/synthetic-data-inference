@@ -1,0 +1,87 @@
+{
+  "application": "Pew",
+  "task_definitions": [
+    {
+      "task_def": "multidim_gpt_4o",
+      "model": "gpt_4.o",
+      "T_tasks": 48,
+      "coordinates": [
+        "co",
+        "opp"
+      ],
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "allocation": "Bonferroni alpha/2 per dim, split (0.05,0.10,0.85)",
+      "note": "theta* = weighted gold approval rate per (item,wave,region) cell",
+      "eval": {
+        "mode": "loo"
+      }
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "model": "gemini_2.0_flash",
+      "T_tasks": 32,
+      "coordinates": [
+        "co",
+        "opp"
+      ],
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "allocation": "Bonferroni alpha/2 per dim, split (0.05,0.10,0.85)",
+      "note": "theta* = weighted gold approval rate per (item,wave,region) cell",
+      "eval": {
+        "mode": "loo"
+      }
+    },
+    {
+      "task_def": "multidim_gpt_4o_temporal",
+      "model": "gpt_4.o",
+      "T_tasks": 48,
+      "coordinates": [
+        "co",
+        "opp"
+      ],
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "allocation": "Bonferroni alpha/2 per dim, split (0.05,0.10,0.85)",
+      "note": "theta* = weighted gold approval rate per (item,wave,region) cell",
+      "eval": {
+        "mode": "temporal",
+        "predict_waves": [
+          "W149",
+          "W156"
+        ]
+      }
+    },
+    {
+      "task_def": "multidim_gemini_20_flash_temporal",
+      "model": "gemini_2.0_flash",
+      "T_tasks": 32,
+      "coordinates": [
+        "co",
+        "opp"
+      ],
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "allocation": "Bonferroni alpha/2 per dim, split (0.05,0.10,0.85)",
+      "note": "theta* = weighted gold approval rate per (item,wave,region) cell",
+      "eval": {
+        "mode": "temporal",
+        "predict_waves": [
+          "W149",
+          "W156"
+        ]
+      }
+    }
+  ],
+  "n_j": "per-task gold sample size [min, median, max]",
+  "N_j": "per-task synthetic sample size [min, median, max]"
+}

@@ -1,0 +1,160 @@
+{
+  "description": "Randomization configuration for W61_Feb20 (auto-extracted from questionnaire.txt by generate_survey_prompt.py). Covers: (1) content_assignments \u2014 content placeholders, (2) option_order \u2014 shuffle answer-option codes within a question, (3) item_order \u2014 shuffle sub-items within grid/matrix questions, (4) form_randomization \u2014 reverse order of response options for a random half sample, (5) screen_order \u2014 multi-screen questions randomization",
+  "content_assignments": [],
+  "option_order": {
+    "HAPPEN2": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "HAPPEN3": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "WINLOSE": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2
+      ]
+    },
+    "PRES1": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "CAND": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ]
+    },
+    "INC2": {
+      "description": "RANDOMIZE a, b, c; d ALWAYS LAST",
+      "randomize": [
+        1,
+        2
+      ]
+    },
+    "TRUMPISSUE1": {
+      "description": "RANDOMIZE DISPLAY OF OPTIONS 1-4 AND 4-1",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "TRUMPISSUE2": {
+      "description": "RANDOMIZE DISPLAY OF OPTIONS 1-3 AND 3- 1",
+      "randomize": [
+        1,
+        2,
+        3
+      ]
+    },
+    "TRUMPDESC": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "TRUMPHELP": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3
+      ]
+    },
+    "ISUPP": {
+      "description": "RANDOMIZE 1 & 2, 3 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "PPLFAV": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        8
+      ]
+    },
+    "CHR_INFL1": {
+      "description": "RANDOMIZE RESPONSE OPTIONS 1 & 2 WITH 3 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "CHR_INFL2": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2
+      ]
+    },
+    "CHR_INFL3": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3
+      ]
+    },
+    "CHR_INFL5": {
+      "description": "RANDOMIZE",
+      "randomize": [
+        1,
+        2,
+        3
+      ]
+    },
+    "ELECT_TRUMP": {
+      "description": "RANDOMIZE ORDER OF ELECT_TRUMP AND ELECT_OBAMA",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "item_order": {},
+  "form_randomization": {},
+  "question_order": [],
+  "block_order": [],
+  "screen_order": {}
+}

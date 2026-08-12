@@ -1,0 +1,211 @@
+{
+  "description": "Wave coverage for Politics_satisfaction0 (satisfaction-frame items only) and Politics_attitude0 (broader positive/negative attitude family). For each variable: ATP waves that include it, the canonical wording, the response-option format, and the binarization rule. Use this to (a) pull gold-standard topline proportions for ∆̂_j across exchangeable historical tasks, and (b) extract demographics for LLM-conditioned simulation.",
+  "binarization_convention": "For scaled items: 'positive' = options labeled Very/Extremely/Fairly/Mostly/Somewhat (satisfied | favorable | approve); 'negative' = options labeled Somewhat/Mostly/Not too/Not at all/Very (dissatisfied | unfavorable | disapprove). 'Not sure' / 'Have not heard enough' / DK / refused are dropped from the denominator (mirrors the SATIS no_answer convention in data/use_data/Politics_basic0/SATIS.csv).",
+
+  "satisfaction_family": {
+    "tier_1_strong_binary": {
+      "SATIS": {
+        "wording": "All in all, are you satisfied or dissatisfied with the way things are going in this country today?",
+        "response_format": "binary",
+        "satisfied_codes": [1], "dissatisfied_codes": [2],
+        "waves": [
+          {"wave_id": "W18",   "field_dates": "June 7-July 5, 2016",            "variant": "SATISF",  "form_filter": "FORM 2"},
+          {"wave_id": "W21",   "field_dates": "September 27-October 10, 2016", "variant": "SATISF"},
+          {"wave_id": "W24.5", "field_dates": "February 28-March 12, 2017",    "variant": "SATISF"},
+          {"wave_id": "W31",   "field_dates": "January 29-February 13, 2018",  "variant": "SATISF"},
+          {"wave_id": "W52",   "field_dates": "July 22-August 4, 2019",        "variant": "SATIS"},
+          {"wave_id": "W69",   "field_dates": "June 16-22, 2020",              "variant": "SATIS"},
+          {"wave_id": "W75",   "field_dates": "September 30-October 5, 2020",  "variant": "SATIS"},
+          {"wave_id": "W78",   "field_dates": "November 12-17, 2020",          "variant": "SATIS"},
+          {"wave_id": "W84",   "field_dates": "March 1-7, 2021",               "variant": "SATIS"},
+          {"wave_id": "W95",   "field_dates": "September 13-19, 2021",         "variant": "SATIS"},
+          {"wave_id": "W101",  "field_dates": "January 10-17, 2022",           "variant": "SATIS",  "form_filter": "XFORM=1"},
+          {"wave_id": "W116",  "field_dates": "October 10-16, 2022",           "variant": "SATIS"},
+          {"wave_id": "W120",  "field_dates": "January 18-24, 2023",           "variant": "SATIS",  "form_filter": "XFORM=1"},
+          {"wave_id": "W125",  "field_dates": "March 27-April 2, 2023",        "variant": "SATIS"},
+          {"wave_id": "W139",  "field_dates": "November 27-December 3, 2023",  "variant": "SATIS"},
+          {"wave_id": "W149",  "field_dates": "July 1-7, 2024",                "variant": "SATIS"},
+          {"wave_id": "W151",  "field_dates": "August 5-11, 2024",             "variant": "SATIS"},
+          {"wave_id": "W156",  "field_dates": "September 30-October 6, 2024",  "variant": "SATIS"}
+        ]
+      },
+      "SATISFPERS": {
+        "wording": "Overall, are you satisfied or dissatisfied with the way things are going in YOUR LIFE today?",
+        "response_format": "binary",
+        "satisfied_codes": [1], "dissatisfied_codes": [2],
+        "waves": [
+          {"wave_id": "W21", "field_dates": "September 27-October 10, 2016", "notes": "Rotated against SATISF by form."}
+        ],
+        "notes": "Closest pure-binary analogue of SATIS — same response options, different referent."
+      }
+    },
+
+    "tier_2_scaled_binarizable": {
+      "REDIST_SATIS": {
+        "wording": "Are you satisfied or dissatisfied with how redistricting is being handled in your state?",
+        "response_format": "4_point_plus_not_sure",
+        "satisfied_codes": [1, 2], "dissatisfied_codes": [3, 4], "drop_codes": [5],
+        "waves": [{"wave_id": "W101", "field_dates": "January 10-17, 2022"}]
+      },
+      "CANDHOUSAT": {
+        "wording": "How satisfied are you with the choice of candidates for Congress in your district this November?",
+        "response_format": "4_point",
+        "satisfied_codes": [1, 2], "dissatisfied_codes": [3, 4],
+        "waves": [{"wave_id": "W116", "field_dates": "October 10-16, 2022", "notes": "Pre-2022-midterm wave."}]
+      },
+      "SATISPRESCAND": {
+        "wording": "What is your opinion of the presidential candidates for this year? Would you say that you are…",
+        "response_format": "4_point",
+        "satisfied_codes": [1, 2], "dissatisfied_codes": [3, 4],
+        "waves": [
+          {"wave_id": "W69",  "field_dates": "June 16-22, 2020"},
+          {"wave_id": "W149", "field_dates": "July 1-7, 2024", "form_filter": "X_FORM=1"},
+          {"wave_id": "W153", "field_dates": "September 2024"}
+        ]
+      },
+      "SATCAND_POST": {
+        "wording": "Now that the campaign is over, how satisfied were you with the choice of presidential candidates? Would you say that you were…",
+        "response_format": "4_point",
+        "satisfied_codes": [1, 2], "dissatisfied_codes": [3, 4],
+        "waves": [{"wave_id": "W78", "field_dates": "November 12-17, 2020", "notes": "Post-2020-election retrospective version of SATISPRESCAND."}]
+      },
+      "PRICANDSAT_R": {
+        "wording": "Now thinking about some of the candidates running for the Republican nomination for president… Regardless of who your first choice is, how would you feel if [CANDIDATE] became the Republican nominee in 2024?",
+        "response_format": "4_point_plus_not_heard",
+        "satisfied_codes": [1, 2], "dissatisfied_codes": [3, 4], "drop_codes": [5],
+        "waves": [{"wave_id": "W139", "field_dates": "November 27-December 3, 2023", "screener": "XPARTYSUMFINAL=1,9 & XREG=1 (Republican-leaning + registered voters)", "battery_items": ["Donald Trump", "Ron DeSantis", "Chris Christie", "Vivek Ramaswamy", "Nikki Haley"]}],
+        "notes": "Battery question — each named candidate yields its own ∆̂. Asked of Republicans/leaners only, so the underlying population differs from SATIS."
+      }
+    },
+
+    "tier_3_population_screened": {
+      "JOBSAT": {
+        "wording": "Overall, how satisfied are you with your job?",
+        "response_format": "5_point",
+        "satisfied_codes": [1, 2, 3], "dissatisfied_codes": [4, 5],
+        "waves": [{"wave_id": "W121", "field_dates": "February 6-12, 2023", "screener": "Employed respondents only."}],
+        "notes": "Use with caution — employment screening creates a different respondent pool than SATIS."
+      }
+    }
+  },
+
+  "broader_attitude_family": {
+    "description": "Same positive/negative semantic frame as satisfaction items, but using approve/disapprove, favorable/unfavorable, or right-direction/wrong-track wording. Useful if you want the broader 'positive vs. negative attitude toward {target}' interpretation rather than strict satisfaction wording.",
+
+    "TRACK": {
+      "wording": "Do you think things in this country are generally going in the right direction or do you feel that things are off on the wrong track?",
+      "response_format": "binary",
+      "positive_codes": [1], "negative_codes": [2],
+      "waves": [
+        {"wave_id": "W18", "field_dates": "June 7-July 5, 2016", "form_filter": "FORM 1", "variant": "TRACK", "notes": "Phrasing: 'right direction' vs. 'wrong track'."},
+        {"wave_id": "W91", "field_dates": "June 14-24, 2021", "variant": "TRACK", "notes": "Phrasing: 'Generally headed in the right direction' vs. 'Off on the wrong track'."}
+      ],
+      "notes": "Conceptually the closest 'cousin' to SATIS — same target (the country), positive/negative response, asked of all respondents. Treating SATIS and TRACK as exchangeable assumes question wording does not move the proportion meaningfully (a non-trivial assumption — Pew documents systematic gaps between satisfaction and direction framings)."
+    },
+
+    "POL1JB": {
+      "wording": "Do you approve or disapprove of the way Joe Biden is handling his job as president?",
+      "response_format": "binary",
+      "positive_codes": [1], "negative_codes": [2],
+      "waves": [
+        {"wave_id": "W84",   "field_dates": "March 1-7, 2021",              "form_filter": "FORM 2"},
+        {"wave_id": "W95",   "field_dates": "September 13-19, 2021"},
+        {"wave_id": "W101",  "field_dates": "January 10-17, 2022"},
+        {"wave_id": "W116",  "field_dates": "October 10-16, 2022"},
+        {"wave_id": "W120",  "field_dates": "January 18-24, 2023"},
+        {"wave_id": "W125",  "field_dates": "March 27-April 2, 2023"},
+        {"wave_id": "W139",  "field_dates": "November 27-December 3, 2023"},
+        {"wave_id": "W149",  "field_dates": "July 1-7, 2024"},
+        {"wave_id": "W156",  "field_dates": "September 30-October 6, 2024"}
+      ]
+    },
+
+    "POL1DT": {
+      "wording": "Do you approve or disapprove of the way Donald Trump is handling his job as President?",
+      "response_format": "binary",
+      "positive_codes": [1], "negative_codes": [2],
+      "waves": [
+        {"wave_id": "W24.5", "field_dates": "February 28-March 12, 2017"},
+        {"wave_id": "W31",   "field_dates": "January 29-February 13, 2018"},
+        {"wave_id": "W52",   "field_dates": "July 22-August 4, 2019"},
+        {"wave_id": "W69",   "field_dates": "June 16-22, 2020"},
+        {"wave_id": "W84",   "field_dates": "March 1-7, 2021",  "form_filter": "FORM 1", "notes": "Asked retrospectively about Trump's tenure."}
+      ]
+    },
+
+    "INSTFAV_FED": {
+      "wording": "Do you have a favorable or unfavorable opinion of the federal government in Washington?",
+      "response_format": "4_point",
+      "positive_codes": [1, 2], "negative_codes": [3, 4],
+      "waves": [
+        {"wave_id": "W52",  "field_dates": "July 22-August 4, 2019",        "battery": "INSTFAV item e"},
+        {"wave_id": "W139", "field_dates": "November 27-December 3, 2023",  "battery": "INSTFAV item FED", "form_filter": "XFORM=2"}
+      ],
+      "notes": "Direct match to your example ('positive vs. negative attitude toward current government')."
+    },
+
+    "INSTFAV_STAT": {
+      "wording": "Do you have a favorable or unfavorable opinion of your STATE government?",
+      "response_format": "4_point",
+      "positive_codes": [1, 2], "negative_codes": [3, 4],
+      "waves": [
+        {"wave_id": "W52",  "field_dates": "July 22-August 4, 2019",        "battery": "INSTFAV item f"},
+        {"wave_id": "W139", "field_dates": "November 27-December 3, 2023",  "battery": "INSTFAV item STAT", "form_filter": "XFORM=2"}
+      ]
+    },
+
+    "INSTFAV_LOC": {
+      "wording": "Do you have a favorable or unfavorable opinion of your LOCAL government?",
+      "response_format": "4_point",
+      "positive_codes": [1, 2], "negative_codes": [3, 4],
+      "waves": [
+        {"wave_id": "W52",  "field_dates": "July 22-August 4, 2019",        "battery": "INSTFAV item g"},
+        {"wave_id": "W139", "field_dates": "November 27-December 3, 2023",  "battery": "INSTFAV item LOC", "form_filter": "XFORM=2"}
+      ]
+    },
+
+    "INSTFAV_CONG": {
+      "wording": "Do you have a favorable or unfavorable opinion of Congress?",
+      "response_format": "4_point",
+      "positive_codes": [1, 2], "negative_codes": [3, 4],
+      "waves": [
+        {"wave_id": "W52",  "field_dates": "July 22-August 4, 2019"},
+        {"wave_id": "W101", "field_dates": "January 10-17, 2022"},
+        {"wave_id": "W125", "field_dates": "March 27-April 2, 2023"},
+        {"wave_id": "W139", "field_dates": "November 27-December 3, 2023", "form_filter": "XFORM=1"},
+        {"wave_id": "W149", "field_dates": "July 1-7, 2024"}
+      ]
+    },
+
+    "INSTFAV_COURT": {
+      "wording": "Do you have a favorable or unfavorable opinion of the Supreme Court?",
+      "response_format": "4_point",
+      "positive_codes": [1, 2], "negative_codes": [3, 4],
+      "waves": [
+        {"wave_id": "W52",  "field_dates": "July 22-August 4, 2019"},
+        {"wave_id": "W101", "field_dates": "January 10-17, 2022"},
+        {"wave_id": "W125", "field_dates": "March 27-April 2, 2023"},
+        {"wave_id": "W149", "field_dates": "July 1-7, 2024"}
+      ]
+    }
+  },
+
+  "task_exchangeability_notes": {
+    "tier_1_strong":            ["SATIS", "SATISFPERS"],
+    "tier_2_scaled_binarizable":["REDIST_SATIS", "CANDHOUSAT", "SATISPRESCAND", "SATCAND_POST", "PRICANDSAT_R"],
+    "tier_3_population_screened":["JOBSAT", "PRICANDSAT_R"],
+    "tier_4_attitude_cousins":  ["TRACK", "POL1JB", "POL1DT", "INSTFAV_FED", "INSTFAV_STAT", "INSTFAV_LOC", "INSTFAV_CONG", "INSTFAV_COURT"],
+
+    "rationale": "Tier 1 items are the only ones with native two-option Satisfied/Dissatisfied responses, so they are most plausibly exchangeable in form with the running SATIS example. Tier 2 share the satisfied/dissatisfied semantic frame but require binarization, which adds a measurement-design difference into ∆̂_j. Tier 3 changes the underlying population (employment, party). Tier 4 abandons the satisfaction wording but preserves the binary positive/negative attitude frame — useful if you want to argue exchangeability at the level of 'positive-vs-negative attitude toward {target}' rather than 'satisfaction with {target}'. Note that within Tier 4, mixing referents (presidential approval, institutional favorability, country direction) introduces target heterogeneity that strict exchangeability may not survive; the principled move is to either (a) keep targets matched (e.g. only TRACK with SATIS, both about the country) or (b) condition demographics finely enough that target-level shifts are absorbed by group-level means.",
+
+    "T_counts": {
+      "satisfaction_only_pooled": 26,
+      "satisfaction_only_pooled_breakdown": {"SATIS":18, "SATISFPERS":1, "REDIST_SATIS":1, "CANDHOUSAT":1, "SATISPRESCAND":3, "SATCAND_POST":1, "PRICANDSAT_R_per_item":1, "JOBSAT":1},
+      "attitude_pooled_addition": 28,
+      "attitude_pooled_breakdown": {"TRACK":2, "POL1JB":9, "POL1DT":5, "INSTFAV_FED":2, "INSTFAV_STAT":2, "INSTFAV_LOC":2, "INSTFAV_CONG":5, "INSTFAV_COURT":4},
+      "alpha3_floor_at_T18":  0.105,
+      "alpha3_floor_at_T26":  0.074,
+      "alpha3_floor_at_T54":  0.036
+    }
+  }
+}

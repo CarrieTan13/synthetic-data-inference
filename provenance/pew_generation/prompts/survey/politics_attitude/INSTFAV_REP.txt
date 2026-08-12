@@ -1,0 +1,7 @@
+
+[INSTFAV_REP]
+Do you have a favorable or unfavorable opinion of the Republican Party?
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable

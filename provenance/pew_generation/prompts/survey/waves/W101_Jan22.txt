@@ -1,0 +1,515 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[SATIS] (skip if condition not met: FORM 1 (XFORM=1):)
+All in all, are you satisfied or dissatisfied with the way things are going in this country today?
+1 - Satisfied
+2 - Dissatisfied
+
+[YEARAHEAD] (skip if condition not met: FORM 2 (XFORM=2):)
+Looking ahead, as far as you are concerned, do you think that 2022 will be…
+1 - Better than 2021
+2 - Worse than 2021
+
+[POL1JB]
+Do you approve or disapprove of the way Joe Biden is handling his job as president?
+1 - Approve
+2 - Disapprove
+
+[POL1JBSTR] (skip if condition not met: IF POL1JB=1,2:)
+Do you of the way Joe Biden is handling his job as president…
+1 - Very strongly
+2 - Not so strongly
+
+[JBSUCCESS]
+In the long run, do you think Joe Biden will be…
+1 - A successful president
+2 - An unsuccessful president
+3 - Too early to tell
+
+[INSTFAV_a]
+Do you have a favorable or unfavorable opinion of each of the following? — The Republican Party
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+
+[INSTFAV_b]
+Do you have a favorable or unfavorable opinion of each of the following? — The Democratic Party
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+
+[INSTFAV_c]
+Do you have a favorable or unfavorable opinion of each of the following? — Congress
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+
+[INSTFAV_d]
+Do you have a favorable or unfavorable opinion of each of the following? — The Supreme Court
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+
+[FEEL_COUNTRY_FEAR]
+[DISPLAY RESPONSES IN ORDER]
+1 - Fearful
+2 - Not fearful
+
+[FEEL_COUNTRY_HOPEFUL]
+1 Hopeful
+2 - Not hopeful
+
+[FEEL_COUNTRY_ANGRY]
+1 Angry
+2 - Not angry
+
+[FEEL_COUNTRY_PROUD]
+1 Proud
+2 - Not proud
+
+[POLATTN]
+Compared with a few years ago, are you paying… [RANDOMLY DISPLAY RESPONSES 1-5 OR 5-1]
+1 - A lot more attention to politics
+2 - A little more attention to politics
+3 - About the same amount of attention to politics
+4 - A little less attention to politics
+5 - A lot less attention to politics
+
+[JBCONF] (open-end)
+Thinking about Joe Biden’s ability to handle a number of things, how confident are you that Joe Biden can do each of the following?
+
+[PUBH] (open-end)
+Handle the public health impact of the coronavirus outbreak
+
+[ECON] (open-end)
+Make good decisions about economic policy
+
+[IMMI] (open-end) (skip if condition not met: FORM 1 (XFORM=1):)
+Make wise decisions about immigration policy
+
+[CLSR] (open-end)
+Bring the country closer together CN Deal effectively with China
+
+[CRIS] (open-end) (skip if condition not met: FORM 2 (XFORM=2):)
+Handle an international crisis
+
+[CONG] (open-end)
+Work effectively with Congress
+
+[CRIM]
+Effectively handle law enforcement and criminal justice issues
+1 - Very confident
+2 - Somewhat confident
+3 - Not too confident
+4 - Not at all confident
+
+[BIDEFOCUS]
+Thinking about what Joe Biden has done as president, do you think he is listening…
+1 - More to liberal Democrats
+2 - More to moderate Democrats
+3 - About equally to moderate and liberal Democrats
+
+[BIDEFOCUS2]
+Thinking about what Joe Biden has done as president, do you think he SHOULD BE listening...
+1 - More to liberal Democrats
+2 - More to moderate Democrats
+3 - About equally to moderate and liberal Democrats
+
+[PTYISSUE_c]
+Which party would you say you agree with on each of the following policy areas? — Policies to deal with the economy
+
+[PTYISSUE_e]
+Which party would you say you agree with on each of the following policy areas? — Policies to deal with the health impact of the coronavirus (COVID-19)
+
+[PTYIDEADEM]
+Overall, would you say the DEMOCRATIC PARTY has…
+1 - A lot of good ideas
+2 - Some good ideas
+3 - A few good ideas
+4 - Almost no good ideas
+
+[PTYIDEAREP]
+Overall, would you say the REPUBLICAN PARTY has…
+1 - A lot of good ideas
+2 - Some good ideas
+3 - A few good ideas
+4 - Almost no good ideas
+
+[REPPTYTRAIT] (open-end)
+How well do each of the following phrases describe the REPUBLICAN PARTY? [NO ITEMS c-e]
+
+[DEMPTYTRAIT] (open-end)
+How well do each of the following phrases describe the DEMOCRATIC PARTY? [NO ITEMS c-e]
+
+[COVIDTHREAT_a]
+How much of a threat, if any, is the coronavirus outbreak for… — The health of the U.S. population as a whole
+1 - A major threat
+2 - A minor threat
+3 - Not a threat
+
+[COVIDTHREAT_b]
+How much of a threat, if any, is the coronavirus outbreak for… — Your personal health
+1 - A major threat
+2 - A minor threat
+3 - Not a threat
+
+[COVIDTHREAT_c]
+How much of a threat, if any, is the coronavirus outbreak for… — The U.S. economy
+1 - A major threat
+2 - A minor threat
+3 - Not a threat
+
+[COVIDTHREAT_d]
+How much of a threat, if any, is the coronavirus outbreak for… — Your personal financial situation
+1 - A major threat
+2 - A minor threat
+3 - Not a threat
+
+[COVID_FUT]
+Thinking about the problems the country is facing from the coronavirus outbreak, do you think...
+1 - The worst is behind us
+2 - The worst is still to come
+
+[COVID_INFECT_a]
+How concerned, if at all, are you that… — You might spread the coronavirus to other people without knowing that you have it
+1 - Very concerned
+2 - Somewhat concerned
+3 - Not too concerned
+4 - Not at all concerned
+
+[COVID_INFECT_b]
+How concerned, if at all, are you that… — You will get the coronavirus and require hospitalization
+1 - Very concerned
+2 - Somewhat concerned
+3 - Not too concerned
+4 - Not at all concerned
+
+[COVIDMASK1]
+In the past month, how often, if ever, have you worn a mask or face covering when in stores or other businesses?
+1 - All or most of the time
+2 - Some of the time
+3 - Hardly ever
+4 - Never
+5 - Have not gone to these types of places
+
+[REDIST_ATTN]
+As you may know, state legislative districts and congressional districts must be redrawn after the 2020 U.S. Census. This process is known as redistricting. How much have you heard or read about this process in your state?
+1 - A lot
+2 - A little
+3 - Nothing at all
+
+[REDIST_SATIS]
+Are you satisfied or dissatisfied with how redistricting is being handled in your state?
+1 - Very satisfied
+2 - Somewhat satisfied
+3 - Somewhat dissatisfied
+4 - Very dissatisfied
+5 - Not sure
+
+[UNDROPPL] (skip if condition not met: FORM 1 (XFORM=1):)
+As you may know, over the past several decades there has been a large reduction in the percentage of workers who are represented by unions. Thinking about working people, do you think this has been… [RANDOMLY DISPLAY RESPONSES 1-4 OR 4-1]
+1 - Very good for working people
+2 - Somewhat good for working people
+3 - Somewhat bad for working people
+4 - Very bad for working people
+
+[UNIONDROP] (skip if condition not met: FORM 2 (XFORM=2):)
+As you may know, over the past several decades there has been a large reduction in the percentage of workers who are represented by unions. Do you think this has been…
+1 - Very good for the country
+2 - Somewhat good for the country
+3 - Somewhat bad for the country
+4 - Very bad for the country
+
+[OLYMP_BOYCHRD]
+As you may know, the Winter Olympics will be held in China next month. The Biden administration has announced a “diplomatic boycott” of these Olympics. U.S. athletes will still compete, but U.S. government officials will not attend. How much have you read or heard about this decision?
+1 - A lot
+2 - A little
+3 - Nothing at all
+
+[OLYMP_BOYCAPP]
+Do you approve or disapprove of the U.S. diplomatic boycott of the Olympics in China?
+1 - Strongly approve
+2 - Somewhat approve
+3 - Somewhat disapprove
+4 - Strongly disapprove
+5 - Not sure
+
+[PRIPRES] (open-end)
+How much of a priority should each of the following be for the president and Congress to address this year?
+
+[PRIPRES_JOB] (open-end) (skip if condition not met: FORM 1 (XFORM=1) [SCREEN ONE, RANDOMIZE ITEMS ON SCREEN]:)
+Improving the job situation
+
+[PRIPRES_BD] (open-end)
+Reducing the budget deficit
+
+[PRIPRES_CRI] (open-end)
+Reducing crime
+
+[PRIPRES_CVD] (open-end)
+Dealing with the coronavirus outbreak
+
+[PRIPRES_HC] (open-end)
+Reducing health care costs
+
+[PRIPRES_TER] (open-end) (skip if condition not met: FORM 1 (XFORM=1) [SCREEN 2, RANDOMIZE ITEMS ON SCREEN]:)
+Defending the country from future terrorist attacks
+
+[PRIPRES_GT] (open-end)
+Dealing with global trade issues
+
+[PRIPRES_EDU] (open-end)
+Improving the educational system
+
+[PRIPRES_SC] (open-end)
+Taking steps to make the Social Security system financially sound
+
+[PRIPRES_IMM] (open-end) (skip if condition not met: FORM 2 (XFORM=2) [SCREEN 1, RANDOMIZE ITEMS ON SCREEN]:)
+Dealing with the issue of immigration
+
+[PRIPRES_EC] (open-end)
+Strengthening the nation’s economy
+
+[PRIPRES_GCC] (open-end)
+Dealing with global climate change
+
+[PRIPRES_JUS] (open-end)
+Addressing issues within the criminal justice system
+
+[PRIPRES_POOR] (open-end) (skip if condition not met: FORM 2 (XFORM=2) [SCREEN 2, RANDOMIZE ITEMS ON SCREEN]:)
+Dealing with the problems of poor people
+
+[PRIPRES_MIL] (open-end)
+Strengthening the U.S. military
+
+[PRIPRES_POL] (open-end)
+Improving the way the political system works in the U.S.
+
+[PRIPRES_RA] (open-end)
+Addressing issues around race in this country
+
+[PRIPRES_DA]
+Dealing with drug addiction
+1 - Top priority
+2 - Important but lower priority
+3 - Not too important
+4 - Should not be done
+
+[PRESWITHOP] (skip if condition not met: FORM 1 (XFORM=1):)
+This year, do you think Joe Biden should...
+1 - Try as best he can to work with Republican congressional leaders to accomplish things, even if it means disappointing some people who voted for him
+2 - Stand up to Republican congressional leaders on issues that are important to the people who voted for him, even if it means it’s harder to address critical problems facing the country
+
+[OPWITHPRES] (skip if condition not met: FORM 2 (XFORM=2):)
+This year, do you think Republican congressional leaders should...
+1 - Try as best they can to work with Joe Biden to accomplish things, even if it means disappointing some Republican voters
+2 - Stand up to Joe Biden on issues that are important to Republican voters, even if it means it’s harder to address critical problems facing the country
+
+[ECON1]
+Thinking about the nation’s economy… How would you rate economic conditions in this country today?
+1 - Excellent
+2 - Good
+3 - Only fair
+4 - Poor
+
+[ECON1B]
+A year from now, do you expect that economic conditions in the country as a whole will be…
+1 - Better
+2 - Worse
+3 - About the same as now
+
+[ECONLIST] (open-end)
+Thinking about some areas of the U.S. economy, how does each of the following compare to one year ago?
+
+[AVCG] (open-end) (skip if condition not met: FORM 1 (XFORM=1):)
+Availability of consumer goods
+
+[AFHC] (open-end)
+The cost of healthcare
+
+[GAS] (open-end)
+Gasoline prices
+
+[STOC] (open-end)
+The stock market
+
+[AVJ] (open-end) (skip if condition not met: FORM 2 (XFORM=2):)
+Availability of jobs
+
+[AFHO] (open-end)
+The cost of housing
+
+[PRCG] (open-end)
+Prices for food and consumer goods
+
+[BUDG]
+The federal budget deficit
+1 - A lot better than a year ago
+2 - A little better than a year ago
+3 - About the same as a year ago
+4 - A little worse than a year ago
+5 - A lot worse than a year ago
+
+[CHINA_US_ENEMY] (skip if condition not met: FORM 1 (XFORM=1):)
+On balance, do you think of China as a partner of the U.S., a competitor of the U.S. or an enemy of the U.S.?
+1 - Partner
+2 - Competitor
+3 - Enemy
+
+[RUS_US_ENEMY] (skip if condition not met: FORM 2 (XFORM=2):)
+On balance, do you think of Russia as a partner of the U.S., a competitor of the U.S. or an enemy of the U.S.?
+1 - Partner
+2 - Competitor
+3 - Enemy
+
+[COURTIDEO] (skip if condition not met: FORM 1 (XFORM=1):)
+In your view, do you think the current Supreme Court is...
+1 - Conservative
+2 - Middle of the road
+3 - Liberal
+
+[COURTPOWER] (skip if condition not met: FORM 2 (XFORM=2):)
+Do you think the U.S. Supreme Court has...
+1 - Too much power
+2 - Too little power
+3 - Right amount of power
+
+[COURTIDEO2] (skip if condition not met: FORM 2 (XFORM=2):)
+In your view, do you think the current Supreme Court is...
+1 - Very conservative
+2 - Somewhat conservative
+3 - Middle of the road
+4 - Somewhat liberal
+5 - Very liberal
+
+[SCOTUS_FOL]
+How much have you heard or read about recent cases being considered by the Supreme Court?
+1 - A lot
+2 - A little
+3 - Nothing at all
+
+[SCOTUS_PRTSN]
+Thinking about the Supreme Court, do you think justices should or should not bring their own political views into how they decide major cases?
+1 - Should do this
+2 - Should NOT do this
+
+[SCOTUS_JOB] (skip if condition not met: IF SCOTUS_PRTSN=2 AND FORM 2 (XFORM=2):)
+How would you rate the job Supreme Court justices are doing in keeping their own political views out of how they decide major cases?
+1 - Excellent
+2 - Good
+3 - Only fair
+4 - Poor
+5 - Not sure
+
+[SCOTUS_JOBREP] (open-end) (skip if condition not met: IF SCOTUSPRTSN=2 AND FORM 1 (XFORM=1):)
+How would you rate the job Supreme Court justices who were nominated by
+
+[REPUBLICAN]
+presidents are doing in keeping their own political views out of how they decide major cases?
+1 - Excellent
+2 - Good
+3 - Only fair
+4 - Poor
+5 - Not sure
+
+[SCOTUS_JOBDEM] (open-end) (skip if condition not met: IF SCOTUSPRTSN=2 AND FORM 1 (XFORM=1):)
+How would you rate the job Supreme Court justices who were nominated by
+
+[DEMOCRATIC]
+presidents are doing in keeping their own political views out of how they decide major cases?
+1 - Excellent
+2 - Good
+3 - Only fair
+4 - Poor
+5 - Not sure
+
+[JAN6ATTN]
+Overall, how much attention would you say has been paid to the riot at the U.S. Capitol and its impacts?
+1 - Too much attention
+2 - Too little attention
+3 - About the right amount of attention
+
+[JAN6CMTHEAR]
+As you may know, a committee in the House of Representatives is investigating the January 6, 2021 Capitol riot. How much, if anything, have you heard or read about this committee and the investigation?
+1 - A lot
+2 - A little
+3 - Nothing at all
+
+[JAN6CONFCM]
+How confident are you that the committee’s investigation is fair and reasonable?
+1 - Very confident
+2 - Somewhat confident
+3 - Not too confident
+4 - Not at all confident
+
+[JAN6_DTRESP]
+How much responsibility, if any, did Donald Trump bear for the violence and destruction committed by some of his supporters when they broke into the U.S. Capitol on January 6, 2021?
+1 - A lot
+2 - Some
+3 - None at all
+
+[RU_UKN_HRD]
+How much have you read or heard about Russia’s military buildup near its border with Ukraine?
+1 - A lot
+2 - A little
+3 - Nothing at all
+
+[RU_UKN_THRT]
+How much of a threat to U.S. interests is Russia’s military buildup near its border with Ukraine?
+1 - A major threat
+2 - A minor threat
+3 - Not a threat
+4 - Not sure
+
+[UNITEDREP]
+When it comes to the issues facing the country, do you think the REPUBLICAN PARTY is…
+1 - Completely united
+2 - Mostly united
+3 - Mostly divided
+4 - Completely divided
+
+[UNITEDDEM]
+When it comes to the issues facing the country, do you think the DEMOCRATIC PARTY is…
+1 - Completely united
+2 - Mostly united
+
+[IDENT_OE] (open-end)
+We're interested in knowing more about how people see themselves. Using single words or short phrases, list a few of the most important things about who you are. [OPEN-END, SHOW 1 SMALL TEXT BOX]
+
+[COVIDFOL]
+How closely have you been following news about the outbreak of the coronavirus strain known as COVID-19?
+1 - Very closely
+2 - Fairly closely
+3 - Not too closely
+4 - Not at all closely
+
+[COVIDDEAL]
+All in all, do you think that the coronavirus outbreak has been…
+1 - Made a BIGGER deal than it really is
+2 - Made a SMALLER deal than it really is
+3 - Approached about right
+
+[COVIDNATLOC]
+Do you pay more attention to news about the coronavirus outbreak at...
+1 - The state and local level
+2 - The national level
+3 - Both about equally
+
+[COVIDCONTROL]
+Which statement comes closer to your view, even if neither is exactly right?
+1 - The U.S. has controlled the outbreak as much as it could have
+2 - The U.S. has not controlled the outbreak as much as it could have
+
+[COVIDDISC]
+How often, if at all, are you discussing the coronavirus outbreak with others whether online, in person or over the phone?
+1 - Almost all the time
+2 - Most of the time
+3 - Sometimes
+4 - Hardly ever
+5 - Never

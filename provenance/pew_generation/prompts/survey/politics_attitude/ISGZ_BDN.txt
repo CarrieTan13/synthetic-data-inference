@@ -1,0 +1,8 @@
+
+[ISGZ_BDN]
+Do you approve or disapprove of the Biden administration's response to the Israel-Hamas war?
+1 - Strongly approve
+2 - Somewhat approve
+3 - Somewhat disapprove
+4 - Strongly disapprove
+5 - Not sure

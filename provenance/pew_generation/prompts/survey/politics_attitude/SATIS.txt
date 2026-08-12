@@ -1,0 +1,5 @@
+
+[SATIS]
+All in all, are you satisfied or dissatisfied with the way things are going in this country today?
+1 - Satisfied
+2 - Dissatisfied

@@ -1,0 +1,656 @@
+[HL1A]
+Which ONE of the following news stories, if any, would you be MOST LIKELY to read?
+1 - Presidential Race Ramps Up
+2 - State Chiefs Urge Congress to Act on Critical Law in American Education
+3 - Mentors Are the Secret Weapons of Successful Startups
+4 - Young Business Owner Creates Recipe for Success
+5 - Kim Kardashian Puts Every Curve on Display as She Endures Grueling Workout
+6 - Selma Director Talks Race, Gender in Entertainment Field
+7 - Huge Performance Bonuses Commonplace for NCAA Basketball Coaches
+8 - Volleyball and Soccer Top List of Preferred Olympic Tickets
+9 - {{HL1_STORY_9}}
+10 - {{HL1_STORY_10}}
+11 - I wouldn't like to read any of these stories
+
+[HL1B] (multi-select, skip if: HL1A = 11)
+Which OTHER stories (from the HL1A list, excluding what you already picked), if any, would you be LIKELY to read? Check all that apply. Respond with a list of option codes from HL1A, or [11] for none.
+1 - Presidential Race Ramps Up
+2 - State Chiefs Urge Congress to Act on Critical Law in American Education
+3 - Mentors Are the Secret Weapons of Successful Startups
+4 - Young Business Owner Creates Recipe for Success
+5 - Kim Kardashian Puts Every Curve on Display as She Endures Grueling Workout
+6 - Selma Director Talks Race, Gender in Entertainment Field
+7 - Huge Performance Bonuses Commonplace for NCAA Basketball Coaches
+8 - Volleyball and Soccer Top List of Preferred Olympic Tickets
+9 - {{HL1_STORY_9}}
+10 - {{HL1_STORY_10}}
+11 - I wouldn't like to read any other stories
+
+[HL1C] (multi-select, skip if: HL1A = 11 and HL1B = [11])
+Which HL1A stories, if any, would you AVOID reading? Check all that apply. Respond with a list of option codes from HL1A (from those you did NOT pick in HL1A or HL1B), or [11] for none.
+1 - Presidential Race Ramps Up
+2 - State Chiefs Urge Congress to Act on Critical Law in American Education
+3 - Mentors Are the Secret Weapons of Successful Startups
+4 - Young Business Owner Creates Recipe for Success
+5 - Kim Kardashian Puts Every Curve on Display as She Endures Grueling Workout
+6 - Selma Director Talks Race, Gender in Entertainment Field
+7 - Huge Performance Bonuses Commonplace for NCAA Basketball Coaches
+8 - Volleyball and Soccer Top List of Preferred Olympic Tickets
+9 - {{HL1_STORY_9}}
+10 - {{HL1_STORY_10}}
+11 - I would not avoid any of these stories
+
+[HL2A]
+Which ONE of the following news stories, if any, would you be MOST LIKELY to read?
+1 - Former Obama Administration Official Running for Congress
+2 - Major Supreme Court Cases in 2015
+3 - What Record-High Margin Debt Means for Stocks
+4 - Turning Microcelebrity into a Big Business
+5 - Paul McCartney Surprises Fans with Beatles Hit
+6 - One Direction Working on a New, More Oasis-y Album
+7 - How Night Games Changed Baseball History
+8 - Best Football Teams Not to Win Title
+9 - {{HL2_STORY_9}}
+10 - {{HL2_STORY_10}}
+11 - I wouldn't like to read any of these stories
+
+[HL2B] (multi-select, skip if: HL2A = 11)
+Which OTHER stories (from the HL2A list, excluding what you already picked), if any, would you be LIKELY to read? Check all that apply. Respond with a list of option codes from HL2A, or [11] for none.
+1 - Former Obama Administration Official Running for Congress
+2 - Major Supreme Court Cases in 2015
+3 - What Record-High Margin Debt Means for Stocks
+4 - Turning Microcelebrity into a Big Business
+5 - Paul McCartney Surprises Fans with Beatles Hit
+6 - One Direction Working on a New, More Oasis-y Album
+7 - How Night Games Changed Baseball History
+8 - Best Football Teams Not to Win Title
+9 - {{HL2_STORY_9}}
+10 - {{HL2_STORY_10}}
+11 - I wouldn't like to read any other stories
+
+[HL2C] (multi-select, skip if: HL2A = 11 and HL2B = [11])
+Which HL2A stories, if any, would you AVOID reading? Check all that apply. Respond with a list of option codes from HL2A (from those you did NOT pick in HL2A or HL2B), or [11] for none.
+1 - Former Obama Administration Official Running for Congress
+2 - Major Supreme Court Cases in 2015
+3 - What Record-High Margin Debt Means for Stocks
+4 - Turning Microcelebrity into a Big Business
+5 - Paul McCartney Surprises Fans with Beatles Hit
+6 - One Direction Working on a New, More Oasis-y Album
+7 - How Night Games Changed Baseball History
+8 - Best Football Teams Not to Win Title
+9 - {{HL2_STORY_9}}
+10 - {{HL2_STORY_10}}
+11 - I would not avoid any of these stories
+
+[HL3A]
+Which ONE of the following news stories, if any, would you be MOST LIKELY to read?
+1 - Global Warming Linked To More Extreme Weather and Weaker Jet Stream
+2 - Climate Change Not To Blame for Extreme Winters
+3 - Climate Change Debate Heats Up
+4 - How to Choose a Papaya that's Not Genetically Modified
+5 - FDA Official: Genetically Modified Foods 'As Safe As' Other Foods
+6 - Farmer Tries To Find Balance with Genetically Modified Crops
+7 - Australopithecus Sediba: Scientists Find 2-Million-Year-Old Human, Ape Missing Link
+8 - Evolution: Not All Scientists Agree On the Evidence
+9 - Evolution Battle Continues
+10 - Fear Measles, Not Vaccines
+11 - Vaccine Safety Is a Natural Concern for Parents
+12 - The Making of a Vaccine
+13 - I wouldn't like to read any of these stories
+
+[HL3B] (multi-select, skip if: HL3A = 13)
+Which OTHER stories (from the HL3A list, excluding what you already picked), if any, would you be LIKELY to read? Check all that apply. Respond with a list of option codes from HL3A, or [13] for none.
+1 - Global Warming Linked To More Extreme Weather and Weaker Jet Stream
+2 - Climate Change Not To Blame for Extreme Winters
+3 - Climate Change Debate Heats Up
+4 - How to Choose a Papaya that's Not Genetically Modified
+5 - FDA Official: Genetically Modified Foods 'As Safe As' Other Foods
+6 - Farmer Tries To Find Balance with Genetically Modified Crops
+7 - Australopithecus Sediba: Scientists Find 2-Million-Year-Old Human, Ape Missing Link
+8 - Evolution: Not All Scientists Agree On the Evidence
+9 - Evolution Battle Continues
+10 - Fear Measles, Not Vaccines
+11 - Vaccine Safety Is a Natural Concern for Parents
+12 - The Making of a Vaccine
+13 - I wouldn't like to read any other stories
+
+[HL3C] (multi-select, skip if: HL3A = 13 and HL3B = [13])
+Which HL3A stories, if any, would you AVOID reading? Check all that apply. Respond with a list of option codes from HL3A (from those you did NOT pick in HL3A or HL3B), or [13] for none.
+1 - Global Warming Linked To More Extreme Weather and Weaker Jet Stream
+2 - Climate Change Not To Blame for Extreme Winters
+3 - Climate Change Debate Heats Up
+4 - How to Choose a Papaya that's Not Genetically Modified
+5 - FDA Official: Genetically Modified Foods 'As Safe As' Other Foods
+6 - Farmer Tries To Find Balance with Genetically Modified Crops
+7 - Australopithecus Sediba: Scientists Find 2-Million-Year-Old Human, Ape Missing Link
+8 - Evolution: Not All Scientists Agree On the Evidence
+9 - Evolution Battle Continues
+10 - Fear Measles, Not Vaccines
+11 - Vaccine Safety Is a Natural Concern for Parents
+12 - The Making of a Vaccine
+13 - I would not avoid any of these stories
+
+[NEWS1] (multi-select)
+Please indicate all of the following news sources that you have HEARD OF, regardless of whether you use them or not. If you are unsure, please DO NOT include it. Check all that apply.
+1 - Sean Hannity Show (radio)
+2 - NBC News
+3 - Yahoo News
+4 - CNN
+5 - Huffington Post
+6 - Wall Street Journal
+7 - Drudge Report
+8 - New York Times
+9 - NPR
+
+[NEWS2] (multi-select, skip if: NEWS1 contains no sources)
+Of the sources you selected in NEWS1, please indicate which ones you got news from about GOVERNMENT AND POLITICS IN THE PAST WEEK. Pick only from the codes you selected in NEWS1. Check all that apply.
+1 - Sean Hannity Show (radio)
+2 - NBC News
+3 - Yahoo News
+4 - CNN
+5 - Huffington Post
+6 - Wall Street Journal
+7 - Drudge Report
+8 - New York Times
+9 - NPR
+
+[NEWS3] (multi-select)
+Now, please think about where you get news in general, REGARDLESS OF THE TOPIC. Please indicate all of the sources that you got news from IN THE PAST WEEK (from any medium). Exclude sources already selected in NEWS2. Check all that apply.
+1 - Rush Limbaugh Show (radio)
+2 - ABC News
+3 - CBS News
+4 - NBC News
+5 - Washington Post
+6 - The New York Times
+7 - Huffington Post
+8 - Drudge Report
+9 - Breitbart
+10 - Google News
+11 - NPR
+12 - Real Time with Bill Maher
+13 - Fox News Cable Channel
+14 - CNN
+15 - MSNBC
+16 - Daily Show
+17 - Last Week Tonight with John Oliver
+18 - Sean Hannity Show (radio)
+19 - Local television news
+20 - Wall Street Journal
+21 - USA Today
+22 - Yahoo News
+23 - NewsHour on PBS
+24 - Local newspaper
+
+[NEWSATT_a]
+During the past week, how much attention did you pay to news about … — Science
+1 - A great deal of attention
+2 - Some attention
+3 - Not too much attention
+4 - No attention at all
+
+[NEWSATT_b]
+During the past week, how much attention did you pay to news about … — Government and politics
+1 - A great deal of attention
+2 - Some attention
+3 - Not too much attention
+4 - No attention at all
+
+[NEWSATT_c]
+During the past week, how much attention did you pay to news about … — Health and medicine
+1 - A great deal of attention
+2 - Some attention
+3 - Not too much attention
+4 - No attention at all
+
+[NEWSATT_d]
+During the past week, how much attention did you pay to news about … — Environmental issues
+1 - A great deal of attention
+2 - Some attention
+3 - Not too much attention
+4 - No attention at all
+
+[SOURCES] (multi-select)
+Please indicate all of the sources that you watched, read, or listened to IN THE PAST 30 DAYS. If you are unsure, please DO NOT include it. Check all that apply.
+1 - Discovery Channel
+2 - Weather Channel
+3 - NOVA on PBS
+4 - Blogs devoted to science, such as Ars Technica or Science blogs on Wired
+5 - Science-related radio shows or podcasts
+6 - Science Channel
+7 - Scientific American, Popular Science, Smithsonian Magazine, or Psychology Today
+8 - Consumer Reports
+9 - National Geographic
+10 - Bill Nye the Science Guy
+11 - Dr. Oz
+12 - I did not read, watch, or listen to any of these sources
+
+[FAVORG_a]
+What is your overall opinion of each of the following corporations and agencies? — Monsanto
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_b]
+What is your overall opinion of each of the following corporations and agencies? — United States Department of Agriculture, USDA
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_c]
+What is your overall opinion of each of the following corporations and agencies? — The National Aeronautic and Space Administration, NASA
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_d]
+What is your overall opinion of each of the following corporations and agencies? — The National Oceanic and Atmospheric Administration, NOAA
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_e]
+What is your overall opinion of each of the following corporations and agencies? — The Centers for Disease Control, the CDC
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_f]
+What is your overall opinion of each of the following corporations and agencies? — General Mills
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[FAVORG_g]
+What is your overall opinion of each of the following corporations and agencies? — Grocery stores specializing in organic and natural food, like Whole Foods
+1 - Very favorable
+2 - Somewhat favorable
+3 - Somewhat unfavorable
+4 - Very unfavorable
+8 - Never heard of / Not sure
+
+[KHJ1]
+From what you've read and heard, is there solid evidence that the average temperature on earth has been getting warmer over the past few decades, or not?
+1 - Yes, solid evidence that earth is getting warmer
+2 - No, not solid evidence
+8 - Don't know
+
+[KHJ2A] (skip if: KHJ1 != 1)
+Do you believe that the earth is getting warmer mostly because of…
+1 - Human activity such as burning fossil fuels
+2 - Natural patterns in the earth's environment
+8 - Don't know
+
+[KHJ2B] (skip if: KHJ1 != 2)
+Do you think that we just don't know enough yet about whether the Earth is getting warmer or do you think it's just not happening?
+1 - Just don't know enough yet
+2 - Just not happening
+8 - Don't know
+
+[KHJ6]
+Just your impression, which one of the following statements do you think is most accurate?
+1 - Most scientists believe that global warming is occurring
+2 - Most scientists believe that global warming is not occurring
+3 - Most scientists are unsure about whether global warming is occurring or not
+8 - No opinion
+
+[KHJ8_2]
+Do you think genetically engineered or modified foods, such as corn, are safe or not safe to eat?
+1 - Safe to eat
+2 - Not safe to eat
+8 - Don't know
+
+[AGENCYTRUST]
+How much do you trust federal agencies, like the United States Department of Agriculture (USDA) and the Food and Drug Administration (FDA), to provide impartial and accurate findings on the safety of genetically engineered or modified crops?
+1 - A great deal
+2 - A fair amount
+3 - Just some
+4 - Very little
+8 - Don't know
+
+[KHJ10]
+In the last week, how much, if any, genetically engineered or modified food do you think you ate?
+1 - Great deal
+2 - Some
+3 - Not much
+4 - None at all
+8 - Don't know
+
+[VACSAFE]
+Turning now to vaccines... Thinking about vaccines for diseases such as measles, mumps, and rubella, do you think these vaccines are…
+1 - Safe for healthy children
+2 - Not safe for healthy children
+8 - Don't know
+
+[VACAUT]
+How likely do you think it is that vaccines given to children for diseases like measles, mumps, and rubella can cause neurological disorders like autism?
+1 - Very likely
+2 - Somewhat likely
+3 - Not very likely
+4 - Not at all likely
+8 - Don't know
+
+[EVOPERS]
+Which comes closer to your view?
+1 - Humans have evolved over time
+2 - Humans have existed in their present form since the beginning of time
+8 - Don't know
+
+[EVOSCI]
+From what you've heard or read, do scientists generally agree that humans evolved over time, or do they not generally agree about this?
+1 - Generally agree that humans evolved over time
+2 - Do not generally agree that humans evolved over time
+8 - Don't know
+
+[SCICONS] (multi-select)
+Which, if any, of the following did you do IN THE PAST 30 DAYS? Check all that apply.
+1 - Shopped at a grocery store specializing in organic and natural food, like Whole Foods
+2 - Used Roundup or a similar herbicide on weeds
+3 - Bought food from a local farmer's market
+4 - Worked in your home garden
+5 - Bought bottled water
+6 - Drove an SUV
+7 - Used reusable bags for grocery shopping
+8 - Drove an electric or hybrid car
+9 - Lived in a home with solar panels
+10 - Gave money to a charity or organization dedicated to an environmental cause
+11 - Did environmental volunteer work, such as planting trees or participating in a nature clean-up
+12 - Avoided genetically modified food
+13 - I did not do any of these
+
+[EXERCISE] (multi-select)
+Which, if any, of the following do you do in A TYPICAL WEEK? Check all that apply.
+1 - Work out at a gym
+2 - Play a competitive sport
+3 - Run, walk, bike or swim for exercise
+4 - Take vitamins or nutritional supplements
+5 - I do not do any of these
+
+[SCICHOICE] (multi-select)
+Which of the following would you do if you had the chance? Check all that apply.
+1 - Recycle paper, aluminum, glass, or plastic
+2 - Buy organic food
+3 - Buy food labeled as GMO-free
+4 - Eat at a restaurant advertising that it does not serve genetically modified food
+5 - Drive your car to work instead of taking public transportation
+6 - I would not do any of these
+
+[KNOSCT13]
+What gas is made as a consequence of burning coal or oil?
+1 - Carbon dioxide
+2 - Hydrogen
+3 - Helium
+4 - Radon
+8 - Don't know
+
+[KNOSCT14]
+What gas do most scientists believe causes temperatures in the atmosphere to rise?
+1 - Carbon dioxide
+2 - Hydrogen
+3 - Helium
+4 - Radon
+8 - Don't know
+
+[KNOSCT15]
+According to the theory of evolution, human beings, as we know them today, developed from an earlier species of animal.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT16]
+Because most people received a smallpox vaccine, smallpox outbreaks no longer occur.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT17]
+Vaccines contain viruses that are either killed or weakened to the point that they don't cause disease.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT18]
+Vaccines work by helping the body fight a disease.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT19]
+Eating genetically modified food changes a person's genetic makeup.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT20]
+Regular food does not contain genes, but genetically modified food does.
+1 - True
+2 - False
+8 - Don't know
+
+[KNOSCT21] (multi-select)
+Which of the following foods, or ingredients, has a genetically modified version currently available for human consumption in the United States? Check all that apply. If you are unsure, please DO NOT include it.
+1 - Wheat
+2 - Corn
+3 - Tomato
+4 - Soy
+5 - Papaya
+6 - Pink grapefruit
+
+[GMOLAW]
+Has the state in which you live passed legislation requiring that genetically modified foods be labeled?
+1 - Yes
+2 - No
+8 - Don't know
+
+[GMOBAL] (skip if: GMOLAW = 1)
+In your state's next election, will there be a measure on the ballot requiring that genetically modified foods be labeled?
+1 - Yes
+2 - No
+8 - Don't know
+
+[SCIREL_a]
+Please indicate how much you agree or disagree with each of the following statements: — Altering genes in plants or animals is against the will of God.
+1 - Strongly agree
+2 - Somewhat agree
+3 - Undecided
+4 - Somewhat disagree
+5 - Strongly disagree
+
+[SCIREL_b]
+Please indicate how much you agree or disagree with each of the following statements: — Science and religion are incompatible.
+1 - Strongly agree
+2 - Somewhat agree
+3 - Undecided
+4 - Somewhat disagree
+5 - Strongly disagree
+
+[SCIREL_c]
+Please indicate how much you agree or disagree with each of the following statements: — We rely too much on science and not enough on faith.
+1 - Strongly agree
+2 - Somewhat agree
+3 - Undecided
+4 - Somewhat disagree
+5 - Strongly disagree
+
+[SCIREL_d]
+Please indicate how much you agree or disagree with each of the following statements: — Most scientists are hostile to religion.
+1 - Strongly agree
+2 - Somewhat agree
+3 - Undecided
+4 - Somewhat disagree
+5 - Strongly disagree
+
+[DROUGHT]
+Do you live in a region that has been affected by a drought in the past five years?
+1 - Yes
+2 - No
+8 - Don't know
+
+[DRTCON]
+In the past five years, have you personally experienced any consequences from a drought?
+1 - Yes
+2 - No
+8 - Don't know
+
+[STORMS]
+Do you believe that storms in your region have become more intense over the past five years?
+1 - Yes
+2 - No
+8 - Don't know
+
+[SVWEATH] (multi-select)
+In the past five years, please indicate whether you have experienced any of the following severe weather events. Check all that apply.
+1 - Blizzard
+2 - Hurricane
+3 - Tornado
+4 - Polar vortex
+5 - Dust storm
+6 - Flood
+7 - I have not experienced any of these severe weather events
+
+[LIVENEAR] (multi-select)
+Do you live within 25 miles of any of the following? Check all that apply.
+1 - A corn field, soybean field, or papaya orchard
+2 - An oil or coal refinery
+3 - A coal mine
+4 - A nuclear power plant
+5 - The proposed Keystone pipeline route
+6 - A designated toxic waste site
+7 - A train line carrying oil or other chemicals
+8 - A wind farm
+9 - A fracking site
+10 - A manufacturing plant that produces chemicals
+11 - A polluted body of water, such as a river, creek, or lake
+12 - I do not live within 25 miles of any of these
+
+[WORKSELF] (multi-select)
+Do you work in any of the following industries? Check all that apply.
+1 - Energy
+2 - Food processing
+3 - Farming or ranching
+4 - Meteorology
+5 - Chemical or genetic engineering
+6 - Natural gas extraction (fracking)
+7 - Coal mining
+8 - Nuclear power
+9 - Health care
+10 - Science education
+11 - I do not work in any of these industries
+
+[WORKFAM] (multi-select)
+Do you have any family members or close friends who work in any of the following industries? Check all that apply.
+1 - Energy
+2 - Food processing
+3 - Farming or ranching
+4 - Meteorology
+5 - Chemical or genetic engineering
+6 - Natural gas extraction (fracking)
+7 - Coal mining
+8 - Nuclear power
+9 - Health care
+10 - Science education
+11 - No one close to me works in any of these industries
+
+[SCIENTIST] (multi-select)
+For this next question, we'd like you to think about media coverage of "scientists' views" on issues like climate change and genetically modified food. Which of the following people would you consider to be a scientist? Check all that apply.
+1 - A person with a PhD in chemistry or biology
+2 - A person with a PhD in psychology, sociology, or communication
+3 - A high school science teacher
+4 - A person who publishes new scientific research in academic journals
+5 - A person who works in a science-related job
+6 - An engineer
+7 - A doctor who has a medical degree
+8 - A dentist who has an advanced degree in dentistry
+9 - An undergraduate student studying science
+10 - A person who is generally interested in science
+
+[FAVPOL_a]
+What is your overall opinion of each of the following? — Hillary Clinton
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_b]
+What is your overall opinion of each of the following? — Jeb Bush
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_c]
+What is your overall opinion of each of the following? — Bill Clinton
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_d]
+What is your overall opinion of each of the following? — Ted Cruz
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_e]
+What is your overall opinion of each of the following? — Mike Huckabee
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_f]
+What is your overall opinion of each of the following? — Rand Paul
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_g]
+What is your overall opinion of each of the following? — Joe Biden
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_h]
+What is your overall opinion of each of the following? — George W. Bush
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_i]
+What is your overall opinion of each of the following? — Marco Rubio
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure
+
+[FAVPOL_j]
+What is your overall opinion of each of the following? — Scott Walker
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable
+5 - Never heard of / Not sure

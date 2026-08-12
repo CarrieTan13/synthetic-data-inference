@@ -1,0 +1,10 @@
+{
+  "description": "Randomization configuration for Politics_attitude0 (broader positive/negative-attitude question family — satisfaction, country direction, presidential approval, institutional favorability). Like Politics_satisfaction0, this is a pool of T candidate exchangeable historical tasks rather than a single wave's instrument.",
+  "content_assignments": [],
+  "option_order": {},
+  "item_order": {},
+  "form_randomization": {},
+  "question_order": [],
+  "block_order": [],
+  "screen_order": {}
+}

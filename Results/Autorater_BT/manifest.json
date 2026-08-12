@@ -1,0 +1,276 @@
+{
+  "app": "Autorater_BT",
+  "n_files": 27,
+  "files": [
+    {
+      "task_def": "BT_m34",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3636,
+      "path": "Autorater_BT/BT_m34/alg1/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "alg4",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 90.0,
+      "mean_width_clip": 0.1323,
+      "path": "Autorater_BT/BT_m34/alg4/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 75.0,
+      "mean_width_clip": 0.078,
+      "path": "Autorater_BT/BT_m34/synth_only/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 100.0,
+      "mean_width_clip": 0.337,
+      "path": "Autorater_BT/BT_m34/alg1/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "alg4",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 85.0,
+      "mean_width_clip": 0.1211,
+      "path": "Autorater_BT/BT_m34/alg4/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 65.0,
+      "mean_width_clip": 0.0683,
+      "path": "Autorater_BT/BT_m34/synth_only/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "alg1",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3272,
+      "path": "Autorater_BT/BT_m34/alg1/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "alg4",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 80.0,
+      "mean_width_clip": 0.1084,
+      "path": "Autorater_BT/BT_m34/alg4/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m34",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 40,
+      "coverage": 60.0,
+      "mean_width_clip": 0.0608,
+      "path": "Autorater_BT/BT_m34/synth_only/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 100.0,
+      "mean_width_clip": 0.361,
+      "path": "Autorater_BT/BT_m24/alg1/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg4",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 92.0,
+      "mean_width_clip": 0.1324,
+      "path": "Autorater_BT/BT_m24/alg4/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 76.0,
+      "mean_width_clip": 0.0776,
+      "path": "Autorater_BT/BT_m24/synth_only/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3371,
+      "path": "Autorater_BT/BT_m24/alg1/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg4",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 88.0,
+      "mean_width_clip": 0.1215,
+      "path": "Autorater_BT/BT_m24/alg4/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 64.0,
+      "mean_width_clip": 0.0679,
+      "path": "Autorater_BT/BT_m24/synth_only/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg1",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 100.0,
+      "mean_width_clip": 0.308,
+      "path": "Autorater_BT/BT_m24/alg1/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "alg4",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 80.0,
+      "mean_width_clip": 0.1015,
+      "path": "Autorater_BT/BT_m24/alg4/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m24",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 50,
+      "coverage": 60.0,
+      "mean_width_clip": 0.0605,
+      "path": "Autorater_BT/BT_m24/synth_only/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3646,
+      "path": "Autorater_BT/BT_m44/alg1/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg4",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 93.3,
+      "mean_width_clip": 0.1495,
+      "path": "Autorater_BT/BT_m44/alg4/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 73.3,
+      "mean_width_clip": 0.0799,
+      "path": "Autorater_BT/BT_m44/synth_only/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3511,
+      "path": "Autorater_BT/BT_m44/alg1/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg4",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 86.7,
+      "mean_width_clip": 0.1296,
+      "path": "Autorater_BT/BT_m44/alg4/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 66.7,
+      "mean_width_clip": 0.0699,
+      "path": "Autorater_BT/BT_m44/synth_only/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg1",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3274,
+      "path": "Autorater_BT/BT_m44/alg1/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "alg4",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 80.0,
+      "mean_width_clip": 0.1167,
+      "path": "Autorater_BT/BT_m44/alg4/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "BT_m44",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 30,
+      "coverage": 60.0,
+      "mean_width_clip": 0.0623,
+      "path": "Autorater_BT/BT_m44/synth_only/alpha020__prop_127.csv"
+    }
+  ]
+}

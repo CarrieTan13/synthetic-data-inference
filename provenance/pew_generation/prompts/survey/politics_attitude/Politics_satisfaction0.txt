@@ -1,0 +1,58 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[SATIS]
+All in all, are you satisfied or dissatisfied with the way things are going in this country today?
+1 - Satisfied
+2 - Dissatisfied
+
+[SATISFPERS]
+Overall, are you satisfied or dissatisfied with the way things are going in YOUR LIFE today?
+1 - Satisfied
+2 - Dissatisfied
+
+[REDIST_SATIS]
+Are you satisfied or dissatisfied with how redistricting is being handled in your state?
+1 - Very satisfied
+2 - Somewhat satisfied
+3 - Somewhat dissatisfied
+4 - Very dissatisfied
+5 - Not sure
+
+[CANDHOUSAT]
+How satisfied are you with the choice of candidates for Congress in your district this November?
+1 - Very satisfied
+2 - Somewhat satisfied
+3 - Not too satisfied
+4 - Not at all satisfied
+
+[SATISPRESCAND]
+What is your opinion of the presidential candidates for this year? Would you say that you are…
+1 - Very satisfied
+2 - Fairly satisfied
+3 - Not too satisfied
+4 - Not at all satisfied
+
+[JOBSAT]
+Overall, how satisfied are you with your job?
+1 - Extremely satisfied
+2 - Very satisfied
+3 - Somewhat satisfied
+4 - Not too satisfied
+5 - Not at all satisfied
+
+[SATCAND_POST]
+Now that the campaign is over, how satisfied were you with the choice of presidential candidates? Would you say that you were…
+1 - Very satisfied
+2 - Fairly satisfied
+3 - Not too satisfied
+4 - Not at all satisfied
+
+[PRICANDSAT_R]
+Now thinking about some of the candidates running for the Republican nomination for president… Regardless of who your first choice is, how would you feel if [CANDIDATE] became the Republican nominee in 2024?
+1 - Very satisfied
+2 - Somewhat satisfied
+3 - Somewhat dissatisfied
+4 - Very dissatisfied
+5 - Have not heard enough to say

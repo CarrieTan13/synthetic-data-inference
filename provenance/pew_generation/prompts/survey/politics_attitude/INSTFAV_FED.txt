@@ -1,0 +1,7 @@
+
+[INSTFAV_FED]
+Do you have a favorable or unfavorable opinion of the federal government in Washington?
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable

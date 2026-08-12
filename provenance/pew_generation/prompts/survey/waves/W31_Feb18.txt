@@ -1,0 +1,820 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[SATISF]
+All in all, are you satisfied or dissatisfied with the way things are going in this country today?
+1 - Satisfied
+2 - Dissatisfied
+
+[CONF_a]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — Elected officials
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[CONF_b]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — The news media
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[CONF_c]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — The military
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[CONF_d]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — Religious leaders
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[CONF_e]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — Business leaders
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[CONF_f]
+How much confidence, if any, do you have in each of the following to act in the best interests of the public? — Scientists
+1 - A great deal of confidence
+2 - A fair amount of confidence
+3 - Not too much confidence
+4 - No confidence at all
+
+[POL1DT]
+Do you approve or disapprove of the way Donald Trump is handling his job as President?
+1 - Approve
+2 - Disapprove
+
+[POL1DTSTR] (skip if condition not met: POL1DT=1 or 2 (ASK IF ANSWERED POL1DT))
+Do you of the way Donald Trump is handling his job as President…
+1 - Very strongly
+2 - Not so strongly
+
+[FOLGOV]
+Would you say you follow what’s going on in government and public affairs…
+1 - Most of the time
+2 - Some of the time
+3 - Only now and then
+4 - Hardly at all
+
+[OFTVOTE]
+How often would you say you vote?
+1 - Always
+2 - Nearly always
+3 - Part of the time
+4 - Seldom
+
+[MATTERSCONG]
+Thinking about how you feel about the 2018 congressional election, where would you place yourself on the following scale?
+1 - 1 = Really matters which party wins control of Congress
+2 - 2
+3 - 3
+4 - 4 = Doesn’t really matter which party wins control of Congress
+
+[CONG] (skip if condition not met: if not living in DC)
+If the elections for the U.S. House of Representatives were being held TODAY, who would you vote for?
+1 - The Republican Party’s candidate
+2 - The Democratic Party’s candidate
+3 - Another candidate
+4 - Not sure
+
+[CONGA] (skip if condition not met: if not living in DC AND (CONG=4 or 99 (not sure or refused)))
+As of TODAY, who do you LEAN more to for the U.S. House of Representatives?
+1 - Lean to the Republican Party’s candidate
+2 - Lean to the Democratic Party’s candidate
+3 - Lean to another candidate
+4 - Not sure
+
+[TALKPOL] (open-end)
+Now, thinking about the people you talk with, whether in person, over the phone, or electronically… How often do you discuss government and politics with others? 1. Nearly every day 2. A few times a week 3. A few times a month 4. Less often []
+
+[COREUSDEM]
+Thinking about the fundamental design and structure of American government, which comes closer to your view?
+1 - Significant changes to the design and structure are needed to make it work for current times
+2 - The design and structure serves the country well and does not need significant changes
+
+[IMPTUS_a]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — Government policies generally reflect the views of most Americans
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_b]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The government conducts its work openly and transparently
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_c]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The executive, legislative and judicial branches of government each keep the others from having too much power
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_d]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — People who give a lot of money to elected officials do not have more political influence than other people
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_e]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The tone of debate among political leaders is respectful
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_f]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — Republican and Democratic elected officials work together on important issues
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_g]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — Elected officials face serious consequences if they engage in misconduct
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS_h]
+Now we’re going to ask you about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — Judges are not influenced by political parties
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[WELLUS_a]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — Government policies generally reflect the views of most Americans
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_b]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — The government conducts its work openly and transparently
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_c]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — The executive, legislative and judicial branches of government each keep the others from having too much power
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_d]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — People who give a lot of money to elected officials do not have more political influence than other people
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_e]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — The tone of debate among political leaders is respectful
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_f]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — Republican and Democratic elected officials work together on important issues
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_g]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — Elected officials face serious consequences if they engage in misconduct
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WELLUS_h]
+Now thinking about how things actually are in the U.S. today, HOW WELL does each of the following describe the country? — Judges are not influenced by political parties
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[GOVVOTEREP] (open-end) (skip if condition not met: xform=1 (ASK FORM 1))
+Thinking about a new bill passed in a state with a Republican governor… If most people in the state support the bill, but most Republicans in the state oppose it, what should the governor do? 1. Sign the bill 2. Veto the bill []
+
+[GOVVOTEDEM] (open-end) (skip if condition not met: xform=3 (ASK FORM 3))
+Thinking about a new bill passed in a state with a Democratic governor… If most people in the state support the bill, but most Democrats in the state oppose it, what should the governor do? 1. Sign the bill 2. Veto the bill []
+
+[GOVVOTEGEN] (open-end) (skip if condition not met: xform=2 (ASK FORM 2))
+Thinking about a new bill passed in a state… If most people in the state support the bill, but most people who voted for the governor oppose it, what should the governor do? 1. Sign the bill 2. Veto the bill []
+
+[GOVVOTEGENREV] (open-end) (skip if condition not met: xform=4 (ASK FORM 4))
+Thinking about a new bill passed in a state… If most people in the state oppose the bill, but most people who voted for the governor support it, what should the governor do? 1. Sign the bill 2. Veto the bill []
+
+[POLCRCT] (skip if condition not met: xform=2 or 4 (ASK FORMS 2 and 4))
+Which comes closer to your own views – even if neither is exactly right?
+1 - People need to be more careful about the language they use to avoid offending people with different backgrounds
+2 - Too many people are easily offended these days over the language that others use
+
+[POLRULES] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Which comes closer to your view?
+1 - In politics, it’s sometimes necessary to bend the rules in order to get things done
+2 - In politics, it’s important to respect the rules, even if it sometimes makes it harder to get things done
+
+[CITIZ_INFL]
+Which statement comes closer to your views, even if neither is exactly right?
+1 - Ordinary citizens can do a lot to influence the government in Washington if they are willing to make the effort
+2 - There’s not much ordinary citizens can do to influence the government in Washington
+
+[VOTING]
+Which statement comes closer to your views, even if neither is exactly right?
+1 - Voting gives people like me some say about how government runs things
+2 - Voting by people like me doesn’t really affect how government runs things
+
+[IMPTUS2_j]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The rights and freedoms of all people are respected
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_k]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — Everyone has an equal opportunity to succeed
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_l]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The views of people who are not in the majority on issues are respected
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_m]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — The military leadership does not publicly express support for one party over the other
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_n]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — People are free to peacefully protest
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_o]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — News organizations don’t favor one political party
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_p]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — People agree on basic facts even if they disagree politically
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[IMPTUS2_q]
+Now thinking again about the importance of a number of things for the United States. For each of the following, HOW IMPORTANT is it for the country that… — News organizations are independent of government influence
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[WELLUS2] (open-end)
+Now thinking about how things actually are in the U.S. today…
+
+[HOW_j]
+WELL does each of the following describe the country? — The rights and freedoms of all people are respected
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_k]
+WELL does each of the following describe the country? — Everyone has an equal opportunity to succeed
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_l]
+WELL does each of the following describe the country? — The views of people who are not in the majority on issues are respected
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_m]
+WELL does each of the following describe the country? — The military leadership does not publicly express support for one party over the other
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_n]
+WELL does each of the following describe the country? — People are free to peacefully protest
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_o]
+WELL does each of the following describe the country? — News organizations don’t favor one political party
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_p]
+WELL does each of the following describe the country? — People agree on basic facts even if they disagree politically
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[HOW_q]
+WELL does each of the following describe the country? — News organizations are independent of government influence
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[DISTRESULT]
+Thinking about elections for U.S. House of Representatives in the district where you live. What is your impression?
+1 - They are usually close contests
+2 - One candidate usually wins easily
+
+[CNTCT_RE]
+Suppose you contacted your member of the U.S. House of Representatives with a problem. How likely do you think it is that they would help you address it?
+1 - Very likely
+2 - Somewhat likely
+3 - Not very likely
+4 - Not likely at all
+
+[HOUSESZ] (open-end) (skip if condition not met: xform=1 or 2 (ASK FORMS 1 and 2))
+[xform=1: As you may know, when the first Congress met, there were 65 members, each of whom represented an average of about 60,000 people. Currently] [xform=2: As you may know,] there are 435 members of the House of Representatives in Washington, each of whom represents an average of more than 700,000 people. Do you think the number of members in the House of Representatives should be… 1. Increased 2. Decreased 3. Stay the same []
+
+[SENATESZ] (skip if condition not met: xform=3 or 4 (ASK FORMS 3 and 4))
+As you may know, the Constitution requires that all states have two U.S. senators, regardless of how many people live in the state. [xform=3: When the first Congress met, the state with the largest population had about 10 times as many people as the state with the smallest population. Currently, the state with the largest population has about 66 times as many people as the state with the smallest population.] Which comes closer to your view?
+1 - The Constitution should not be changed, and all states should continue to have two senators regardless of the size of their population
+2 - The Constitution should be amended so that states with larger populations have more senators than smaller states
+
+[ELECTIMPT_b] (skip if condition not met: xform=2 or 4 (ASK FORMS 2 and 4))
+Thinking about elections in the United States, HOW IMPORTANT is each of the following? a Elections are free from tampering — No INELIGIBLE voters are permitted to vote
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[ELECTIMPT_c] (skip if condition not met: xform=2 or 4 (ASK FORMS 2 and 4))
+Thinking about elections in the United States, HOW IMPORTANT is each of the following? a Elections are free from tampering — No ELIGIBLE voters are prevented from voting
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[ELECTIMPT_d] (skip if condition not met: xform=2 or 4 (ASK FORMS 2 and 4))
+Thinking about elections in the United States, HOW IMPORTANT is each of the following? a Elections are free from tampering — The way congressional voting districts are determined is fair and reasonable
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[ELECTIMPT_e] (skip if condition not met: xform=2 or 4 (ASK FORMS 2 and 4))
+Thinking about elections in the United States, HOW IMPORTANT is each of the following? a Elections are free from tampering — Voters are knowledgeable about candidates and issues
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[ELECTWELL_b] (skip if condition not met: xform=2 or 4 (ASK ALL FORMS 2 and 4))
+Next still thinking about elections, HOW WELL does each of the following describe elections in the United States? a Elections are free from tampering — No INELIGIBLE voters are permitted to vote
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[ELECTWELL_c] (skip if condition not met: xform=2 or 4 (ASK ALL FORMS 2 and 4))
+Next still thinking about elections, HOW WELL does each of the following describe elections in the United States? a Elections are free from tampering — No ELIGIBLE voters are prevented from voting
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[ELECTWELL_d] (skip if condition not met: xform=2 or 4 (ASK ALL FORMS 2 and 4))
+Next still thinking about elections, HOW WELL does each of the following describe elections in the United States? a Elections are free from tampering — The way congressional voting districts are determined is fair and reasonable
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[ELECTWELL_e] (skip if condition not met: xform=2 or 4 (ASK ALL FORMS 2 and 4))
+Next still thinking about elections, HOW WELL does each of the following describe elections in the United States? a Elections are free from tampering — Voters are knowledgeable about candidates and issues
+1 - Very well
+2 - Somewhat well
+3 - Not too well
+4 - Not at all well
+
+[WINLOSE] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about the way things have been going in politics over the last few years on the issues that matter to you, would you say your side has been...
+1 - Winning more often than losing
+2 - Losing more often than winning
+
+[CITIZENIMPORT_a] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Vote in elections
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_b] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Follow what is happening in government and politics
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_c] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Volunteer to help others
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_d] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Serve jury duty if called
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_e] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Participate in the U.S. Census every 10 years
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_f] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Pay all the taxes you owe
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_g] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Always follow the law
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_j] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Respect the opinions and beliefs of those you disagree with
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CITIZENIMPORT_k] (skip if condition not met: xform=1 or 3 (ASK FORMS 1 and 3))
+Thinking about what it means to be a good citizen, how important is it to… — Protest if you think government actions are wrong
+1 - Very important
+2 - Somewhat important
+3 - Not too important
+4 - Not at all important
+
+[CANQUALPRES] (skip if condition not met: xform=1 (ASK IF FORM 1))
+In general, would you say the quality of the candidates running for president in the last several elections has been…
+1 - Very good
+2 - Somewhat good
+3 - Somewhat bad
+4 - Very bad
+
+[CANQUALLCL] (skip if condition not met: xform=2 (ASK IF FORM 2))
+In general, would you say the quality of the candidates running in local elections (such as for mayor or county government) in the last several elections in your area has been…
+1 - Very good
+2 - Somewhat good
+3 - Somewhat bad
+4 - Very bad
+
+[CANQUALCONG] (skip if condition not met: xform=3 (ASK IF FORM 3))
+In general, would you say the quality of the candidates running for Congress in the last several elections in your district has been…
+1 - Very good
+2 - Somewhat good
+3 - Somewhat bad
+4 - Very bad
+
+[CANQUALPOL] (skip if condition not met: xform=4 (ASK IF FORM 4))
+In general, would you say the quality of the candidates running for political office in the last several years has been…
+1 - Very good
+2 - Somewhat good
+3 - Somewhat bad
+4 - Very bad
+
+[CANMTCHPRES] (skip if condition not met: xform=1 (ASK FORM 1))
+Which comes closer to your view of candidates for presidential elections, even if neither is exactly right?
+1 - I usually feel like there is at least one candidate who shares most of my views
+2 - I usually feel like none of the candidates represent my views well
+
+[CANMTCHLCL] (skip if condition not met: xform=2 (ASK FORM 2))
+Which comes closer to your view of candidates for local elections for positions like mayor or county government, even if neither is exactly right?
+1 - I usually feel like there is at least one candidate who shares most of my views
+2 - I usually feel like none of the candidates represent my views well
+
+[CANMTCHCONG] (skip if condition not met: xform=3 (ASK FORM 3))
+Which comes closer to your view of candidates for congressional elections, even if neither is exactly right?
+1 - I usually feel like there is at least one candidate who shares most of my views
+2 - I usually feel like none of the candidates represent my views well
+
+[CANMTCHPOL] (skip if condition not met: xform=4 (ASK FORM 4))
+Which comes closer to your view of candidates for political office, even if neither is exactly right?
+1 - I usually feel like there is at least one candidate who shares most of my views
+2 - I usually feel like none of the candidates represent my views well
+
+[CIVIC_ENG_ACT_a]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Attended a political rally, speech or campaign event
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CIVIC_ENG_ACT_c]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Worked or volunteered for a political party, candidate or campaign
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CIVIC_ENG_ACT_g]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Contacted any elected official
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CIVIC_ENG_ACT_h]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Contributed money to a candidate running for public office or to a group working to elect a candidate
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CIVIC_ENG_ACT_j]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Publicly expressed your support for a political campaign on Facebook, Twitter or other social media
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CIVIC_ENG_ACT_k]
+Here’s a list of activities some people do and others do not. Please indicate if you have done each of the following activities. — Attended government meetings in your community, such as city or town council meetings
+1 - Yes, in the past year
+2 - Yes, in the last 5 years, but not in the past year
+3 - No
+
+[CONTRHOWMUCH] (skip if condition not met: CIVIC_ENG_ACT_h=1 (ASK CONTRIBUTORS))
+Thinking about the contributions you have made to a candidate running for public office or to a group working to elect a candidate in the past year, would you say all of those contributions added up to…
+1 - Less than $100
+2 - $100 to less than $250
+3 - More than $250
+
+[SHAREVIEWS] (skip if condition not met: xform=1 or 4 (ASK FORM 1 & 4))
+Which of the following statements best describes you?
+1 - Most of my close friends share my views on government and politics
+2 - Some of my close friends share my views, but many do not
+3 - I don’t really know what most of my close friends think about government and politics
+
+[ATP] (open-end) (skip if condition not met: (xform=2 or 3) and xdigital=1 (gets news digitally))
+ONLY Scripter: Randomize and record options 1 and 2
+
+[DIGWDOG_3] (open-end)
+Thinking about the news that your friends, family and acquaintances post or send you online about political and social issues, overall, do you think the mix of news you get from them… 1. Represents just one side 2. Represents more than one side 3. They don’t send me news about political and social issues []
+
+[PLANTOP]
+As you may know, primary elections, where parties select their nominees, take place in the months before general elections. How likely are you to vote in the primary elections for Congress this year?
+1 - I definitely will vote in the primary elections
+2 - I probably will vote
+3 - I probably will not vote
+4 - I definitely will not vote
+
+[PARTY]
+In politics today, do you consider yourself a:
+1 - Republican
+2 - Democrat
+3 - Independent
+4 - Something else
+
+[PARTYLN] (skip if condition not met: PARTY=3 or 4 or 99 (ASK IF PARTY is INDEP/SOMETHING ELSE/ missing))
+As of today do you lean more to…
+1 - The Republican Party
+2 - The Democratic Party
+
+[IDENTITYREP_a] (skip if condition not met: PARTY=1 (ASK REPUBLICANS))
+How much of a reason is each of the following for WHY YOU ARE A REPUBLICAN? — I think the Republican Party’s policies are good for the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYREP_b] (skip if condition not met: PARTY=1 (ASK REPUBLICANS))
+How much of a reason is each of the following for WHY YOU ARE A REPUBLICAN? — I think the Democratic Party’s policies are harmful to the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYREP_c] (skip if condition not met: PARTY=1 (ASK REPUBLICANS))
+How much of a reason is each of the following for WHY YOU ARE A REPUBLICAN? — I have a lot in common with people who are Republicans
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYREP_d] (skip if condition not met: PARTY=1 (ASK REPUBLICANS))
+How much of a reason is each of the following for WHY YOU ARE A REPUBLICAN? — I don’t have much in common with people who are Democrats
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYREP_e] (skip if condition not met: PARTY=1 (ASK REPUBLICANS))
+How much of a reason is each of the following for WHY YOU ARE A REPUBLICAN? — Ever since I can remember, I’ve been a Republican
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYDEM_a] (skip if condition not met: PARTY=2 (ASK DEMOCRATS))
+How much of a reason is each of the following for WHY YOU ARE A DEMOCRAT? — I think the Democratic Party’s policies are good for the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYDEM_b] (skip if condition not met: PARTY=2 (ASK DEMOCRATS))
+How much of a reason is each of the following for WHY YOU ARE A DEMOCRAT? — I think the Republican Party’s policies are harmful to the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYDEM_c] (skip if condition not met: PARTY=2 (ASK DEMOCRATS))
+How much of a reason is each of the following for WHY YOU ARE A DEMOCRAT? — I have a lot in common with people who are Democrats
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYDEM_d] (skip if condition not met: PARTY=2 (ASK DEMOCRATS))
+How much of a reason is each of the following for WHY YOU ARE A DEMOCRAT? — I don’t have much in common with people who are Republicans
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYDEM_e] (skip if condition not met: PARTY=2 (ASK DEMOCRATS))
+How much of a reason is each of the following for WHY YOU ARE A DEMOCRAT? — Ever since I can remember, I’ve been a Democrat
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1R_a] (skip if condition not met: PARTYLN=1 (Republican leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE REPUBLICAN PARTY? — I think the Republican Party’s policies are good for the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1R_b] (skip if condition not met: PARTYLN=1 (Republican leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE REPUBLICAN PARTY? — I think the Democratic Party’s policies are harmful to the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1R_c] (skip if condition not met: PARTYLN=1 (Republican leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE REPUBLICAN PARTY? — I have a lot in common with people who are Republicans
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1R_d] (skip if condition not met: PARTYLN=1 (Republican leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE REPUBLICAN PARTY? — I don’t have much in common with people who are Democrats
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2R_a] (skip if condition not met: PARTYLN=1 (Republican leaners))
+And thinking about why you lean toward the Republican Party but choose not to identify as a Republican… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A REPUBLICAN? — I disagree with the Republican Party on some important issues
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2R_b] (skip if condition not met: PARTYLN=1 (Republican leaners))
+And thinking about why you lean toward the Republican Party but choose not to identify as a Republican… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A REPUBLICAN? — I’m frustrated with the Republican Party’s leaders
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2R_c] (skip if condition not met: PARTYLN=1 (Republican leaners))
+And thinking about why you lean toward the Republican Party but choose not to identify as a Republican… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A REPUBLICAN? — I don’t care enough about politics to identify with a party
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2R_d] (skip if condition not met: PARTYLN=1 (Republican leaners))
+And thinking about why you lean toward the Republican Party but choose not to identify as a Republican… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A REPUBLICAN? — I’m just not comfortable being labeled a Republican
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1D_a] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE DEMOCRATIC PARTY? — I think the Democratic Party’s policies are good for the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1D_b] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE DEMOCRATIC PARTY? — I think the Republican Party’s policies are harmful to the country
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1D_c] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE DEMOCRATIC PARTY? — I have a lot in common with people who are Democrats
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN1D_d] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+How much of a reason is each of the following for WHY YOU LEAN TOWARD THE DEMOCRATIC PARTY? — I don’t have much in common with people who are Republicans
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2D_a] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+And thinking about why you lean toward the Democratic Party but choose not to identify as a Democrat… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A DEMOCRAT? — I disagree with the Democratic Party on some important issues
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2D_b] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+And thinking about why you lean toward the Democratic Party but choose not to identify as a Democrat… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A DEMOCRAT? — I’m frustrated with the Democratic Party’s leaders
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2D_c] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+And thinking about why you lean toward the Democratic Party but choose not to identify as a Democrat… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A DEMOCRAT? — I don’t care enough about politics to identify with a party
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IDENTITYLN2D_d] (skip if condition not met: PARTYLN=2 (Democrat leaners))
+And thinking about why you lean toward the Democratic Party but choose not to identify as a Democrat… How much of a reason is each of the following for WHY YOU DO NOT IDENTIFY AS A DEMOCRAT? — I’m just not comfortable being labeled a Democrat
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[KNOWCIV1] (open-end)
+In the case of a tied vote in the U.S. Senate, is the deciding vote cast by… 1. The vice president 2. The president 3. The Senate majority leader 4. The Senate parliamentarian 5. []
+
+[KNOWCIV2]
+As you may know, a filibuster in the U.S. Senate can be used to prevent legislation from coming to a vote. Of the 100 U.S. senators, how many votes are needed to end a filibuster?
+1 - 51
+2 - 60
+3 - 67
+4 - 70
+
+[KNOWCIV3] (open-end)
+How is the number of terms a president can serve determined? 1. Article II of the U.S. Constitution 2. Custom and precedent 3. The 22nd Amendment of the Constitution 4. There is no limit to the number of terms a president can serve []
+
+[KNOWCIV5]
+The U.S. Electoral College…
+1 - Trains those who run for political office
+2 - Supervises the presidential debates
+3 - Is another name for the U.S. Congress
+4 - Is an assembly that formally elects the president
+
+[KNOWCIV6]
+Which of the following rights is guaranteed by the FIRST Amendment to the Constitution?
+1 - The right of free speech
+2 - The right to bear arms
+3 - The right to privacy
+4 - The right to remain silent
+
+[SENCONTR]
+Do you happen to know which political party currently has a majority in the U.S. Senate?
+1 - Republican Party
+2 - Democratic Party
+
+[HOUCONTR]
+Do you happen to know which political party has a majority in the U.S. House of Representatives?
+1 - Republican Party
+2 - Democratic Party

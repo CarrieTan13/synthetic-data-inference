@@ -1,0 +1,65 @@
+{
+  "application": "simulated",
+  "task_definitions": [
+    {
+      "task_def": "T40",
+      "T_tasks": 41,
+      "T_hist": 40,
+      "n_j": [
+        1000,
+        1000,
+        1000
+      ],
+      "N_j": [
+        2000,
+        2000,
+        2000
+      ],
+      "paired": false,
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "description": "simulated exchangeable Bernoulli tasks, T+1=41",
+      "meta": {
+        "T": 40,
+        "n": 1000,
+        "N": 2000,
+        "bias": 0.05,
+        "tau": 0.1,
+        "seed": 1
+      }
+    },
+    {
+      "task_def": "T100",
+      "T_tasks": 101,
+      "T_hist": 100,
+      "n_j": [
+        1000,
+        1000,
+        1000
+      ],
+      "N_j": [
+        2000,
+        2000,
+        2000
+      ],
+      "paired": false,
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "description": "simulated exchangeable Bernoulli tasks, T+1=101",
+      "meta": {
+        "T": 100,
+        "n": 1000,
+        "N": 2000,
+        "bias": 0.05,
+        "tau": 0.1,
+        "seed": 1
+      }
+    }
+  ],
+  "n_j": "per-task gold sample size [min, median, max]",
+  "N_j": "per-task synthetic sample size [min, median, max]"
+}

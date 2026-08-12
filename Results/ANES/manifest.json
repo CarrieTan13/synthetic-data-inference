@@ -1,0 +1,46 @@
+{
+  "app": "ANES",
+  "n_files": 4,
+  "files": [
+    {
+      "task_def": "main",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 33,
+      "coverage": 100.0,
+      "mean_width_clip": 34.7812,
+      "path": "ANES/main/alg1/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "main",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 33,
+      "coverage": 3.0,
+      "mean_width_clip": 0.6478,
+      "path": "ANES/main/synth_only/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "main",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 33,
+      "coverage": 97.0,
+      "mean_width_clip": 29.9259,
+      "path": "ANES/main/alg1/alpha015__abs_005_005.csv"
+    },
+    {
+      "task_def": "main",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 33,
+      "coverage": 3.0,
+      "mean_width_clip": 0.567,
+      "path": "ANES/main/synth_only/alpha015__abs_005_005.csv"
+    }
+  ]
+}

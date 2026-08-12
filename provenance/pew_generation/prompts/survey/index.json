@@ -1,0 +1,58 @@
+{
+  "description": "Mapping from wave_id (or single-question id) to the on-disk location of its survey prompt and optional randomization config. All paths are relative to prompts/survey/. Wave(wave_id=...) consults this index to resolve files; if a wave_id is not listed, Wave falls back to the legacy {wave_id}.txt convention. The 'randomization' field may be omitted or set to null when the prompt has no randomization (e.g. extracted single questions like SATIS, POL1JB, POL1DT).",
+  "entries": {
+    "Politics_basic0": {
+      "prompt": "politics_attitude/Politics_basic0.txt",
+      "randomization": "politics_attitude/Politics_basic0_randomization.json"
+    },
+    "Politics_attitude0": {
+      "prompt": "politics_attitude/Politics_attitude0.txt",
+      "randomization": "politics_attitude/Politics_attitude0_randomization.json"
+    },
+    "Politics_satisfaction0": {
+      "prompt": "politics_attitude/Politics_satisfaction0.txt",
+      "randomization": "politics_attitude/Politics_satisfaction0_randomization.json"
+    },
+    "SATIS": {
+      "prompt": "politics_attitude/SATIS.txt"
+    },
+    "POL1JB": {
+      "prompt": "politics_attitude/POL1JB.txt"
+    },
+    "POL1DT": {
+      "prompt": "politics_attitude/POL1DT.txt"
+    },
+    "W1_Mar14": {
+      "prompt": "waves/W1_Mar14.txt",
+      "randomization": "waves/W1_Mar14_randomization.json"
+    },
+    "W11_Jun15": {
+      "prompt": "waves/W11_Jun15.txt",
+      "randomization": "waves/W11_Jun15_randomization.json"
+    },
+    "W31_Feb18": {
+      "prompt": "waves/W31_Feb18.txt",
+      "randomization": "waves/W31_Feb18_randomization.json"
+    },
+    "W61_Feb20": {
+      "prompt": "waves/W61_Feb20.txt",
+      "randomization": "waves/W61_Feb20_randomization.json"
+    },
+    "W91_Jun21": {
+      "prompt": "waves/W91_Jun21.txt",
+      "randomization": "waves/W91_Jun21_randomization.json"
+    },
+    "W101_Jan22": {
+      "prompt": "waves/W101_Jan22.txt",
+      "randomization": "waves/W101_Jan22_randomization.json"
+    },
+    "W121_Feb23": {
+      "prompt": "waves/W121_Feb23.txt",
+      "randomization": "waves/W121_Feb23_randomization.json"
+    },
+    "W151_Aug24": {
+      "prompt": "waves/W151_Aug24.txt",
+      "randomization": "waves/W151_Aug24_randomization.json"
+    }
+  }
+}

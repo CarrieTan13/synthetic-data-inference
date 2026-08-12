@@ -1,0 +1,5 @@
+
+[TRVLBAN]
+As you may know, Donald Trump recently issued an executive order that would temporarily prevent people from entering the U.S. from a number of majority-Muslim countries. Do you approve or disapprove of this action?
+1 - Approve
+2 - Disapprove

@@ -1,0 +1,113 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[JOBLASTYR_CPS]
+These next few questions are about things that happened last year in 2020. Did you work at a job or business at any time during 2020?
+1 - Yes
+2 - No
+
+[RETACCT_CPS]
+At any time during 2020 did you have any retirement accounts such as a 401(k), 403(b), IRA, or other account designed specifically for retirement savings?
+1 - Yes
+2 - No
+
+[EMPCOMPMOD]
+At any time during 2020, did you receive any State or Federal unemployment compensation?
+1 - Yes
+2 - No
+
+[WRKRCMPMOD]
+During 2020 did you receive any Worker’s Compensation payments or other payments as a result of a job-related injury or illness?
+1 - Yes
+2 - No
+
+[SOCSEC_CPS]
+During 2020 did you receive any Social Security payments from the U.S. Government?
+1 - Yes
+2 - No
+
+[FDSTMP2_CPS]
+At any time during 2020, did you or anyone in your household receive benefits from SNAP (the Supplemental Nutritional Assistance Program) or the Food Stamp program, or use a SNAP or food stamp benefit card?
+1 - Yes
+2 - No
+
+[ERNLAB_CPS]
+Are you a member of a labor union or of an employee association similar to a union?
+1 - Yes
+2 - No
+
+[MIL_ACS]
+Have you ever served on active duty in the U.S. Armed Forces, Reserves, or National Guard?
+1 - Never served in the military
+2 - Only on active duty for training in the Reserves or National Guard
+3 - Now on active duty
+4 - On active duty in the past, but not now
+
+[HOMETYPE_ACS]
+Which best describes the building where you currently live? (Include all apartments, flats, etc., even if vacant.)
+1 - A mobile home
+2 - A one-family house detached from any other house
+3 - A one-family house attached to one or more houses
+4 - A building with 2 or more apartments
+5 - Boat, RV, van, etc.
+
+[OWNRENTMOD]
+Which of the following describes the house, apartment or mobile home where
+1 - Owned by you or someone in your household with a mortgage or loan (include home equity loans)
+2 - Owned by you or someone in your household free and clear (without a mortgage or loan)
+3 - Rented
+4 - Occupied without payment of rent
+
+[MIG1YR_CPS]
+Were you living in this house or apartment 1 year ago?
+1 - Yes, this house
+2 - No, different house in the United States or Puerto Rico
+3 - No, outside the United States or Puerto Rico
+
+[MIG5YR_CPS] (skip if condition not met: IF LIVED HERE 1 YEAR AGO (MIG1YR_CPS=1):)
+Were you living in this house or apartment 5 years ago?
+1 - Yes, this house
+2 - No, different house in the United States or Puerto Rico
+3 - No, outside the United States or Puerto Rico
+
+[CARS_ACS]
+How many automobiles, vans, and trucks of one-ton capacity or less are kept at home for use by members of your household?
+1 - None
+2 - 1
+3 - 2
+4 - 3
+5 - 4
+6 - 5
+7 - 6 or more
+
+[NONENG_ACS]
+Do you speak a language other than English at home?
+1 - Yes
+2 - No
+
+[ENGPROF_ACS] (skip if condition not met: IF SPEAKS A LANGUAGE OTHER THAN ENGLISH AT HOME (NONENG_ACS=1))
+How well do you speak English?
+1 - Very well
+2 - Well
+3 - Not well
+4 - Not at all
+
+[REG] (skip if condition not met: CITIZENS (XCITIZEN=1):)
+Which of these statements best describes you?
+1 - You are ABSOLUTELY CERTAIN that you are registered to vote at your current address
+2 - You are PROBABLY registered, but there is a chance your registration has lapsed
+3 - You are NOT registered to vote at your current address
+
+[VOTED]
+Which of the following statements best describes you?
+1 - I did not vote in the 2020 presidential election
+2 - I planned to vote but wasn’t able to
+3 - I definitely voted in the 2020 presidential election
+
+[RANDOM]
+HALF OF RESPONDENTS]
+1 - Joe Biden definitely won
+2 - Joe Biden probably won
+3 - Donald Trump probably won
+4 - Donald Trump definitely won

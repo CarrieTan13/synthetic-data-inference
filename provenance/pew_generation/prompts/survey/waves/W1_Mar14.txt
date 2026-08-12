@@ -1,0 +1,200 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[CNN] (open-end) (skip if condition not met: IF SELECTED CNN, MSNBC, OR FOX NEWS IN Q.22:)
+programs: New Day; Situation Room; Crossfire; Erin Burnett OutFront; Anderson Cooper 360
+
+[FOX] (open-end)
+NEWS programs: Special Report; On The Record; The O’Reilly Factor; The Kelly File; Hannity; Fox & Friends; Your World; Huckabee; The Five
+
+[MSNBC] (open-end)
+programs: Morning Joe; The Ed Show; Politics Nation; Hardball; All In; Rachel Maddow Show; The Last Word; Melissa Harris-Perry ASK SELECTED ABC NEWS, CBS NEWS, NBC NEWS, OR PBS IN Q20: Q.24 Click on all of the national network news programs that you got news from about government and politics in the past week. If you are unsure, please DO NOT click it. 3X6 GRID PER SCREEN WITH RADIO BUTTONS AS IN Q20. ONLY INCLUDE THE SHOWS OF NATIONAL TELEVISON NETWORKS SELECTED IN Q20. ABC News: ABC World News; 20/20; Good Morning America; Nightline; This Week CBS News: CBS Evening News; CBS This Morning; 60 Minutes; Face the Nation NBC News: NBC Nightly News; Meet the Press; Today PBS:
+
+[PBS] (open-end)
+News Hour; Frontline; Tavis Smiley
+
+[LOOP] (open-end) (skip if condition not met: IF PUT IN NO NAMES IN Q53:)
+Q55-58 IN ORDER FOR EACH NAME.
+
+[FILTER] (open-end) (skip if condition not met: IF LISTED AT LEAST ONE NAME IN Q53:)
+QUESTIONS REGSTATUS THROUGH HOWVOTE ON CITIZENS (BIRTH_HISP=1,2 OR USBORN=1,3,4 OR CITIZEN=1)
+
+[REGSTATUS] (open-end)
+Which of these statements best describes you? 1. I am registered to vote in [FILL R’S STATE] 2. I am registered to vote in a different state [SPECIFY / DROPDOWN LIST OF 50 STATES AND DC] 3. I am not registered to vote 4. I am not sure if I’m registered to vote
+
+[UPDATE]
+In the past 30 days, did you register to vote or update your voter registration? 1. Yes, I registered to vote 2. Yes, I updated my registration
+3 - No, I am registered to vote and made no changes in the past 30 days
+
+[PLANTOP]
+As you may know, primary elections take place in the months before general elections. How likely are you to vote in the primary elections this year?
+1 - I definitely will vote in the primary elections
+2 - I probably will vote
+3 - I probably will not vote
+4 - I definitely will not vote
+5 - I have already voted in the primary elections
+
+[PSTATE] (skip if condition not met: IF DEFINITELY/PROBABLY WILL VOTE (PLANTOP=1,2):)
+If you vote in the primary, would it be in [use STATE from Typology unless REGSTATUS=2] or in a different state?
+1 - In [use STATE from Typology unless REGSTATUS=2]
+2 - A different state [SPECIFY FROM DROPDOWN LIST/ 50 STATES PLUS DC]
+
+[PSTATEP] (open-end)
+Did you vote in the primary in [use STATE from Typology unless REGSTATUS=2] or in a different state? 1. In [use STATE from Typology unless REGSTATUS=2] 2. A different state [SPECIFY FROM DROPDOWN LIST/ 50 STATES PLUS DC] ASK THOSE WHO HAVE ALREADY VOTED IN A PRIMARY (PLANTOP=5):
+
+[PEVOTE]
+How did you vote in the primary election?
+1 - Voted in person on Election Day
+2 - Voted in person before Election Day
+3 - Mailed in ballot
+
+[PLAN2P] (skip if condition not met: IF DEFINITELY/PROBABLY WILL VOTE (PLANTOP=1,2):)
+Do you plan to cast your vote in the primary election before Election Day or on Election Day?
+1 - BEFORE Election Day
+2 - ON Election Day
+3 - Not sure
+
+[EARLY1P] (skip if condition not met: IF PLAN TO VOTE IN PRIMARY BEFORE ELECTION DAY (PLAN2P=1) AND NOT REGISTERED IN WA or OR (REGSTATUS NE WA or OR):)
+Do you plan to vote in the primary election in person or will you mail in your ballot?
+1 - Vote in person
+2 - Mail in ballot
+3 - Not sure
+
+[PGENERAL] (open-end)
+How likely are you to vote in the general election this November? 1. Definitely will vote 2. Probably will vote 3. Probably will not vote 4. Definitely will not vote
+
+[CONTACT1]
+In the past 30 days, have you been personally contacted by any candidate, party, or other organization offering you information about an upcoming election?
+1 - Yes
+2 - No
+
+[CONWHO_a] (skip if condition not met: IF YES (CONTACT1=1):)
+Who contacted you with information about an election? Check all that apply. — A candidate running for office or his/her campaign
+
+[CONWHO_b] (skip if condition not met: IF YES (CONTACT1=1):)
+Who contacted you with information about an election? Check all that apply. — A political party
+
+[CONWHO_c] (skip if condition not met: IF YES (CONTACT1=1):)
+Who contacted you with information about an election? Check all that apply. — Issue-based groups other than parties or candidates
+
+[CONWHO_d] (skip if condition not met: IF YES (CONTACT1=1):)
+Who contacted you with information about an election? Check all that apply. — A state or local election office
+
+[CONWHO_e] (skip if condition not met: IF YES (CONTACT1=1):)
+Who contacted you with information about an election? Check all that apply. — Other [please specify]
+
+[SEARCH]
+And in the past 30 days, have you searched for information about an upcoming election?
+1 - Yes
+2 - No
+
+[SEARCHWHAT_a]
+Did you search for any of the following types of information? Check all that apply. — Information about your voter registration status
+
+[SEARCHWHAT_b]
+Did you search for any of the following types of information? Check all that apply. — The date of an upcoming election
+
+[SEARCHWHAT_d]
+Did you search for any of the following types of information? Check all that apply. — The location of your polling place
+
+[SEARCHWHAT_e]
+Did you search for any of the following types of information? Check all that apply. — A sample ballot
+
+[SEARCHWHAT_f]
+Did you search for any of the following types of information? Check all that apply. — Any information about the rules or requirements for voting
+
+[SEARCHWHAT_g]
+Did you search for any of the following types of information? Check all that apply. — Information about a candidate or candidates in an election
+
+[SEARCHRULES_a]
+Did the information about the rules or requirements for voting include any of the following? Check all that apply. — What type of identification you will need to vote
+
+[SEARCHRULES_b]
+Did the information about the rules or requirements for voting include any of the following? Check all that apply. — Who is eligible to participate in a primary election
+
+[SEARCHRULES_c]
+Did the information about the rules or requirements for voting include any of the following? Check all that apply. — How to cast a vote before Election Day, by absentee ballot or early voting
+
+[SEARCHRULES_d]
+Did the information about the rules or requirements for voting include any of the following? Check all that apply. — How to register to vote or update your voter registration information
+
+[REQUEST]
+Did you request an absentee ballot or not? 1. Yes
+2 - No
+
+[VOTE1014]
+These days, many people are so busy they can't find time to vote in elections. Thinking about the elections that have been held since 2010, including the 2012 presidential election, did you happen to vote in any of them? 1. Yes
+2 - No
+
+[HOWVOTE_a]
+In which of the following ways did you vote in elections since 2010? Check all that apply. — In person at a polling place on Election Day
+
+[HOWVOTE_b]
+In which of the following ways did you vote in elections since 2010? Check all that apply. — By mail
+
+[HOWVOTE_c]
+In which of the following ways did you vote in elections since 2010? Check all that apply. — In person at a polling place before Election Day
+
+[HOWVOTE_d]
+In which of the following ways did you vote in elections since 2010? Check all that apply. — Some other way (specify)
+
+[OWNRENT]
+Do you own or rent your home ?
+1 - Own
+2 - Rent
+3 - Live in a dorm [SHOW IF AGE<35]
+4 - Live with parents [SHOW IF AGE<35]
+5 - Other arrangement where you pay for housing
+6 - Other arrangement where you do not pay for housing
+
+[TENURE] (open-end)
+How long have you lived at your current address?
+
+[CATEGORIES]
+1 Less than 1 month
+2 - 1-6 months
+3 - 7-11 months
+4 - 1-2 years
+5 - 3-4 years
+6 - 5 years or longer
+
+[KIDS1] (open-end)
+Are you the parent or guardian of any children under age 18? 1. Yes 2. No IF YES (KIDS1=1):
+
+[PARENT]
+And do any these children currently live in your household?
+1 - Yes
+2 - No
+
+[KIDS3] (numeric: 0-9)
+How many of those children under 18 now living in your household are in each of the following age groups. Please enter a number between 0 and 9 in each box below. ___0 to 4 years old ___5 to 11 years old ___12 to 17 years old
+
+[KIDS2]
+Are you the parent or guardian of any adult children age 18 or older, including any who live on their own?
+1 - Yes
+2 - No
+
+[PARTY] (skip if condition not met: IF INTERVIEWED BEFORE JAN 28 (FSHIFT < 140128):)
+In politics today, do you consider yourself a…?
+1 - Republican
+2 - Democrat
+3 - Independent
+4 - Something else, please specify [TEXT]
+
+[PARTYLN] (skip if condition not met: IF INDEP/SOMETHING ELSE, INTERVIEWED BEFORE JAN 28 (FSHIFT < 140128 AND PARTY=3,4, -1):)
+As of today do you lean more to…?
+1 - The Republican Party
+2 - The Democratic Party
+
+[PARTYSTR] (skip if condition not met: IF REPUBLICAN OR DEMOCRAT INTERVIEWED BEFORE JAN 28 (FSHIFT < 140128 AND PARTY=1,2):)
+Do you consider yourself a…?
+1 - Strong [Republican/Democrat]
+2 - Not strong [Republican/Democrat]
+
+[VET1]
+Have you or has anyone in your household ever served in the U.S. military or the military reserves?
+1 - Yes, self
+2 - Yes, someone else in household
+3 - Yes, both
+4 - No, nobody in household has served

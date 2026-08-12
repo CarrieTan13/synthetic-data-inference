@@ -1,0 +1,32 @@
+{
+  "application": "ANES",
+  "task_definitions": [
+    {
+      "task_def": "main",
+      "T_tasks": 33,
+      "T_hist": 33,
+      "n_j": [
+        657,
+        1596,
+        1795
+      ],
+      "N_j": [
+        657,
+        1596,
+        1795
+      ],
+      "paired": true,
+      "clip": [
+        0.0,
+        100.0
+      ],
+      "description": "ANES feeling-thermometer; calibrate 2016, predict 2020",
+      "meta": {
+        "T_cal": 33,
+        "T_pred": 33
+      }
+    }
+  ],
+  "n_j": "per-task gold sample size [min, median, max]",
+  "N_j": "per-task synthetic sample size [min, median, max]"
+}

@@ -1,0 +1,665 @@
+Answer every question below by providing the corresponding numeric code.
+Return your answers as a JSON object mapping each question ID to your answer.
+If a question says to skip based on a previous answer, set that question to null.
+
+[SATIS]
+All in all, are you satisfied or dissatisfied with the way things are going in this country today?
+1 - Satisfied
+2 - Dissatisfied
+
+[MEDESC_TYP]
+FILE. ] How well does the phrase “a typical American” describe you? [ PN: IF CATI: ] (READ LIST)
+1 - Extremely well
+2 - Very well
+3 - Somewhat well
+4 - Not too well
+5 - Not at all well
+
+[VOTEGEN24] (skip if condition not met: IF CITIZEN (X_CITIZEN=1):1)
+ORDER; RECORD ROTATION IN DATA FILE. ] If the 2024 presidential election were being held today, would you vote for… [ PN: IF CATI: ] (READ LIST)
+1 - Donald Trump, the Republican
+2 - [ PN: IF WEB: ] Kamala Harris, the Democrat [ PN: IF CATI: ] Kamala (PRONO: COM-uh-la) Harris, the Democrat
+3 - Robert F. Kennedy Jr., a third-party candidate
+4 - [ PN: IF WEB: ] None/Other candidate [ PN: IF CATI: ] None of these or another candidate
+
+[VOTEGEN24_LEAN] (open-end) (skip if condition not met: IF NONE/OTHER CANDIDATE OR SKIPPED VOTEGEN24 (VOTEGEN24=4, 98, 99):)
+ROTATION IN DATA FILE. ONLY SHOW OPTION 4 IF RESPONDENT TRIES TO SKIP
+
+[QUESTION] (open-end)
+] [ PN: SOFT PROMPT MESSAGE AFTER FIRST SKIP SHOULD READ: If you would not support any of the candidates, please select answer choice None/Other. If you would like to skip, click Next… ] As of today, do you… [ PN: IF CATI: ] (READ LIST) [ PN: INTERVIEWER: DO NOT READ OPTION 4 UNLESS RESPONDENT SAYS “DON’T KNOW” OR WANTS TO SKIP. THEN SOFT PROMPT: If you would not support any of these candidates you can say none or someone else? IF STILL DEPENDS OR DON’T KNOW,
+
+[ENTER]
+AS “Don’t Know”. ]
+1 - Lean more toward Donald Trump
+2 - [ PN: IF WEB: ] Lean more toward Kamala Harris [ PN: IF CATI: ] Lean more toward Kamala (PRONO: COM-uh-la) Harris
+3 - Lean more toward Robert F. Kennedy Jr.
+4 - [ PN: IF WEB: ] None/Other candidate [ PN: IF CATI: ] (DO NOT READ UNLESS
+
+[SKIPPED] (open-end)
+OR RESPONDENT SAYS DON’T KNOW) None of these or another candidate
+
+[VOTESTRONG] (open-end) (skip if condition not met: IF CHOOSE HARRIS, TRUMP OR KENNEDY (VOTEGEN24=1, 2, OR 3):)
+VOTEGEN24=2 INSERT “Kamala Harris”; IF VOTEGEN24=3 INSERT “Robert F. Kennedy Jr.” ]… [ PN: IF CATI: ] Do you support [ PN: IF VOTEGEN24=1 INSERT “Donald Trump”; IF VOTEGEN24=2 INSERT “Kamala (PRONO: COM-uh-la) Harris”; IF VOTEGEN24=3
+
+[INSERT]
+“Robert F. Kennedy Jr.” ]… [ PN: IF CATI: ] (READ LIST)
+1 - Strongly
+2 - Moderately
+
+[PATRIOT]
+FILE. ] How proud are you to be an American? [ PN: IF CATI: ] (READ LIST)
+1 - Extremely proud
+2 - Very proud
+3 - Somewhat proud
+4 - Not too proud
+5 - Not at all proud
+
+[PATRIOTIC_FLAG]
+[ PN: IF WEB: ] Compared with other Americans, would you say people who…? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST)? [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about people who (INSERT ITEM)? (READ AS NECESSARY: Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST IF NECESSARY)?) — Display the American flag outside their home or car
+1 - Are a lot more patriotic
+2 - Are somewhat more patriotic
+3 - Are neither more nor less patriotic
+4 - Are somewhat less patriotic
+5 - Are a lot less patriotic
+
+[PATRIOTIC_VOTE]
+[ PN: IF WEB: ] Compared with other Americans, would you say people who…? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST)? [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about people who (INSERT ITEM)? (READ AS NECESSARY: Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST IF NECESSARY)?) — Vote in U.S. elections
+1 - Are a lot more patriotic
+2 - Are somewhat more patriotic
+3 - Are neither more nor less patriotic
+4 - Are somewhat less patriotic
+5 - Are a lot less patriotic
+
+[PATRIOTIC_MILIT]
+[ PN: IF WEB: ] Compared with other Americans, would you say people who…? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST)? [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about people who (INSERT ITEM)? (READ AS NECESSARY: Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST IF NECESSARY)?) — Serve in the U.S. military
+1 - Are a lot more patriotic
+2 - Are somewhat more patriotic
+3 - Are neither more nor less patriotic
+4 - Are somewhat less patriotic
+5 - Are a lot less patriotic
+
+[PATRIOTIC_VOL]
+[ PN: IF WEB: ] Compared with other Americans, would you say people who…? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST)? [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about people who (INSERT ITEM)? (READ AS NECESSARY: Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST IF NECESSARY)?) — Volunteer to help others
+1 - Are a lot more patriotic
+2 - Are somewhat more patriotic
+3 - Are neither more nor less patriotic
+4 - Are somewhat less patriotic
+5 - Are a lot less patriotic
+
+[PATRIOTIC_PROT]
+[ PN: IF WEB: ] Compared with other Americans, would you say people who…? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST)? [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about people who (INSERT ITEM)? (READ AS NECESSARY: Compared with other Americans, would you say people who (INSERT ITEM) (READ LIST IF NECESSARY)?) — Protest social injustices
+1 - Are a lot more patriotic
+2 - Are somewhat more patriotic
+3 - Are neither more nor less patriotic
+4 - Are somewhat less patriotic
+5 - Are a lot less patriotic
+
+[NATIONID_REF]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Welcome people from other countries who are escaping violence and war
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_DIV]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Embrace the blending of cultures and values from around the world
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_DEM]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Uphold democracy
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_ENGL]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Make English the nation’s official language
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_CHR]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Have a culture based in Christian religious beliefs
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_OPP]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Ensure equal opportunities for everyone to succeed
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[NATIONID_CAP]
+[ PN: IF WEB: ] How important is it for the United States to… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How important is it for the United States to (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How important is it for the United States to (INSERT ITEM)? (READ LIST IF NECESSARY)) — Have an economic system based on capitalism
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[FAVPOL_TRUMP]
+[ PN: RANDOMIZE ITEMS; RECORD RANDOMIZATION IN DATA FILE ] [ PN: IF WEB: ] What is your overall opinion of… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What is your overall opinion of (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: What is your overall opinion of (INSERT ITEM)? (READ LIST IF NECESSARY)) — Donald Trump
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable [ PN: INSERT A LINE OF SPACE ]
+5 - Never heard of this person
+
+[FAVPOL_BIDEN]
+[ PN: RANDOMIZE ITEMS; RECORD RANDOMIZATION IN DATA FILE ] [ PN: IF WEB: ] What is your overall opinion of… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What is your overall opinion of (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: What is your overall opinion of (INSERT ITEM)? (READ LIST IF NECESSARY)) — Joe Biden
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable [ PN: INSERT A LINE OF SPACE ]
+5 - Never heard of this person
+
+[FAVPOL_HARRIS]
+[ PN: RANDOMIZE ITEMS; RECORD RANDOMIZATION IN DATA FILE ] [ PN: IF WEB: ] What is your overall opinion of… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What is your overall opinion of (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: What is your overall opinion of (INSERT ITEM)? (READ LIST IF NECESSARY)) — [ PN: IF WEB: ] Kamala Harris [ PN: IF CATI: ] Kamala (PRONO: COM-uh- la) Harris
+1 - Very favorable
+2 - Mostly favorable
+3 - Mostly unfavorable
+4 - Very unfavorable [ PN: INSERT A LINE OF SPACE ]
+5 - Never heard of this person
+
+[HARHAP]
+DATA FILE. ] [ PN: IF WEB: ] Does Kamala Harris being the Democratic candidate for president in November make you feel… [ PN: IF CATI: ] Does Kamala (PRONO: COM-uh-la) Harris being the Democratic candidate for president in November make you feel… [ PN: IF CATI: ] (READ LIST)
+1 - Very happy
+2 - Somewhat happy
+3 - Somewhat unhappy
+4 - Very unhappy
+
+[TRLYAM_TGEN]
+[ PN: IF WEB: ] In your view, should each of the following be considered U.S. citizens? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In your view, should each of the following be considered U.S. citizens? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: In your view, should (INSERT ITEM) be considered U.S. citizens? (READ LIST IF NECESSARY)) — People born in the U.S. to parents who were born in the U.S.
+1 - Yes
+2 - No
+
+[TRLYAM_SGENLG]
+[ PN: IF WEB: ] In your view, should each of the following be considered U.S. citizens? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In your view, should each of the following be considered U.S. citizens? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: In your view, should (INSERT ITEM) be considered U.S. citizens? (READ LIST IF NECESSARY)) — People born in the U.S. to parents who immigrated legally
+1 - Yes
+2 - No
+
+[TRLYAM_SGENIL]
+[ PN: IF WEB: ] In your view, should each of the following be considered U.S. citizens? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In your view, should each of the following be considered U.S. citizens? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: In your view, should (INSERT ITEM) be considered U.S. citizens? (READ LIST IF NECESSARY)) — People born in the U.S. to parents who immigrated illegally
+1 - Yes
+2 - No
+
+[TRLYAM_PARSTS]
+[ PN: IF WEB: ] In your view, should each of the following be considered U.S. citizens? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In your view, should each of the following be considered U.S. citizens? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: In your view, should (INSERT ITEM) be considered U.S. citizens? (READ LIST IF NECESSARY)) — People born in the U.S. regardless of the status of their parents
+1 - Yes
+2 - No
+
+[KNOWIMSYS]
+FILE.] How familiar are you with how the U.S. immigration system works? [ PN: IF CATI: ] (READ LIST) [ PN: IF CATI: INTERVIEWER: IF R SAYS “Not very” OR SOMETHING SIMILAR, ENTER AS “NOT TOO FAMILIAR” ]
+1 - Extremely familiar
+2 - Very familiar
+3 - Somewhat familiar
+4 - Not too familiar
+5 - Not at all familiar
+
+[ST_2]
+FILE.] In your view, do you think the immigration system in this country… [ PN: IF CATI: ] (READ LIST)
+1 - Requires no changes
+2 - Requires only minor changes
+3 - Requires major changes
+4 - Needs to be completely rebuilt
+
+[IMMAWARE]
+FILE. ] How much have you seen, read, or heard about legal immigration in the news lately? [ PN: IF CATI: ] (READ LIST)
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMMAWARE2]
+] How much have you seen, read, or heard about illegal immigration in the news lately? [ PN: IF CATI: ] (READ LIST)
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMVALUE_ASIA]
+[ PN: IF WEB: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? First, how about immigrants from (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR FIRST ITEM SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: When it comes to their values, how much do you think immigrants from (INSERT ITEM) have in common with most Americans? (READ LIST IF NECESSARY)) — Asia
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMVALUE_LATAM]
+[ PN: IF WEB: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? First, how about immigrants from (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR FIRST ITEM SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: When it comes to their values, how much do you think immigrants from (INSERT ITEM) have in common with most Americans? (READ LIST IF NECESSARY)) — Latin America
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMVALUE_AFRICA]
+[ PN: IF WEB: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? First, how about immigrants from (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR FIRST ITEM SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: When it comes to their values, how much do you think immigrants from (INSERT ITEM) have in common with most Americans? (READ LIST IF NECESSARY)) — Africa
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMVALUE_MIDEAST]
+[ PN: IF WEB: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? First, how about immigrants from (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR FIRST ITEM SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: When it comes to their values, how much do you think immigrants from (INSERT ITEM) have in common with most Americans? (READ LIST IF NECESSARY)) — Middle East
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[IMVALUE_EUR]
+[ PN: IF WEB: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] When it comes to their values, how much do you think immigrants from each of the following regions have in common with most Americans? First, how about immigrants from (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR FIRST ITEM SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: When it comes to their values, how much do you think immigrants from (INSERT ITEM) have in common with most Americans? (READ LIST IF NECESSARY)) — Europe
+1 - A great deal
+2 - A fair amount
+3 - Some
+4 - Not too much
+5 - Nothing at all
+
+[ST_12_ASIA]
+[ PN: IF WEB: ] Do you think the impact of immigrants from each of the following regions on American society has been… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Do you think the impact of immigrants from each of the following regions on American society has been (READ LIST)? First, how about immigrants from (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: Do you think the impact of immigrants from (INSERT ITEM) on American society has been (READ LIST IF NECESSARY)?) — Asia
+1 - Mostly positive
+2 - Mostly negative
+3 - Neither positive nor negative
+
+[ST_12_LATAM]
+[ PN: IF WEB: ] Do you think the impact of immigrants from each of the following regions on American society has been… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Do you think the impact of immigrants from each of the following regions on American society has been (READ LIST)? First, how about immigrants from (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: Do you think the impact of immigrants from (INSERT ITEM) on American society has been (READ LIST IF NECESSARY)?) — Latin America
+1 - Mostly positive
+2 - Mostly negative
+3 - Neither positive nor negative
+
+[ST_12_AFRICA]
+[ PN: IF WEB: ] Do you think the impact of immigrants from each of the following regions on American society has been… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Do you think the impact of immigrants from each of the following regions on American society has been (READ LIST)? First, how about immigrants from (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: Do you think the impact of immigrants from (INSERT ITEM) on American society has been (READ LIST IF NECESSARY)?) — Africa
+1 - Mostly positive
+2 - Mostly negative
+3 - Neither positive nor negative
+
+[ST_12_MIDEAST]
+[ PN: IF WEB: ] Do you think the impact of immigrants from each of the following regions on American society has been… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Do you think the impact of immigrants from each of the following regions on American society has been (READ LIST)? First, how about immigrants from (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: Do you think the impact of immigrants from (INSERT ITEM) on American society has been (READ LIST IF NECESSARY)?) — Middle East
+1 - Mostly positive
+2 - Mostly negative
+3 - Neither positive nor negative
+
+[ST_12_EUR]
+[ PN: IF WEB: ] Do you think the impact of immigrants from each of the following regions on American society has been… [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Do you think the impact of immigrants from each of the following regions on American society has been (READ LIST)? First, how about immigrants from (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about immigrants from (INSERT ITEM)? (READ AS NECESSARY: Do you think the impact of immigrants from (INSERT ITEM) on American society has been (READ LIST IF NECESSARY)?) — Europe
+1 - Mostly positive
+2 - Mostly negative
+3 - Neither positive nor negative
+
+[LGIMMCTRL]
+FILE ] How much control do you think the U.S. government has over the number of immigrants who enter the country legally? [ PN: IF CATI: ] (READ LIST)
+1 - Complete control
+2 - Almost complete control
+3 - A moderate degree of control
+4 - Little control
+5 - No control
+
+[ILIMMCTRL]
+] How much control do you think the U.S. government has over the number of immigrants who enter the country illegally? [ PN: IF CATI: ] (READ LIST)
+1 - Complete control
+2 - Almost complete control
+3 - A moderate degree of control
+4 - Little control
+5 - No control
+
+[IMMCRN]
+FILE ] How concerned are you about the number of immigrants entering the country illegally? [ PN: IF CATI: ] (READ LIST)
+1 - Extremely concerned
+2 - Very concerned
+3 - Somewhat concerned
+4 - Not too concerned
+5 - Not at all concerned
+
+[IMMSUPPORT_BRDER]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Improving security along the country’s borders
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_REF]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Admitting more civilian refugees from countries where people are trying to escape violence and war
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_SKILL]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Legally admitting more high-skilled immigrants
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_DIV]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Legally admitting immigrants from all over the world to ensure the nation’s immigrant population is diverse
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_LABOR]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Legally admitting immigrants who can fill labor shortages
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_DEPORT]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Enforcing mass deportations of immigrants living in the country illegally
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_STUD]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Allowing international students who receive a college degree in the U.S. to legally work and stay in the country
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[IMMSUPPORT_MARRY]
+[ PN: IF WEB: ] How much would you favor or oppose each of the following U.S. immigration policies? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much would you favor or oppose each of the following U.S. immigration policies? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] How about (INSERT ITEM)? (READ AS NECESSARY: How much would you favor or oppose (INSERT ITEM)? (READ LIST IF NECESSARY)) — Allowing undocumented immigrants to legally work and stay in the country if they are married to a U.S. citizen
+1 - Strongly favor
+2 - Somewhat favor
+3 - Somewhat oppose
+4 - Strongly oppose
+
+[LGLSTATUS]
+FILE ] Which comes closer to your view about how to handle undocumented immigrants who are now living in the U.S.? [ PN: IF CATI: ] (READ LIST)
+1 - They should not be allowed to stay in the country legally
+2 - There should be a way for them to stay in the country legally, if certain requirements are met
+
+[IMREASON_LAW] (skip if condition not met: IF SAY UNDOCUMENTED IMMIGRANTS SHOULD NOT BE ALLOWED TO STAY LEGALLY)
+(LGLSTATUS=1): [ PN: RANDOMIZE BATTERY ITEMS. INCLUDE RANDOMIZATIONS IN DATA FILE. ] [ PN: IF WEB: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? (INSERT ITEM) (READ LIST IF NECESSARY)) — Because people shouldn’t be rewarded for breaking the law
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IMREASON_FAIR] (skip if condition not met: IF SAY UNDOCUMENTED IMMIGRANTS SHOULD NOT BE ALLOWED TO STAY LEGALLY)
+(LGLSTATUS=1): [ PN: RANDOMIZE BATTERY ITEMS. INCLUDE RANDOMIZATIONS IN DATA FILE. ] [ PN: IF WEB: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? (INSERT ITEM) (READ LIST IF NECESSARY)) — It’s unfair to immigrants who entered the country legally
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IMREASON_RSRC] (skip if condition not met: IF SAY UNDOCUMENTED IMMIGRANTS SHOULD NOT BE ALLOWED TO STAY LEGALLY)
+(LGLSTATUS=1): [ PN: RANDOMIZE BATTERY ITEMS. INCLUDE RANDOMIZATIONS IN DATA FILE. ] [ PN: IF WEB: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: How much do you think each of the following are a reason why undocumented immigrants should not be allowed to stay in the U.S.? (INSERT ITEM) (READ LIST IF NECESSARY)) — They take away resources from American citizens
+1 - Major reason
+2 - Minor reason
+3 - Not a reason
+
+[IMREQURMNTS] (open-end) (skip if condition not met: IF SAY UNDOCUMENTED IMMIGRANTS SHOULD BE ALLOWED TO STAY LEGALLY IF)
+
+
+[CERTAIN_BKGRND]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Passing a security background check
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_FINE]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Paying a fine
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_JOB]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Having a job
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_HASCHILD]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Having a child or children who were born in the U.S.
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_HOME]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Owning a home in the U.S.
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_BUS]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Owning a business in the U.S.
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[CERTAIN_IMMCHILD]
+REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN THE DATA FILE. ] [ PN: IF WEB: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about (INSERT ITEM)? (READ AS NECESSARY: Thinking about the requirements undocumented immigrants should meet in order to stay in the country legally, should each of the following be required, considered but not required, or neither? (READ LIST IF NECESSARY)) — Having come to the U.S. as a child
+1 - Yes, should be required
+2 - Yes, should be considered but not required
+3 - No, should not be considered
+
+[LGL_CITIZPRENSHIP] (skip if condition not met: IF SAY UNDOCUMENTED IMMIGRANTS SHOULD BE ALLOWED TO STAY LEGALLY IF)
+CERTAIN REQUIREMENTS ARE MET (LGLSTATUS=2): [ PN: ROTATE RESPONSE OPTIONS 1-2/2-1 HOLDING 98 AND 99 LAST. RECORD RANDOMIZATION IN DATA FILE. ] And do you think immigrants who are in the U.S. illegally and meet the requirements should… [ PN: IF CATI: ] (READ LIST)
+1 - Be eligible to apply for U.S. citizenship
+2 - Be eligible to apply for permanent residency, but not U.S. citizenship
+
+[LG_IMLVL]
+ROTATION IN DATA FILE. ] Should legal immigration into the United States be… [ PN: IF CATI: ] (READ LIST)
+1 - Increased
+2 - Decreased
+3 - Kept at its present level
+
+[CITIZEN_TIME]
+IN DATA FILE. ] How long after entering the country do you think it should take for legal immigrants seeking U.S. citizenship to become a citizen of the United States? [ PN: IF CATI: ] (READ LIST)
+1 - Less than a year
+2 - 1-4 years
+3 - 5-9 years
+4 - 10+ years
+
+[IMCRT_HIGHSKILL]
+[ PN: IF WEB: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] Next, how much priority should (INSERT ITEM) be given? (READ AS NECSESARY: In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? (READ LIST IF NECESSARY)) — People who are highly skilled workers (such as scientists, doctors, nurses, computer programmers, etc.)
+1 - Top priority
+2 - Some priority
+3 - No priority
+
+[IMCRT_FAMILY]
+[ PN: IF WEB: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] Next, how much priority should (INSERT ITEM) be given? (READ AS NECSESARY: In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? (READ LIST IF NECESSARY)) — People who have close family members already living in the U.S.
+1 - Top priority
+2 - Some priority
+3 - No priority
+
+[IMCRT_LABOR]
+[ PN: IF WEB: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] Next, how much priority should (INSERT ITEM) be given? (READ AS NECSESARY: In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? (READ LIST IF NECESSARY)) — People who can fill labor shortages like agricultural workers, home health aides, or childcare workers
+1 - Top priority
+2 - Some priority
+3 - No priority
+
+[IMCRT_UNDERREP]
+[ PN: IF WEB: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] Next, how much priority should (INSERT ITEM) be given? (READ AS NECSESARY: In deciding whether people from other countries should be allowed to legally immigrate to the United States, how much priority should be given to each of the following? (READ LIST IF NECESSARY)) — People who come from countries not well represented in the U.S.
+1 - Top priority
+2 - Some priority
+3 - No priority
+
+[IMMENF]
+RECORD ROTATION IN THE DATA FILE. ] Who should enforce deportations of undocumented immigrants living in the United States? [ PN: IF CATI: ] (READ LIST)
+1 - The federal government
+2 - State and local governments
+3 - Both [ PN: INSERT A LINE OF SPACE ]
+4 - [ PN: IF WEB: ] There should not be deportations [ PN: IF CATI: ] Or there should not be deportations
+
+[IMMSER_LGL]
+[ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN DATA FILE. ] [ PN: IF WEB: ] Should each of the following be eligible for public assistance provided by state and local governments? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Should each of the following be eligible for public assistance provided by state and local governments? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEM: ] Next, should (INSERT ITEM) be eligible for public assistance provided by the state and local governments? (READ LIST IF NECESSARY) — Immigrants who are living in the U.S. legally
+1 - Yes
+2 - No
+
+[IMMSER_ILGL]
+[ PN: RANDOMIZE BATTERY ITEMS. RECORD RANDOMIZATION IN DATA FILE. ] [ PN: IF WEB: ] Should each of the following be eligible for public assistance provided by state and local governments? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] Should each of the following be eligible for public assistance provided by state and local governments? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEM: ] Next, should (INSERT ITEM) be eligible for public assistance provided by the state and local governments? (READ LIST IF NECESSARY) — Immigrants who are living in the U.S. illegally
+1 - Yes
+2 - No
+
+[IMMVOTE_LGL]
+[ PN: IF WEB: ] As you may know, only U.S. citizens are allowed to vote in federal elections. Some cities and counties have proposed allowing non-citizen residents to vote in some local elections. Do you favor or oppose allowing each of the following to vote in local elections? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] As you may know, only U.S. citizens are allowed to vote in federal elections. Some cities and counties have proposed allowing non-citizen residents to vote in some local elections. Do you favor or oppose allowing each of the following to vote in local elections? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEM: ] Next, do you favor or oppose allowing (INSERT ITEM) to vote in local elections? (READ LIST IF NECESSARY) — Immigrants who are living in the U.S. legally and are not U.S. citizens
+1 - Favor them voting in local elections
+2 - Oppose them voting in local elections
+
+[IMMVOTE_ILGL]
+[ PN: IF WEB: ] As you may know, only U.S. citizens are allowed to vote in federal elections. Some cities and counties have proposed allowing non-citizen residents to vote in some local elections. Do you favor or oppose allowing each of the following to vote in local elections? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] As you may know, only U.S. citizens are allowed to vote in federal elections. Some cities and counties have proposed allowing non-citizen residents to vote in some local elections. Do you favor or oppose allowing each of the following to vote in local elections? First, (INSERT ITEM)? (READ LIST IF NECESSARY) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEM: ] Next, do you favor or oppose allowing (INSERT ITEM) to vote in local elections? (READ LIST IF NECESSARY) — Immigrants who are living in the U.S. illegally and are not U.S. citizens
+1 - Favor them voting in local elections
+2 - Oppose them voting in local elections
+
+[IMMINTEG]
+IN THE DATA FILE. ] Which comes closer to your view — even if neither is exactly right? [ PN: IF CATI: ] (READ LIST)
+1 - Immigrants in our country today should adopt American customs and way of life
+2 - Immigrants in our country today should be able to hold on to the customs and way of life of their home country
+
+[IMMENG]
+AS MEDESC_TYP. RECORD ROTATION IN THE DATA FILE ] How important is it to you personally that immigrants in the United States speak English fluently? [ PN: IF CATI: ] (READ LIST)
+1 - Extremely important
+2 - Very important
+3 - Somewhat important
+4 - Not too important
+5 - Not at all important
+
+[IMMSTS]
+ROTATIONS IN THE DATA FILE.] Do you think the increasing number of immigrants in the United States will make life… [ PN: IF CATI: ] (READ LIST)
+1 - Better for people like you
+2 - Worse for people like you
+3 - No different for people like you
+
+[ILLIMPCT] (open-end)
+FIRST, FOLLOWED BY LGIMPCT. RECORD ORDER IN DATA FILE. ]
+
+[LGIMPCT_CRIME]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country legally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Crime
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[LGIMPCT_ECON]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country legally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — The U.S. economy
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[LGIMPCT_VALUE]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country legally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Social and cultural values
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[LGIMPCT_TECH]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country legally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Science and technological innovation
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[LGIMPCT_PUBRES]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country legally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country legally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Public resources (such as housing, education, health care, etc.)
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[ILLIMPCT_CRIME]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country illegally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Crime
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[ILLIMPCT_ECON]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country illegally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — The U.S. economy
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[ILLIMPCT_VALUE]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country illegally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Social and cultural values
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[ILLIMPCT_TECH]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country illegally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Science and technological innovation
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[ILLIMPCT_PUBRES]
+[ PN: IF WEB: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? [ PN: IF CATI: SHOW FOR FIRST ITEM: ] What type of impact do you think immigrants living in the country illegally are having on each of the following areas? First, (INSERT ITEM)? (READ LIST) [ PN: IF CATI: SHOW FOR SUBSEQUENT ITEMS: ] What about on (INSERT ITEM)? (READ AS NECESSARY: What type of impact do you think immigrants living in the country illegally are having on (INSERT ITEM)? (READ LIST IF NECESSARY)) — Public resources (such as housing, education, health care, etc.)
+1 - Making things better
+2 - Making things worse
+3 - Not having much effect
+
+[UNDCIMPCT]
+IMMIMPCTa; INCLUDE ROTATION IN DATA FILE ] When it comes to undocumented immigrants currently in the U.S, which comes closer to your view? [ PN: IF CATI: ] (READ LIST)
+1 - Undocumented immigrants mostly fill jobs that American citizens would like to have
+2 - Undocumented immigrants mostly fill jobs American citizens don’t want
+
+[IMMIMPCT]
+UNDCIMPCTa; INCLUDE ROTATION IN DATA FILE ] When it comes to legal immigrants currently in the U.S, which comes closer to your view? [ PN: IF CATI: ] (READ LIST)
+1 - Legal immigrants mostly fill jobs that American citizens would like to have
+2 - Legal immigrants mostly fill jobs American citizens don’t want
+
+[KNOWIMM]
+Do you personally know someone in your community who was born outside of the United States? [ PN: IF CATI: ] (READ LIST IF NECESSARY)
+1 - Yes
+2 - No
+
+[IMMJOBIMP]
+Do you believe that you or a family member has ever lost a job or not gotten a job because an employer hired an immigrant worker instead? [ PN: IF CATI: ] (READ LIST IF NECESSARY)
+1 - Yes
+2 - No
+
+[IMMCONTACT]
+IN DATA FILE ] How often do you personally come in contact with immigrants who speak little or no English? [ PN: IF CATI: ] (READ LIST)
+1 - Extremely often
+2 - Very often
+3 - Sometimes
+4 - Rarely
+5 - Never
+
+[IMMCONTACT2] (skip if condition not met: IF COME IN CONTACT WITH IMMIGRANTS WHO SPEAK LITTLE OR NO ENGLISH AT)
+LEAST SOMETIMES (IMMCONTACT=1,2, OR 3): When you come into contact with immigrants who speak little or no English, does it bother you? [ PN: IF CATI: ] (READ LIST IF NECESSARY)
+1 - Yes
+2 - No
+
+[SELFIMM]
+Do you consider yourself an immigrant? [ PN: IF CATI: ] (READ LIST IF NECESSARY)
+1 - Yes
+2 - No
+
+[SELFIMM2_OE] (open-end) (skip if condition not met: IF CONSIDERS SELF AN IMMIGRANT (SELFIMM=1):)
+In just a few words, why do you consider yourself an immigrant? __ [ PN: PROGRAM OPEN END TEXT BOX-3 LINES ]
+
+[MOTHERNAT2]
+Where was your MOTHER born? [ PN: IF CATI: ] Was your mother born in the United States, in Puerto Rico, in another U.S. territory, or in another country?
+1 - U.S. – 50 states, District of Columbia
+2 - U.S. – Puerto Rico
+3 - U.S. – other territory
+4 - Another country (please specify): [ PN: INSERT SINGLE LINE TEXT BOX ]
+
+[FATHERNAT]
+Where was your FATHER born? [ PN: IF CATI: ] Was your father born in the United States, in Puerto Rico, in another U.S. territory, or in another country?
+1 - U.S. – 50 states, District of Columbia
+2 - U.S. – Puerto Rico
+3 - U.S. – other territory
+4 - Another country (please specify): [ PN: INSERT SINGLE LINE TEXT BOX ]
+
+[VOTE_MOTIV] (skip if condition not met: IF CITIZEN (X_CITIZEN=1):3)
+Thinking about voting in the presidential election, would you say that you are personally... [ PN: IF CATI: ] (READ LIST)
+1 - Extremely motivated to vote
+2 - Very motivated to vote
+3 - Somewhat motivated to vote
+4 - Not too motivated to vote
+5 - Not at all motivated to vote

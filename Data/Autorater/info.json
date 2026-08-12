@@ -1,0 +1,28 @@
+{
+  "application": "Autorater",
+  "task_definitions": [
+    {
+      "task_def": "AR_M",
+      "T_tasks": 74,
+      "T_hist": 73,
+      "n_j": [
+        2865,
+        7918,
+        20324
+      ],
+      "N_j": [
+        2865,
+        7918,
+        20324
+      ],
+      "paired": true,
+      "clip": [
+        0.0,
+        1.0
+      ],
+      "note": "theta* = human win-rate per model; intervals ingested from ar_m_{paired,synth_only_baseline,conformal_only}_per_task.csv"
+    }
+  ],
+  "n_j": "per-task gold sample size [min, median, max]",
+  "N_j": "per-task synthetic sample size [min, median, max]"
+}

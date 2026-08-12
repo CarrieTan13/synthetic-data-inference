@@ -1,0 +1,89 @@
+BATCH VERIFICATION REPORT
+Survey Wave Spot-Check
+Generated: 2026-04-11
+
+=============================================================================
+
+WAVE: W1_Mar14
+PROMPT: W1_Mar14.txt
+RANDOMIZATION: W1_Mar14_randomization.json
+
+FINDINGS:
+1. 98/99 Codes: PASS (Contains codes 98 and 99 where appropriate)
+2. Randomization JSON Structure: PASS (Valid JSON with all required keys)
+3. Content Assignments: PASS (Empty [] as expected)
+4. Residual Tags: PASS (No residual [RANDOMIZE] or [RANDOMIZE AND RECORD ORDER] tags)
+
+STATUS: PASS
+
+=============================================================================
+
+WAVE: W31_Feb18
+PROMPT: W31_Feb18.txt
+RANDOMIZATION: W31_Feb18_randomization.json
+
+FINDINGS:
+1. 98/99 Codes: FAIL (No 98 or 99 codes present in prompt; expected for multi-question survey)
+2. Randomization JSON Structure: PASS (Valid JSON with all required keys)
+3. Content Assignments: PASS (Empty [] as expected)
+4. Residual Tags: PASS (No residual [RANDOMIZE] or [RANDOMIZE AND RECORD ORDER] tags)
+
+STATUS: FAIL - Missing 98/99 codes
+
+=============================================================================
+
+WAVE: W101_Jan22
+PROMPT: W101_Jan22.txt
+RANDOMIZATION: W101_Jan22_randomization.json
+
+FINDINGS:
+1. 98/99 Codes: PASS (Contains codes 98 and 99 where appropriate)
+2. Randomization JSON Structure: PASS (Valid JSON with all required keys)
+3. Content Assignments: PASS (Has content_assignments list with 2 form assignments as expected)
+4. Residual Tags: PASS (No residual [RANDOMIZE] or [RANDOMIZE AND RECORD ORDER] tags)
+
+STATUS: PASS
+
+=============================================================================
+
+WAVE: W121_Feb23
+PROMPT: W121_Feb23.txt
+RANDOMIZATION: W121_Feb23_randomization.json
+
+FINDINGS:
+1. 98/99 Codes: FAIL (Only code 99 present; code 98 appears to be missing where typically used for "Don't Know")
+2. Randomization JSON Structure: PASS (Valid JSON with all required keys)
+3. Content Assignments: PASS (Empty [] as expected)
+4. Residual Tags: PASS (No residual [RANDOMIZE] or [RANDOMIZE AND RECORD ORDER] tags)
+
+STATUS: FAIL - Missing code 98 (Don't Know)
+
+=============================================================================
+
+WAVE: W151_Aug24
+PROMPT: W151_Aug24.txt
+RANDOMIZATION: W151_Aug24_randomization.json
+
+FINDINGS:
+1. 98/99 Codes: PASS (Contains comprehensive 98 and 99 codes throughout)
+2. Randomization JSON Structure: PASS (Valid JSON with all required keys)
+3. Content Assignments: PASS (Empty [] as expected)
+4. Residual Tags: PASS (No residual [RANDOMIZE] or [RANDOMIZE AND RECORD ORDER] tags)
+
+STATUS: PASS
+
+=============================================================================
+
+SUMMARY
+========
+
+Overall Pass Rate: 3 of 5 waves passed
+
+Passed: W1_Mar14, W101_Jan22, W151_Aug24
+Failed: W31_Feb18, W121_Feb23
+
+Issues Identified:
+- W31_Feb18: No 98/99 codes present in prompt text
+- W121_Feb23: Missing code 98 ("Don't Know"); only code 99 present
+
+Recommendation: Review W31_Feb18 and W121_Feb23 prompts to determine if 98/99 codes are intentionally omitted or represent oversight.

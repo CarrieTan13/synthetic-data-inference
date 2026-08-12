@@ -1,0 +1,7 @@
+# Verified with Python 3.12.2 on macOS (arm64).
+# pyreadr is needed only for the ANES application (reads the .rds file).
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+matplotlib==3.9.2
+pyreadr==0.5.6

@@ -1,0 +1,186 @@
+{
+  "app": "Pew",
+  "n_files": 18,
+  "files": [
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "multidim_alg1",
+      "alpha": 0.1,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3648,
+      "path": "Pew/multidim_gpt_4o/multidim_alg1/alpha010__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 0.0,
+      "mean_width_clip": 0.0212,
+      "path": "Pew/multidim_gpt_4o/synth_only/alpha010__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "multidim_alg1",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3572,
+      "path": "Pew/multidim_gpt_4o/multidim_alg1/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 0.0,
+      "mean_width_clip": 0.0193,
+      "path": "Pew/multidim_gpt_4o/synth_only/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "multidim_alg1",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3151,
+      "path": "Pew/multidim_gpt_4o/multidim_alg1/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 96,
+      "coverage": 0.0,
+      "mean_width_clip": 0.0179,
+      "path": "Pew/multidim_gpt_4o/synth_only/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "multidim_alg1",
+      "alpha": 0.1,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 100.0,
+      "mean_width_clip": 1.0,
+      "path": "Pew/multidim_gemini_20_flash/multidim_alg1/alpha010__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 7.8,
+      "mean_width_clip": 0.0481,
+      "path": "Pew/multidim_gemini_20_flash/synth_only/alpha010__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "multidim_alg1",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3906,
+      "path": "Pew/multidim_gemini_20_flash/multidim_alg1/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 7.8,
+      "mean_width_clip": 0.0439,
+      "path": "Pew/multidim_gemini_20_flash/synth_only/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "multidim_alg1",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3856,
+      "path": "Pew/multidim_gemini_20_flash/multidim_alg1/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 64,
+      "coverage": 6.2,
+      "mean_width_clip": 0.0406,
+      "path": "Pew/multidim_gemini_20_flash/synth_only/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o_temporal",
+      "algo": "multidim_alg1",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 100.0,
+      "mean_width_clip": 0.3521,
+      "path": "Pew/multidim_gpt_4o_temporal/multidim_alg1/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o_temporal",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 0.0,
+      "mean_width_clip": 0.0158,
+      "path": "Pew/multidim_gpt_4o_temporal/synth_only/alpha015__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o_temporal",
+      "algo": "multidim_alg1",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 100.0,
+      "mean_width_clip": 0.346,
+      "path": "Pew/multidim_gpt_4o_temporal/multidim_alg1/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gpt_4o_temporal",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 0.0,
+      "mean_width_clip": 0.0146,
+      "path": "Pew/multidim_gpt_4o_temporal/synth_only/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash_temporal",
+      "algo": "multidim_alg1",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 100.0,
+      "mean_width_clip": 0.4048,
+      "path": "Pew/multidim_gemini_20_flash_temporal/multidim_alg1/alpha020__bonf_split.csv"
+    },
+    {
+      "task_def": "multidim_gemini_20_flash_temporal",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "bonf_split",
+      "n_tasks": 16,
+      "coverage": 6.2,
+      "mean_width_clip": 0.0373,
+      "path": "Pew/multidim_gemini_20_flash_temporal/synth_only/alpha020__bonf_split.csv"
+    }
+  ]
+}

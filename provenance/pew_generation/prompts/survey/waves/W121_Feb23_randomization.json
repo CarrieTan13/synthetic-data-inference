@@ -1,0 +1,229 @@
+{
+  "description": "Randomization configuration for W121_Feb23 (auto-extracted from questionnaire.txt by generate_survey_prompt.py). Covers: (1) content_assignments \u2014 content placeholders, (2) option_order \u2014 shuffle answer-option codes within a question, (3) item_order \u2014 shuffle sub-items within grid/matrix questions, (4) form_randomization \u2014 reverse order of response options for a random half sample, (5) screen_order \u2014 multi-screen questions randomization",
+  "content_assignments": [],
+  "option_order": {
+    "HRSSATIS": {
+      "description": "RANDOMIZE RESPONSE OPTIONS 1 AND 2, WITH OPTION 3 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "WORKPTO": {
+      "description": "RANDOMIZE RESPONSE OPTIONS 1 AND 2, WITH OPTION 3 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "JOBNEG3": {
+      "description": "Option(s) [3] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "WFHOPTION": {
+      "description": "RANDOMIZE RESPONSE OPTIONS",
+      "randomize": [
+        1,
+        2
+      ]
+    },
+    "WFHDAYS": {
+      "description": "Option(s) [6] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_last": [
+        6
+      ]
+    },
+    "DIVSUCCESS": {
+      "description": "Option(s) [6] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_last": [
+        6
+      ]
+    },
+    "WRKDEI": {
+      "description": "RANDOMIZE RESPONSE OPTIONS 1 AND 2, WITH OPTION 3 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3
+      ],
+      "fixed_last": [
+        3
+      ]
+    },
+    "DIVEFFORT": {
+      "description": "RANDOMIZE RESPONSE OPTIONS 1 AND 2, WITH OPTIONS 3 AND 4 ALWAYS LAST",
+      "randomize": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "fixed_last": [
+        3,
+        4
+      ]
+    },
+    "DIVHAVE": {
+      "description": "Option(s) [6] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_last": [
+        6
+      ]
+    },
+    "WRKDISA2": {
+      "description": "Option(s) [6] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_last": [
+        6
+      ]
+    },
+    "PRTYPREF": {
+      "description": "Option(s) [6] anchored last via [anchor] tag",
+      "randomize": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "fixed_last": [
+        6
+      ]
+    }
+  },
+  "item_order": {
+    "WORKSATIS": {
+      "description": "RANDOMIZE ITEMS ACROSS TWO SCREENS; DISPLAY RESPONSE OPTIONS IN SAME ORDER AS JOBSAT",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ]
+    },
+    "WORKFEEL": {
+      "description": "RANDOMIZE ITEMS; RANDOMLY DISPLAY RESPONSE OPTIONS 1-5 OR 5-1, USING THE SAME ORDER FOR EACH ITEM",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "WORKPTO2": {
+      "description": "RANDOMIZE ITEMS",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "WFHIMPACT": {
+      "description": "RANDOMIZE ITEMS; RANDOMLY DISPLAY RESPONSE OPTIONS 1-5 OR 5-1, USING THE SAME ORDER FOR EACH ITEM",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "DIVSUCCESS": {
+      "description": "RANDOMIZE ITEMS; RANDOMLY DISPLAY RESPONSE OPTIONS 1-5 OR 5-1 WITH OPTION 6 ALWAYS LAST, USING THE SAME ORDER FOR EACH ITEM",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+      ]
+    },
+    "PERSONALLY": {
+      "description": "RANDOMIZE ITEMS; DISPLAY RESPONSE OPTIONS IN SAME ORDER AS JOBSAT",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "DIVHAVE": {
+      "description": "RANDOMIZE ITEMS IN SAME ORDER AS DIVIMP; DISPLAY RESPONSE OPTIONS 1-5 IN SAME ORDER AS JOBSAT, WITH OPTION 6 ALWAYS LAST",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "DEIPOLICY1": {
+      "description": "RANDOMIZE ITEMS",
+      "items": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    }
+  },
+  "form_randomization": {
+    "PRTYPREF": {
+      "description": "REVERSE ORDER 1-5; 5-1 RANDOM HALF SAMPLE; KEEP 6 LAST",
+      "reverse_for_half": true
+    }
+  },
+  "question_order": [],
+  "block_order": [],
+  "screen_order": {}
+}

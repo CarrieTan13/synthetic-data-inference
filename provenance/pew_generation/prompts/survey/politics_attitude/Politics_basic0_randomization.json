@@ -1,0 +1,10 @@
+{
+  "description": "Randomization configuration for Politics_basic0 (basic political satisfaction and economic outlook survey). No randomization needed for these three questions.",
+  "content_assignments": [],
+  "option_order": {},
+  "item_order": {},
+  "form_randomization": {},
+  "question_order": [],
+  "block_order": [],
+  "screen_order": {}
+}

@@ -1,0 +1,451 @@
+{
+  "_note": "Release dates for Autorater models, used to order the BT-score anchor cohort (earliest-released models form the anchor). 62/74 dated from embedded date suffixes + web sources; 12 anonymized arena codenames have no public date and are placed last (task side). Reference gpt-5.2-chat-latest is pinned at beta=0 and forced into every anchor. Retrieved 2026-07-18.",
+  "dates": {
+    "model-61": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-19": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "claude-haiku-4-5-20251001": {
+      "date": "2025-10-01",
+      "source": "embedded",
+      "confidence": "high"
+    },
+    "claude-opus-4-5-20251101": {
+      "date": "2025-11-01",
+      "source": "embedded (API id; announcement 2025-11-24)",
+      "confidence": "high"
+    },
+    "claude-opus-4-6": {
+      "date": "2026-02-05",
+      "source": "anthropic.com/news/claude-opus-4-6",
+      "confidence": "high"
+    },
+    "claude-opus-4-6-thinking": {
+      "date": "2026-02-05",
+      "source": "anthropic.com/news/claude-opus-4-6",
+      "confidence": "high"
+    },
+    "claude-opus-4-7": {
+      "date": "2026-04-16",
+      "source": "web",
+      "confidence": "medium"
+    },
+    "claude-opus-4-7-thinking": {
+      "date": "2026-04-16",
+      "source": "web",
+      "confidence": "medium"
+    },
+    "claude-sonnet-4-5-20250929": {
+      "date": "2025-09-29",
+      "source": "embedded",
+      "confidence": "high"
+    },
+    "claude-sonnet-4-5-20250929-thinking-32k": {
+      "date": "2025-09-29",
+      "source": "embedded",
+      "confidence": "high"
+    },
+    "claude-sonnet-4-6": {
+      "date": "2026-02-17",
+      "source": "anthropic.com/news/claude-sonnet-4-6",
+      "confidence": "high"
+    },
+    "model-46": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-32": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "deepseek-v4-ch3-text": {
+      "date": "2026-04-24",
+      "source": "web (DeepSeek V4 preview)",
+      "confidence": "medium"
+    },
+    "deepseek-v4-ch3-thinking-text": {
+      "date": "2026-04-24",
+      "source": "web (DeepSeek V4 preview)",
+      "confidence": "medium"
+    },
+    "deepseek-v4-pro-ch1-text": {
+      "date": "2026-04-24",
+      "source": "web (DeepSeek V4-Pro preview)",
+      "confidence": "medium"
+    },
+    "deepseek-v4-pro-ch1-thinking-text": {
+      "date": "2026-04-24",
+      "source": "web (DeepSeek V4-Pro preview)",
+      "confidence": "medium"
+    },
+    "model-71": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "medium"
+    },
+    "model-06": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-55": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-28": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "gemini-2.5-flash": {
+      "date": "2025-04-17",
+      "source": "wikipedia Gemini (preview 2025-04-17)",
+      "confidence": "medium"
+    },
+    "gemini-2.5-pro": {
+      "date": "2025-03-25",
+      "source": "blog.google (announced 2025-03-25)",
+      "confidence": "medium"
+    },
+    "gemini-3-flash-thinking-minimal": {
+      "date": "2025-12-17",
+      "source": "web",
+      "confidence": "medium"
+    },
+    "gemini-3.1-flash-lite-preview": {
+      "date": "2026-03-03",
+      "source": "web",
+      "confidence": "medium"
+    },
+    "gemini-3.1-pro-preview": {
+      "date": "2026-02-19",
+      "source": "blog.google/gemini-3-1-pro",
+      "confidence": "high"
+    },
+    "gpt-5.2": {
+      "date": "2025-12-11",
+      "source": "wikipedia GPT-5.2",
+      "confidence": "high"
+    },
+    "gpt-5.2-chat-latest": {
+      "date": "2025-12-11",
+      "source": "wikipedia GPT-5.2 (Instant)",
+      "confidence": "high"
+    },
+    "gpt-5.2-high": {
+      "date": "2025-12-11",
+      "source": "wikipedia GPT-5.2",
+      "confidence": "high"
+    },
+    "gpt-5.3-chat-latest": {
+      "date": "2026-03-15",
+      "source": "web (GPT-5.3 Instant, March 2026; day=15 for YYYY-MM)",
+      "confidence": "medium"
+    },
+    "gpt-5.4-high-no-system-prompt": {
+      "date": "2026-03-05",
+      "source": "wikipedia GPT-5.4",
+      "confidence": "high"
+    },
+    "gpt-5.4-mini-high": {
+      "date": "2026-03-17",
+      "source": "wikipedia GPT-5.4 (mini/nano)",
+      "confidence": "high"
+    },
+    "gpt-5.4-nano-high": {
+      "date": "2026-03-17",
+      "source": "wikipedia GPT-5.4 (mini/nano)",
+      "confidence": "high"
+    },
+    "gpt-5.4-no-system-prompt": {
+      "date": "2026-03-05",
+      "source": "wikipedia GPT-5.4",
+      "confidence": "high"
+    },
+    "gpt-5.5-high-text": {
+      "date": "2026-04-23",
+      "source": "wikipedia GPT-5.5",
+      "confidence": "high"
+    },
+    "gpt-5.5-instant": {
+      "date": "2026-05-05",
+      "source": "wikipedia GPT-5.5 (Instant to free tier)",
+      "confidence": "medium"
+    },
+    "gpt-5.5-text": {
+      "date": "2026-04-23",
+      "source": "wikipedia GPT-5.5",
+      "confidence": "high"
+    },
+    "gpt-5.5-xhigh": {
+      "date": "2026-04-23",
+      "source": "wikipedia GPT-5.5",
+      "confidence": "high"
+    },
+    "gpt-5.5-xhigh-text": {
+      "date": "2026-04-23",
+      "source": "wikipedia GPT-5.5",
+      "confidence": "high"
+    },
+    "grok-4-1-fast-non-reasoning": {
+      "date": "2025-11-19",
+      "source": "x.ai/news/grok-4-1 (Fast for devs)",
+      "confidence": "medium"
+    },
+    "grok-4.1": {
+      "date": "2025-11-17",
+      "source": "x.ai/news/grok-4-1",
+      "confidence": "high"
+    },
+    "grok-4.1-thinking": {
+      "date": "2025-11-17",
+      "source": "x.ai/news/grok-4-1",
+      "confidence": "high"
+    },
+    "grok-4.20-beta-0309-reasoning": {
+      "date": "2026-03-09",
+      "source": "embedded (MMDD)",
+      "confidence": "high"
+    },
+    "grok-4.20-multi-agent-beta-0309": {
+      "date": "2026-03-09",
+      "source": "embedded (MMDD)",
+      "confidence": "high"
+    },
+    "grok-4.3-text": {
+      "date": "2026-04-17",
+      "source": "web (Grok 4.3 Beta)",
+      "confidence": "medium"
+    },
+    "model-63": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-37": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-15": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "kimi-k2-thinking-turbo": {
+      "date": "2025-11-06",
+      "source": "web (Kimi K2 Thinking)",
+      "confidence": "medium"
+    },
+    "kimi-k2.5-instant-20260302": {
+      "date": "2026-03-02",
+      "source": "embedded",
+      "confidence": "high"
+    },
+    "kimi-k2.5-text": {
+      "date": "2026-01-27",
+      "source": "web (Kimi K2.5)",
+      "confidence": "high"
+    },
+    "kimi-k2.6-text": {
+      "date": "2026-04-20",
+      "source": "web (Kimi K2.6 GA)",
+      "confidence": "high"
+    },
+    "model-22": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-01": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-59": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "medium"
+    },
+    "model-14": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "mimo-v2.5-pro-text": {
+      "date": "2026-04-27",
+      "source": "web (Xiaomi MiMo-V2.5-Pro)",
+      "confidence": "medium"
+    },
+    "mimo-v2.5-text": {
+      "date": "2026-04-22",
+      "source": "web (Xiaomi MiMo-V2.5)",
+      "confidence": "medium"
+    },
+    "minimax-m2.5": {
+      "date": "2026-02-12",
+      "source": "web (MiniMax M2.5)",
+      "confidence": "high"
+    },
+    "mistral-medium-2508": {
+      "date": "2025-08-15",
+      "source": "embedded (YYMM; day=15)",
+      "confidence": "high"
+    },
+    "mistral-small-2603": {
+      "date": "2026-03-15",
+      "source": "embedded (YYMM; day=15)",
+      "confidence": "high"
+    },
+    "qwen3-235b-a22b-instruct-2507": {
+      "date": "2025-07-15",
+      "source": "embedded (YYMM; day=15)",
+      "confidence": "high"
+    },
+    "qwen3-max-preview-v2": {
+      "date": "2025-09-05",
+      "source": "family-inference (Qwen3-Max-Preview 2025-09-05)",
+      "confidence": "low"
+    },
+    "qwen3.5-122b-a10b": {
+      "date": "2026-02-16",
+      "source": "web (Qwen 3.5 family)",
+      "confidence": "medium"
+    },
+    "qwen3.5-27b": {
+      "date": "2026-02-16",
+      "source": "web (Qwen 3.5 family)",
+      "confidence": "medium"
+    },
+    "qwen3.5-35b-a3b": {
+      "date": "2026-02-16",
+      "source": "web (Qwen 3.5 family)",
+      "confidence": "medium"
+    },
+    "qwen3.5-397b-a17b-text": {
+      "date": "2026-02-16",
+      "source": "web (Qwen3.5 open-weight 397B)",
+      "confidence": "high"
+    },
+    "qwen3.5-flash": {
+      "date": "2026-02-16",
+      "source": "web (Qwen 3.5 family)",
+      "confidence": "medium"
+    },
+    "qwen3.6-27b": {
+      "date": "2026-04-22",
+      "source": "web (Qwen3.6-27B open-weight)",
+      "confidence": "medium"
+    },
+    "qwen3.6-plus-text": {
+      "date": "2026-04-02",
+      "source": "web (Qwen3.6-Plus)",
+      "confidence": "medium"
+    },
+    "model-02": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "medium"
+    },
+    "model-21": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-67": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    },
+    "model-49": {
+      "date": null,
+      "source": "anonymized",
+      "confidence": "high"
+    }
+  },
+  "ordering": [
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "qwen3-235b-a22b-instruct-2507",
+    "mistral-medium-2508",
+    "qwen3-max-preview-v2",
+    "claude-sonnet-4-5-20250929",
+    "claude-sonnet-4-5-20250929-thinking-32k",
+    "claude-haiku-4-5-20251001",
+    "claude-opus-4-5-20251101",
+    "kimi-k2-thinking-turbo",
+    "grok-4.1",
+    "grok-4.1-thinking",
+    "grok-4-1-fast-non-reasoning",
+    "gpt-5.2",
+    "gpt-5.2-chat-latest",
+    "gpt-5.2-high",
+    "model-59",
+    "gemini-3-flash-thinking-minimal",
+    "model-55",
+    "model-06",
+    "kimi-k2.5-text",
+    "model-02",
+    "claude-opus-4-6",
+    "claude-opus-4-6-thinking",
+    "minimax-m2.5",
+    "model-71",
+    "qwen3.5-122b-a10b",
+    "qwen3.5-27b",
+    "qwen3.5-35b-a3b",
+    "qwen3.5-397b-a17b-text",
+    "qwen3.5-flash",
+    "claude-sonnet-4-6",
+    "gemini-3.1-pro-preview",
+    "kimi-k2.5-instant-20260302",
+    "gemini-3.1-flash-lite-preview",
+    "gpt-5.4-high-no-system-prompt",
+    "gpt-5.4-no-system-prompt",
+    "grok-4.20-beta-0309-reasoning",
+    "grok-4.20-multi-agent-beta-0309",
+    "gpt-5.3-chat-latest",
+    "mistral-small-2603",
+    "gpt-5.4-mini-high",
+    "gpt-5.4-nano-high",
+    "model-14",
+    "qwen3.6-plus-text",
+    "claude-opus-4-7",
+    "claude-opus-4-7-thinking",
+    "grok-4.3-text",
+    "kimi-k2.6-text",
+    "mimo-v2.5-text",
+    "qwen3.6-27b",
+    "gpt-5.5-high-text",
+    "gpt-5.5-text",
+    "gpt-5.5-xhigh",
+    "gpt-5.5-xhigh-text",
+    "deepseek-v4-ch3-text",
+    "deepseek-v4-ch3-thinking-text",
+    "deepseek-v4-pro-ch1-text",
+    "deepseek-v4-pro-ch1-thinking-text",
+    "mimo-v2.5-pro-text",
+    "model-61",
+    "gpt-5.5-instant",
+    "model-19",
+    "model-46",
+    "model-32",
+    "model-28",
+    "model-63",
+    "model-37",
+    "model-15",
+    "model-22",
+    "model-01",
+    "model-21",
+    "model-67",
+    "model-49"
+  ]
+}

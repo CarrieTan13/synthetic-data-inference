@@ -1,0 +1,96 @@
+{
+  "app": "Autorater",
+  "n_files": 9,
+  "files": [
+    {
+      "task_def": "AR_M",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 100.0,
+      "mean_width_clip": 0.0669,
+      "path": "Autorater/AR_M/alg1/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 19.2,
+      "mean_width_clip": 0.0059,
+      "path": "Autorater/AR_M/synth_only/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "alg3",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 91.8,
+      "mean_width_clip": 0.0318,
+      "path": "Autorater/AR_M/alg3/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 100.0,
+      "mean_width_clip": 0.0633,
+      "path": "Autorater/AR_M/alg1/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 15.1,
+      "mean_width_clip": 0.0051,
+      "path": "Autorater/AR_M/synth_only/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "alg3",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 87.7,
+      "mean_width_clip": 0.0283,
+      "path": "Autorater/AR_M/alg3/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "alg1",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 100.0,
+      "mean_width_clip": 0.0561,
+      "path": "Autorater/AR_M/alg1/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 12.3,
+      "mean_width_clip": 0.0046,
+      "path": "Autorater/AR_M/synth_only/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "AR_M",
+      "algo": "alg3",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 73,
+      "coverage": 82.2,
+      "mean_width_clip": 0.0239,
+      "path": "Autorater/AR_M/alg3/alpha020__prop_127.csv"
+    }
+  ]
+}

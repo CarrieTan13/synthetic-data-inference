@@ -1,0 +1,206 @@
+{
+  "app": "simulated",
+  "n_files": 20,
+  "files": [
+    {
+      "task_def": "T40",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 99.5,
+      "mean_width_clip": 0.5248,
+      "path": "simulated/T40/alg1/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "alg2",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 99.6,
+      "mean_width_clip": 0.5523,
+      "path": "simulated/T40/alg2/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "alg3",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 90.5,
+      "mean_width_clip": 0.3292,
+      "path": "simulated/T40/alg3/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 12.7,
+      "mean_width_clip": 0.0311,
+      "path": "simulated/T40/synth_only/alpha010__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 98.4,
+      "mean_width_clip": 0.4617,
+      "path": "simulated/T40/alg1/alpha015__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "alg2",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 99.1,
+      "mean_width_clip": 0.4911,
+      "path": "simulated/T40/alg2/alpha015__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "alg3",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 85.9,
+      "mean_width_clip": 0.2876,
+      "path": "simulated/T40/alg3/alpha015__abs_005_005.csv"
+    },
+    {
+      "task_def": "T40",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "abs_005_005",
+      "n_tasks": 1000,
+      "coverage": 11.1,
+      "mean_width_clip": 0.0272,
+      "path": "simulated/T40/synth_only/alpha015__abs_005_005.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg1",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 98.6,
+      "mean_width_clip": 0.4787,
+      "path": "simulated/T100/alg1/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg2",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 99.2,
+      "mean_width_clip": 0.5179,
+      "path": "simulated/T100/alg2/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg3",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 91.0,
+      "mean_width_clip": 0.3207,
+      "path": "simulated/T100/alg3/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "synth_only",
+      "alpha": 0.1,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 12.7,
+      "mean_width_clip": 0.0314,
+      "path": "simulated/T100/synth_only/alpha010__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg1",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 97.7,
+      "mean_width_clip": 0.4294,
+      "path": "simulated/T100/alg1/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg2",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 98.4,
+      "mean_width_clip": 0.4716,
+      "path": "simulated/T100/alg2/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg3",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 86.5,
+      "mean_width_clip": 0.2881,
+      "path": "simulated/T100/alg3/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "synth_only",
+      "alpha": 0.15,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 10.5,
+      "mean_width_clip": 0.0274,
+      "path": "simulated/T100/synth_only/alpha015__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg1",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 96.1,
+      "mean_width_clip": 0.3932,
+      "path": "simulated/T100/alg1/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg2",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 98.0,
+      "mean_width_clip": 0.4378,
+      "path": "simulated/T100/alg2/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "alg3",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 80.3,
+      "mean_width_clip": 0.2514,
+      "path": "simulated/T100/alg3/alpha020__prop_127.csv"
+    },
+    {
+      "task_def": "T100",
+      "algo": "synth_only",
+      "alpha": 0.2,
+      "alloc": "prop_127",
+      "n_tasks": 1000,
+      "coverage": 9.6,
+      "mean_width_clip": 0.0244,
+      "path": "simulated/T100/synth_only/alpha020__prop_127.csv"
+    }
+  ]
+}
