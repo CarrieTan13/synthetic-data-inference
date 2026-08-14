@@ -14,7 +14,7 @@ fix is *task exchangeability*: find historical tasks where both real and
 synthetic data exist, measure how far the synthetic answer fell from the real
 one there, and widen the current, synthetic-only interval by that learned
 amount. This repo runs that method — and the baselines it's compared
-against — end to end on five applications, from raw data to the exact
+against — end to end on five experiments, from raw data to the exact
 figures and tables in the paper.
 
 ```bash
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 `--check` regenerates `Results/` from `Data/` and fails if any coverage, width, or
 task count differs from the deposited copy. Expect 15–25 minutes; the
-Bradley-Terry application dominates (a paired bootstrap over three anchor sizes).
+Bradley-Terry experiment dominates (a paired bootstrap over three anchor sizes).
 
 ## Citation
 
@@ -59,9 +59,9 @@ Inference runs once and is persisted, so regenerating a table never re-runs it.
 aren't part of this deposit (`Plots/` is gitignored); run
 `python -m Alg.result_process.plot_forest --repro` yourself to regenerate them.
 
-## Applications
+## Experiments
 
-| application | task definitions | estimand |
+| experiment | task definitions | estimand |
 |---|---|---|
 | `simulated` | `T40`, `T100` | mean of an exchangeable Bernoulli task; Monte-Carlo coverage over R=1000 replications |
 | `ANES` | `main` | feeling-thermometer mean per (target group × respondent partisanship); calibrate 2016, predict 2020 |
@@ -88,10 +88,16 @@ comes from three external sources, reduced or reprocessed as described in
 - **Pew** — real and GPT-4o-simulated presidential-approval responses, from the
   Pew Research Center's
   [American Trends Panel](https://www.pewresearch.org/american-trends-panel-datasets/).
-- **Autorater / Autorater_BT** — human votes, autorater votes, and Bradley-Terry
-  battle outcomes, from Chiang, Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu,
-  Jordan, Gonzalez & Stoica (2024), *"Chatbot Arena: An Open Platform for
-  Evaluating LLMs by Human Preference,"* ICML 2024.
+- **Autorater / Autorater_BT** — human votes, reward-model autorater votes, and
+  Bradley-Terry battle outcomes collected directly on the
+  [LMArena](https://lmarena.ai/) platform and released here with permission;
+  this vote-level data is not part of any public dataset release. See Chiang,
+  Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu, Jordan, Gonzalez & Stoica
+  (2024), *"Chatbot Arena: An Open Platform for Evaluating LLMs by Human
+  Preference,"* ICML 2024, for the platform this data was collected on. Models
+  that appear in no paper figure are pseudonymized regardless of whether they
+  were a named public release or an anonymous test entry at collection time —
+  see *Two deliberate departures* below.
 
 ## Two deliberate departures from the authors' working tree
 
