@@ -95,9 +95,11 @@ comes from three external sources, reduced or reprocessed as described in
   Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu, Jordan, Gonzalez & Stoica
   (2024), *"Chatbot Arena: An Open Platform for Evaluating LLMs by Human
   Preference,"* ICML 2024, for the platform this data was collected on. Models
-  that appear in no paper figure are pseudonymized regardless of whether they
-  were a named public release or an anonymous test entry at collection time —
-  see *Two deliberate departures* below.
+  under pre-release testing on Arena at collection time are pseudonymized; the
+  paper's figures only display the subset cleared with LMArena for public
+  release, and a few names outside that cleared set are already public
+  elsewhere but pseudonymized anyway as a conservative default — see *Two
+  deliberate departures* below.
 
 ## Two deliberate departures from the authors' working tree
 
@@ -121,12 +123,18 @@ and no respondent row is redistributed. `Alg/inference/_pew/multidim.py::dim_sta
 accepts either form, so the code also runs unchanged against a respondent-level
 file rebuilt from your own ATP download.
 
-**Thirty Arena models are pseudonymised.** Every model that appears in a figure of
-the paper keeps its real name. Thirty that appear in no figure are renamed
-`model-NN`, with release dates blanked in `model_release.json` (a real date
-re-identifies a pseudonym against a public release timeline). Pseudonyms are
-assigned by a seeded shuffle, not alphabetically. The mapping is not distributed.
-`Alg/data_ingestion/anonymize.py` is included so the transformation is auditable.
+**Thirty Arena models are pseudonymised.** These are the models under pre-release
+testing on Arena at collection time; the paper's figures only display the subset
+cleared with LMArena for public release, so every figure-shown model keeps its
+real name. The pseudonymized set is a conservative superset of the private
+models: a few names in it turned out to already be public elsewhere but were
+never checked with LMArena for release, so they stay hidden too. Pseudonyms are
+renamed `model-NN`, with release dates blanked in `model_release.json` (a real
+date re-identifies a pseudonym against a public release timeline) and assigned
+by a seeded shuffle, not alphabetically. The mapping is not distributed.
+`Alg/data_ingestion/anonymize.py` performs the substitution and
+`Alg/data_ingestion/figure_models.py` derives the candidate list from the
+figures so it isn't hand-maintained.
 
 ## Provenance
 
