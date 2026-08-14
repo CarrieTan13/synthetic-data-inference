@@ -147,12 +147,3 @@ Code (`Alg/`, `provenance/`, `reproduce.sh`) is MIT — see `LICENSE-CODE.txt`.
 Data is CC BY 4.0 except where an upstream source imposes its own terms — see
 `LICENSE-DATA.txt`, which gives the per-application position for Arena, Pew, and
 ANES.
-
-## Integrity
-
-`MANIFEST.sha256` lists a SHA-256 for every file. Verify with:
-
-```bash
-shasum -a 256 -c MANIFEST.sha256      # macOS
-sha256sum -c MANIFEST.sha256          # Linux
-```
