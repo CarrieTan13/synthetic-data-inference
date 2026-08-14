@@ -1,6 +1,21 @@
-# Valid Inference with Synthetic Data via Task Exchangeability — replication deposit
+# Valid Inference with Synthetic Data via Task Exchangeability
 
-Code and data to reproduce every number, table, and figure in the paper.
+By [Lezhi Tan](https://github.com/CarrieTan13), [Tijana Zrnic](https://tijana-zrnic.github.io/)
+
+Replication deposit for the paper *"Valid Inference with Synthetic Data via Task
+Exchangeability"* (Lezhi Tan, Tijana Zrnic; Stanford Management Science &
+Engineering / Statistics). Paper link and DOI will be added once the
+manuscript is public.
+
+Synthetic data — silicon-sample survey respondents, LLM-as-a-judge scores,
+generated protein structures — is cheap to produce but can be biased or
+misspecified in ways that break standard confidence intervals. The paper's
+fix is *task exchangeability*: find historical tasks where both real and
+synthetic data exist, measure how far the synthetic answer fell from the real
+one there, and widen the current, synthetic-only interval by that learned
+amount. This repo runs that method — and the baselines it's compared
+against — end to end on five applications, from raw data to the exact
+figures and tables in the paper.
 
 ```bash
 pip install -r requirements.txt
@@ -10,6 +25,17 @@ pip install -r requirements.txt
 `--check` regenerates `Results/` from `Data/` and fails if any coverage, width, or
 task count differs from the deposited copy. Expect 15–25 minutes; the
 Bradley-Terry application dominates (a paired bootstrap over three anchor sizes).
+
+## Citation
+
+```bibtex
+@article{tan2026valid,
+  title   = {Valid Inference with Synthetic Data via Task Exchangeability},
+  author  = {Tan, Lezhi and Zrnic, Tijana},
+  year    = {2026},
+  note    = {Under review}
+}
+```
 
 ## Layout
 
@@ -24,9 +50,9 @@ Bradley-Terry application dominates (a paired bootstrap over three anchor sizes)
 Three stages, run in order by `reproduce.sh`:
 
 ```
-Data/  --(Alg/inference/run_inference)-->  Results/
-Results/  --(Alg/result_process/plot_forest)-->       Plots/
-Results/  --(Alg/result_process/summarize_tables)-->  summary_tables.csv
+Data/     --(Alg/inference/run_inference)-->        Results/
+Results/  --(Alg/result_process/plot_forest)-->      Plots/
+Results/  --(Alg/result_process/summarize_tables)--> summary_tables.csv
 ```
 
 Inference runs once and is persisted, so regenerating a figure never re-runs it.
@@ -52,7 +78,7 @@ Both are exact: `reproduce.sh --check` confirms every published interval is
 unchanged.
 
 **Pew carries no respondent-level data.** The American Trends Panel data use
-agreement covers redistribution of the survey datasets. It does not have to be
+agreement covers redistribution of the survey datasets. That doesn't need to be
 resolved here, because both Pew estimators are Hájek —
 
 ```
@@ -60,7 +86,7 @@ w_mean(x, w)     = Σ w·x / Σ w
 w_mean_var(x, w) = Σ w²(x − μ)² / (Σ w)²
 ```
 
-— and the algorithms only ever evaluate five functionals of a cell: the weighted
+— so the algorithms only ever evaluate five functionals of a cell: the weighted
 gold mean, the weighted gap and its standard error, and the weighted synthetic mean
 and its standard error. `Data/Pew/tasks.pkl` stores exactly those, plus the
 respondent count, per (item, wave, party, region) cell. Reproduction is bit-exact
