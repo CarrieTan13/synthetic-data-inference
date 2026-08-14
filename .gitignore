@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 ANONYMIZATION_KEY*.csv
 .Results.deposited/
+Plots/

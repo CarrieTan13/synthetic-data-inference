@@ -44,18 +44,20 @@ Bradley-Terry application dominates (a paired bootstrap over three anchor sizes)
 | `Data/` | one folder per application (the five the paper uses), plus an `info.json` recording task counts and per-task sizes `n_j` / `N_j` for each task definition |
 | `Alg/` | all algorithm code, the shared renderer, and the driver scripts |
 | `Results/` | inference output: one CSV per (application, task definition, algorithm, allocation, α), one row per task |
-| `Plots/` | rendered forest plots |
 | `provenance/` | the upstream generating code for artifacts that `Alg/` consumes rather than builds |
 
-Three stages, run in order by `reproduce.sh`:
+Two stages, run in order by `reproduce.sh`:
 
 ```
 Data/     --(Alg/inference/run_inference)-->        Results/
-Results/  --(Alg/result_process/plot_forest)-->      Plots/
 Results/  --(Alg/result_process/summarize_tables)--> summary_tables.csv
 ```
 
-Inference runs once and is persisted, so regenerating a figure never re-runs it.
+Inference runs once and is persisted, so regenerating a table never re-runs it.
+`Alg/result_process/plot_forest.py` renders the paper's forest plots from
+`Results/` the same way — `reproduce.sh` still runs it, but the rendered images
+aren't part of this deposit (`Plots/` is gitignored); run
+`python -m Alg.result_process.plot_forest --repro` yourself to regenerate them.
 
 ## Applications
 
@@ -71,6 +73,25 @@ Algorithms are keyed as `alg1` (Algorithm 1), `alg2` (task-only exchangeability,
 Bonferroni), `alg3` / `alg4` (finite-sample target — a single conformal step at the
 full α), `multidim_alg1` (rectangular multidimensional), and `synth_only` (the naive
 synthetic-only baseline).
+
+## Data sources
+
+`simulated` is generated in-repo (`Alg/data_ingestion/simulate.py`); the rest
+comes from three external sources, reduced or reprocessed as described in
+*Provenance* below:
+
+- **ANES** — real feeling-thermometer responses and their GPT-3.5 silicon-sample
+  counterparts, from Bisbee, Clinton, Dorff, Kenkel & Larson (2024), *"Synthetic
+  replacements for human survey data? The perils of large language models,"*
+  Political Analysis 32(4), 401–416. Underlying survey program: the
+  [American National Election Studies](https://electionstudies.org/).
+- **Pew** — real and GPT-4o-simulated presidential-approval responses, from the
+  Pew Research Center's
+  [American Trends Panel](https://www.pewresearch.org/american-trends-panel-datasets/).
+- **Autorater / Autorater_BT** — human votes, autorater votes, and Bradley-Terry
+  battle outcomes, from Chiang, Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu,
+  Jordan, Gonzalez & Stoica (2024), *"Chatbot Arena: An Open Platform for
+  Evaluating LLMs by Human Preference,"* ICML 2024.
 
 ## Two deliberate departures from the authors' working tree
 
