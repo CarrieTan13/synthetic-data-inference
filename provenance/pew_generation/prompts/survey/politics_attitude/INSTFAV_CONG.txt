@@ -1,7 +1,0 @@
-
-[INSTFAV_CONG]
-Do you have a favorable or unfavorable opinion of Congress?
-1 - Very favorable
-2 - Mostly favorable
-3 - Mostly unfavorable
-4 - Very unfavorable

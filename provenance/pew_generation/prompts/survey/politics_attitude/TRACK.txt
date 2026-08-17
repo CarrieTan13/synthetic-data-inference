@@ -1,5 +1,0 @@
-
-[TRACK]
-Do you think things in this country are generally going in the right direction or do you feel that things are off on the wrong track?
-1 - Right direction
-2 - Wrong track

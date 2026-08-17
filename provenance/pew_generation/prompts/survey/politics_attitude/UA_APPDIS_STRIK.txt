@@ -1,8 +1,0 @@
-
-[UA_APPDIS_STRIK]
-Do you approve or disapprove of the following action the U.S. is taking in response to Russia's invasion of Ukraine? — Allowing Ukraine to use U.S.-made weapons to strike targets inside Russia
-1 - Strongly approve
-2 - Somewhat approve
-3 - Somewhat disapprove
-4 - Strongly disapprove
-5 - Not sure

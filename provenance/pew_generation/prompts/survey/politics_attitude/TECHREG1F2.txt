@@ -1,7 +1,0 @@
-
-[TECHREG1F2]
-Do you approve or disapprove of social media companies labeling posts on their platforms from ordinary users as inaccurate or misleading?
-1 - Strongly approve
-2 - Somewhat approve
-3 - Somewhat disapprove
-4 - Strongly disapprove

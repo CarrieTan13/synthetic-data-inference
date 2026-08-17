@@ -1,5 +1,0 @@
-
-[POL1DT]
-Do you approve or disapprove of the way Donald Trump is handling his job as President?
-1 - Approve
-2 - Disapprove

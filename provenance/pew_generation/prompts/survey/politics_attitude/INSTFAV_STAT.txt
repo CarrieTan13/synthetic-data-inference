@@ -1,7 +1,0 @@
-
-[INSTFAV_STAT]
-Do you have a favorable or unfavorable opinion of your STATE government?
-1 - Very favorable
-2 - Mostly favorable
-3 - Mostly unfavorable
-4 - Very unfavorable

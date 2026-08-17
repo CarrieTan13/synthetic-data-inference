@@ -1,8 +1,0 @@
-
-[COLL_RE]
-As you may know, some colleges and universities around the country are selective, which means they have many more applicants than they can admit. One of the factors some of these colleges take into account in admissions decisions is race and ethnicity, in order to increase the racial and ethnic diversity of the school. All in all, do you approve or disapprove of selective colleges and universities doing this?
-1 - Strongly approve
-2 - Somewhat approve
-3 - Somewhat disapprove
-4 - Strongly disapprove
-5 - Not sure

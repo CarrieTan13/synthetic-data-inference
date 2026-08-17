@@ -5,10 +5,10 @@ By [Lezhi Tan](https://github.com/CarrieTan13), [Tijana Zrnic](https://tijana-zr
 > Official repository for the paper *Valid Inference with Synthetic Data via Task
 > Exchangeability* ([arXiv:2606.13629](https://arxiv.org/abs/2606.13629)).
 
-Synthetic data is cheap to produce but can be biased. If we naively treat synthetic data as real, the inference can then be confidently wrong. In application where the ground-truth data is missing, we introduce 
-**task exchangeability** to draw valid inference: find historical tasks
+Synthetic data is cheap to produce but can be biased in ways that break standard
+confidence intervals. Task exchangeability fixes this: find historical tasks
 where both real and synthetic data exist, measure how far the synthetic answer
-fell from the real one there, and `correct' the current synthetic-only interval by
+fell from the real one there, and widen the current synthetic-only interval by
 that learned amount. This repo runs the method, and the baselines it is compared
 against, on all five experiments in the paper.
 
@@ -17,7 +17,7 @@ against, on all five experiments in the paper.
 [Paper](https://arxiv.org/abs/2606.13629) ·
 [Quick start](#quick-start) ·
 [Method](#the-method-in-a-nutshell) ·
-[Experiments](#experiments) ·
+[Structure](#repository-structure) ·
 [Data](#data)
 
 ---
@@ -86,16 +86,6 @@ The two `*_fn` arguments are the only thing you swap to change estimand or
 interval type. `Alg/inference/ci_methods.py` also provides paired, Hoeffding,
 and bootstrap versions.
 
-## Experiments
-
-| experiment | task definitions | estimand |
-|---|---|---|
-| `simulated` | `T40`, `T100` | mean of an exchangeable Bernoulli task; Monte-Carlo coverage over R=1000 replications |
-| `ANES` | `main` | feeling-thermometer mean per (target group × respondent partisanship); calibrate 2016, predict 2020 |
-| `Pew` | 4 (two models × LOO/temporal) | weighted approval rate per (item, wave, region) cell, two coordinates (co-partisan / opposition) |
-| `Autorater` | `AR_M` | per-model human win rate on Arena |
-| `Autorater_BT` | `BT_m24`, `BT_m34`, `BT_m44` | per-model Bradley-Terry log-strength; three anchor sizes as a robustness sweep |
-
 ## Repository structure
 
 ```
@@ -107,15 +97,15 @@ Data/                one folder per experiment, plus an info.json recording task
                      counts and per-task sizes n_j / N_j
 Results/             one CSV per (experiment, task definition, algorithm,
                      allocation, α), one row per task
-provenance/          upstream code for the artifacts Alg/ consumes but does not build
 experiments.ipynb    all five experiments, explained and reproduced
 reproduce.sh         the whole pipeline, with an exactness check
 ```
 
-Two stages, run in order by `reproduce.sh`:
+Three stages, run in order by `reproduce.sh`:
 
 ```
 Data/     --(Alg.inference.run_inference)-->         Results/
+Results/  --(Alg.result_process.plot_forest)-->      Plots/
 Results/  --(Alg.result_process.summarize_tables)--> summary_tables.csv
 ```
 
@@ -123,6 +113,22 @@ Inference runs once and is stored, so regenerating a figure or table never
 re-runs it. Rendered figures are not part of the deposit (`Plots/` is
 gitignored). The notebook renders them inline, or run
 `python -m Alg.result_process.plot_forest --repro`.
+
+Results paths read `Results/<experiment>/<task definition>/<algorithm>/alpha<NNN>__<allocation>.csv`.
+The algorithm keys predate the current draft, so they do not match the paper's
+numbering:
+
+| key | paper | |
+|---|---|---|
+| `alg1` | Algorithm 1 | inference via task exchangeability |
+| `alg2` | Algorithm 5 (appendix) | weaker, task-only exchangeability; Bonferroni α₂/T |
+| `alg3`, `alg4` | Algorithm 4 | finite-sample target; one conformal step at the full α |
+| `multidim_alg1` | Algorithm 3 | multi-dimensional rectangular region |
+| `synth_only` | — | naive synthetic-only baseline |
+
+The paper's Algorithm 2 (weighted inference beyond task exchangeability) is
+stated and proved but not run on data, so it has no key here and is not
+implemented in `Alg/`.
 
 Adding an experiment is a data edit in `Alg/inference/registry.py` plus a loader.
 The three drivers iterate the registry and need no changes.
@@ -157,6 +163,16 @@ as `model-NN`, with release dates blanked and the mapping not distributed. They
 still appear in the figures, under their pseudonyms; every model shown by name is
 one cleared for release.
 
+One caveat on the win-rate experiment. Its per-task intervals are not computed by
+`Alg/`: they were produced by application-specific code implementing a
+graph-structured leave-one-model-out construction, and ship as
+`Data/Autorater/ar_m_*_per_task.csv`, which
+`Alg/result_process/ingest_results.py` reads into the common schema. The win
+rates themselves match `Data/Autorater/AR_M.pkl` exactly, and running the generic
+paired path in `Alg/` over that pickle reproduces the interval endpoints to about
+0.0014 rather than exactly, since it is the simpler construction. Everything else
+in `Results/` is computed from `Data/` by the code in this repo.
+
 ## Citation
 
 ```bibtex
@@ -172,6 +188,6 @@ one cleared for release.
 
 ## Licence
 
-Code (`Alg/`, `provenance/`, `experiments.ipynb`, `reproduce.sh`) is MIT, see
+Code (`Alg/`, `experiments.ipynb`, `reproduce.sh`) is MIT, see
 `LICENSE-CODE.txt`. Data is CC BY 4.0 except where an upstream source imposes its
 own terms, see `LICENSE-DATA.txt`.
