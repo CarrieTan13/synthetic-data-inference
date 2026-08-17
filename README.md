@@ -71,11 +71,11 @@ res = algorithm_1(
     S_tilde,                    # synthetic sample for the current task
     historical_S,               # real samples      S_1 .. S_T
     historical_S_tilde,         # synthetic samples S~_1 .. S~_T
-    ci_fn=mean_ci_clt,          # CI for a mean
-    gap_ci_fn=mean_gap_ci_clt,  # CI for a difference of means
-    alpha1=0.01,                # budget: CI for the synthetic estimand
-    alpha2=0.02,                # budget: each per-task gap CI
-    alpha3=0.07,                # budget: conformal quantile across tasks
+    ci_fn=mean_ci_clt,          # CI for estimating a mean
+    gap_ci_fn=mean_gap_ci_clt,  # CI for mean gaps
+    alpha1=0.01,                # confidence level: CI for the synthetic estimand
+    alpha2=0.02,                # confidence level: each per-task gap CI
+    alpha3=0.07,                # confidence level: conformal quantile across tasks
 )
 
 res.ci          # (L, U), covers theta* with probability >= 1 - (a1 + a2 + a3)
