@@ -1,0 +1,30 @@
+{
+  "title": "Valid Inference with Synthetic Data via Task Exchangeability: replication deposit",
+  "upload_type": "software",
+  "creators": [
+    { "name": "Tan, Lezhi", "affiliation": "Stanford University" },
+    { "name": "Zrnic, Tijana", "affiliation": "Stanford University" }
+  ],
+  "description": "<p>Replication deposit for the paper <em>Valid Inference with Synthetic Data via Task Exchangeability</em> (Lezhi Tan, Tijana Zrnic).</p><p>Synthetic data is cheap to produce but can be biased, and treating it as real makes inference confidently wrong. Task exchangeability corrects for this: find historical tasks where both real and synthetic data exist, measure how far the synthetic answer fell from the real one there, and correct the current synthetic-only interval by that learned amount.</p><p>The deposit runs the method and its baselines end to end on all five experiments in the paper: simulated exchangeable Bernoulli tasks, ANES feeling thermometers, Pew American Trends Panel presidential approval, Arena model win rates, and Arena Bradley-Terry scores. <code>experiments.ipynb</code> explains each experiment and regenerates every figure and table from the stored results in seconds; <code>reproduce.sh --check</code> rebuilds everything from the raw data and fails on any numerical difference from the deposited copy.</p><p><strong>Licensing.</strong> Code (<code>Alg/</code>, <code>experiments.ipynb</code>, <code>reproduce.sh</code>) is MIT, see <code>LICENSE-CODE.txt</code>. Data is CC BY 4.0 except where an upstream source imposes its own terms, see <code>LICENSE-DATA.txt</code>. The single licence field on this record refers to the data; the code is MIT.</p><p><strong>Arena data.</strong> Models under pre-release testing at collection time are pseudonymized as <code>model-NN</code>; the mapping is not distributed.</p>",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "synthetic data",
+    "valid inference",
+    "confidence intervals",
+    "exchangeability",
+    "conformal prediction",
+    "silicon sampling",
+    "LLM-as-a-judge",
+    "AI evaluation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2606.13629",
+      "relation": "isSupplementTo",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}
