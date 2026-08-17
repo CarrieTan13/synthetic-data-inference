@@ -123,14 +123,10 @@ actually read. Both are Hájek estimators, so reproduction is exact, and
 from your own ATP download.
 
 **Arena.** Human votes, autorater votes, and Bradley-Terry battle outcomes
-collected on [LMArena](https://lmarena.ai/) and released here with permission.
-This vote-level data was not part of any public dataset release. See Chiang,
+collected on [Arena](https://arena.ai/). See Chiang,
 Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu, Jordan, Gonzalez & Stoica (2024),
 *Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference*,
-ICML 2024. Models under pre-release testing at collection time are pseudonymized
-as `model-NN`. They
-still appear in the figures in experiment.ipynb, under their pseudonyms; every model shown by name is
-one cleared for release.
+ICML 2024.
 
 ## Citation
 
