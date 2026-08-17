@@ -5,10 +5,12 @@ By [Lezhi Tan](https://github.com/CarrieTan13), [Tijana Zrnic](https://tijana-zr
 > Official repository for the paper *Valid Inference with Synthetic Data via Task
 > Exchangeability* ([arXiv:2606.13629](https://arxiv.org/abs/2606.13629)).
 
-Synthetic data is cheap to produce but can be biased in ways that break standard
-confidence intervals. Task exchangeability fixes this: find historical tasks
+Synthetic data is cheap to produce but can be biased. If we naively treat
+synthetic data as real, the inference can then be confidently wrong. In
+application where the ground-truth data is missing, we introduce
+**task exchangeability** to draw valid inference: find historical tasks
 where both real and synthetic data exist, measure how far the synthetic answer
-fell from the real one there, and widen the current synthetic-only interval by
+fell from the real one there, and 'correct' the current synthetic-only interval by
 that learned amount. This repo runs the method, and the baselines it is compared
 against, on all five experiments in the paper.
 
@@ -114,21 +116,9 @@ re-runs it. Rendered figures are not part of the deposit (`Plots/` is
 gitignored). The notebook renders them inline, or run
 `python -m Alg.result_process.plot_forest --repro`.
 
-Results paths read `Results/<experiment>/<task definition>/<algorithm>/alpha<NNN>__<allocation>.csv`.
-The algorithm keys predate the current draft, so they do not match the paper's
-numbering:
-
-| key | paper | |
-|---|---|---|
-| `alg1` | Algorithm 1 | inference via task exchangeability |
-| `alg2` | Algorithm 5 (appendix) | weaker, task-only exchangeability; Bonferroni α₂/T |
-| `alg3`, `alg4` | Algorithm 4 | finite-sample target; one conformal step at the full α |
-| `multidim_alg1` | Algorithm 3 | multi-dimensional rectangular region |
-| `synth_only` | — | naive synthetic-only baseline |
-
-The paper's Algorithm 2 (weighted inference beyond task exchangeability) is
-stated and proved but not run on data, so it has no key here and is not
-implemented in `Alg/`.
+Results paths read
+`Results/<experiment>/<task definition>/<algorithm>/alpha<NNN>__<allocation>.csv`.
+The notebook maps the algorithm keys onto the paper's numbering.
 
 Adding an experiment is a data edit in `Alg/inference/registry.py` plus a loader.
 The three drivers iterate the registry and need no changes.
