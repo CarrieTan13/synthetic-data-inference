@@ -46,8 +46,8 @@ pip install -r requirements.txt
 jupyter notebook experiments.ipynb
 ```
 
-`experiments.ipynb` covers all five experiments. For each one it states the
-estimand, what counts as a task, and where the historical tasks come from, then
+`experiments.ipynb` covers all five experiments in the paper. For each one it states the definition of a task, the 
+estimand, and where the historical tasks come from, then
 regenerates the paper's figures and tables from the stored results. It runs in
 seconds. Set `RERUN = True` in the setup cell to recompute from `Data/` instead
 of reading the deposited results.
@@ -59,8 +59,7 @@ To rebuild everything from the command line:
 ```
 
 `--check` regenerates `Results/` from `Data/` and fails if any coverage, width,
-or task count differs from the deposited copy. Budget 15 to 25 minutes; the
-Bradley-Terry experiment accounts for most of it.
+or task count differs from the deposited copy. 
 
 ## The method in a nutshell
 
@@ -103,26 +102,6 @@ experiments.ipynb    all five experiments, explained and reproduced
 reproduce.sh         the whole pipeline, with an exactness check
 ```
 
-Three stages, run in order by `reproduce.sh`:
-
-```
-Data/     --(Alg.inference.run_inference)-->         Results/
-Results/  --(Alg.result_process.plot_forest)-->      Plots/
-Results/  --(Alg.result_process.summarize_tables)--> summary_tables.csv
-```
-
-Inference runs once and is stored, so regenerating a figure or table never
-re-runs it. Rendered figures are not part of the deposit (`Plots/` is
-gitignored). The notebook renders them inline, or run
-`python -m Alg.result_process.plot_forest --repro`.
-
-Results paths read
-`Results/<experiment>/<task definition>/<algorithm>/alpha<NNN>__<allocation>.csv`.
-The notebook maps the algorithm keys onto the paper's numbering.
-
-Adding an experiment is a data edit in `Alg/inference/registry.py` plus a loader.
-The three drivers iterate the registry and need no changes.
-
 ## Data
 
 `simulated` is generated in-repo by `Alg/data_ingestion/simulate.py`. The rest
@@ -134,7 +113,7 @@ replacements for human survey data? The perils of large language models*,
 Political Analysis 32(4), 401–416. Underlying survey program: the
 [American National Election Studies](https://electionstudies.org/).
 
-**Pew.** Real and GPT-4o-simulated presidential-approval responses, from the Pew
+**Pew.** Real and simulated presidential-approval responses using gpt-4o, from the Pew
 Research Center's
 [American Trends Panel](https://www.pewresearch.org/american-trends-panel-datasets/).
 The ATP data use agreement covers redistribution of respondent-level rows, so
@@ -145,23 +124,13 @@ from your own ATP download.
 
 **Arena.** Human votes, autorater votes, and Bradley-Terry battle outcomes
 collected on [LMArena](https://lmarena.ai/) and released here with permission.
-This vote-level data is not part of any public dataset release. See Chiang,
+This vote-level data was not part of any public dataset release. See Chiang,
 Zheng, Sheng, Angelopoulos, Li, Li, Zhang, Zhu, Jordan, Gonzalez & Stoica (2024),
 *Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference*,
 ICML 2024. Models under pre-release testing at collection time are pseudonymized
-as `model-NN`, with release dates blanked and the mapping not distributed. They
-still appear in the figures, under their pseudonyms; every model shown by name is
+as `model-NN`. They
+still appear in the figures in experiment.ipynb, under their pseudonyms; every model shown by name is
 one cleared for release.
-
-One caveat on the win-rate experiment. Its per-task intervals are not computed by
-`Alg/`: they were produced by application-specific code implementing a
-graph-structured leave-one-model-out construction, and ship as
-`Data/Autorater/ar_m_*_per_task.csv`, which
-`Alg/result_process/ingest_results.py` reads into the common schema. The win
-rates themselves match `Data/Autorater/AR_M.pkl` exactly, and running the generic
-paired path in `Alg/` over that pickle reproduces the interval endpoints to about
-0.0014 rather than exactly, since it is the simpler construction. Everything else
-in `Results/` is computed from `Data/` by the code in this repo.
 
 ## Citation
 
