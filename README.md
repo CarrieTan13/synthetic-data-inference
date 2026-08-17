@@ -5,10 +5,10 @@ By [Lezhi Tan](https://github.com/CarrieTan13), [Tijana Zrnic](https://tijana-zr
 > Official repository for the paper *Valid Inference with Synthetic Data via Task
 > Exchangeability* ([arXiv:2606.13629](https://arxiv.org/abs/2606.13629)).
 
-Synthetic data is cheap to produce but can be biased in ways that break standard
-confidence intervals. Task exchangeability fixes this: find historical tasks
+Synthetic data is cheap to produce but can be biased. If we naively treat synthetic data as real, the inference can then be confidently wrong. In application where the ground-truth data is missing, we introduce 
+**task exchangeability** to draw valid inference: find historical tasks
 where both real and synthetic data exist, measure how far the synthetic answer
-fell from the real one there, and widen the current synthetic-only interval by
+fell from the real one there, and `correct' the current synthetic-only interval by
 that learned amount. This repo runs the method, and the baselines it is compared
 against, on all five experiments in the paper.
 
@@ -95,21 +95,6 @@ and bootstrap versions.
 | `Pew` | 4 (two models × LOO/temporal) | weighted approval rate per (item, wave, region) cell, two coordinates (co-partisan / opposition) |
 | `Autorater` | `AR_M` | per-model human win rate on Arena |
 | `Autorater_BT` | `BT_m24`, `BT_m34`, `BT_m44` | per-model Bradley-Terry log-strength; three anchor sizes as a robustness sweep |
-
-Result keys predate the current draft and do not match the paper's algorithm
-numbers, so:
-
-| key in `Results/` | paper | |
-|---|---|---|
-| `alg1` | Algorithm 1 | inference via task exchangeability |
-| `alg2` | Algorithm 5 (appendix) | weaker, task-only exchangeability; Bonferroni α₂/T |
-| `alg3`, `alg4` | Algorithm 4 | finite-sample target; one conformal step at the full α |
-| `multidim_alg1` | Algorithm 3 | multi-dimensional rectangular region |
-| `synth_only` | — | naive synthetic-only baseline |
-
-The paper's Algorithm 2 (weighted inference beyond task exchangeability) is
-stated and proved but not run on data, so it has no key here and is not
-implemented in `Alg/`.
 
 ## Repository structure
 
